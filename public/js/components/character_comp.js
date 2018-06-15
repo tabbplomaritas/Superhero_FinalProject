@@ -2,10 +2,13 @@
 console.log("character comp is working");
 
 const character = {
-
+  bindings: {
+    charSelect: "&",
+    charData: "<"
+  },
   template:`
-  <button type="button" ng-click="$ctrl.getHeroes();">Get Heroes</button>
-  <p>{{ $ctrl.hero }}</p>
+  <p>{{$ctrl.hero}}</p>
+  <p>this is a character test</p>
 
   `,
 
