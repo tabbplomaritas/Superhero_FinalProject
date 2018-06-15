@@ -1,26 +1,38 @@
 "use strict";
+console.log("service is working");
 
-function GameService ($http, $location) { 
+function GameService ($http, $sce) { 
   let player = 1; 
   let data = {};
+
 
   const getPlayer = (player) => {
     return $http({
       method: "GET",
-      url: 'http://superheroapi.com/api/834555310063588/1'}).then((response) => {
+      url: 'http://superheroapi.com/api/834555310063588/1',
+      
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then((response) => {
         console.log(response);
         let data = response;
-    })
-  }
-  const sendPlayer = () =>{
+        return data;
+    });
   }
 
-return {
-  getPlayer
-}
+  // const sendPlayer = () => {
+  //   return data;
+  // }
+
+  return {
+    getPlayer
+  };
+
+
 
 }
 
 angular 
   .module("app")
-  .factory("GameService", ["$http", GameService]);
+  .factory("GameService", GameService);
