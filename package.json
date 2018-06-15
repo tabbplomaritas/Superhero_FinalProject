@@ -1,0 +1,23 @@
+{
+  "name": "superhero_finalproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabbplomaritas/Superhero_FinalProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabbplomaritas/Superhero_FinalProject/issues"
+  },
+  "homepage": "https://github.com/tabbplomaritas/Superhero_FinalProject#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pg": "^7.4.3"
+  }
+}
