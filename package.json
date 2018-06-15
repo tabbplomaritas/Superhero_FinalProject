@@ -18,6 +18,10 @@
   "homepage": "https://github.com/tabbplomaritas/Superhero_FinalProject#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "pg": "^7.4.3"
+    "pg": "^7.4.3",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
   }
 }
