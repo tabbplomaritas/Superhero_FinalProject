@@ -21,7 +21,6 @@ const home = {
             <p ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
             <img ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
             <h2>Hero Power stats:</h2>
-          
             <p>Intelligence: </p>
             <p>{{ $ctrl.clickedHero.powerstats.intelligence }} </p>
             <p>Strength: </p>
@@ -34,6 +33,9 @@ const home = {
             <p>{{ $ctrl.clickedHero.powerstats.power }} </p>
             <p>Combat: </p>
             <p>{{ $ctrl.clickedHero.powerstats.combat }} </p>
+            <button ng-click="$ctrl.viewBattle()">Select Hero</button>
+            <button ng-click="$ctrl.chooseDifHero();">Choose a Differerent Hero</button>
+
         </section>
        
     </section>
@@ -91,8 +93,20 @@ const home = {
             GameService.getPlayer(vm.clickedHero.id).then((response)=> {
                 vm.clickedHero = response;
             })
-        
         };
+
+        vm.chooseDifHero = () => {
+            console.log(vm.clickedHero);
+            console.log("click");
+            vm.clickedHero = {};
+            console.log(vm.clickedHero);
+        }
+        vm.viewBattle = () => {
+            // GameService.viewBattle();
+            console.log("battle click");
+        }
+
+
     }]
 
 
