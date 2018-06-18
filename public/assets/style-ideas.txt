@@ -1,0 +1,18 @@
+home-comp:
+    -KAPOW zooms in upon ~load
+    -Spider-Man "swing" (rotate) in
+    -Gotham City slide up from bottom
+
+upon click of hero:
+    -fadeIn animate character pop-up 
+    -*wishlist* -grow character box toward user and populates with HTML powerstats
+    -CHOOSE HERO or SELECT DIFF HERO buttons grow upon hover/click
+
+desktop to mobile view:
+    -animate sidebar disapper (nonexistant in mobile-view)
+
+battle-mode-comp:
+    -Spider-Man animates out ("swings" out)
+    -Speech-bubble Q/A 
+        -typewriter effect on opponent bubble 
+        -question bubble populates, then answer bubble populates

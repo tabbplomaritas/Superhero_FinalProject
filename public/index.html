@@ -4,14 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!--Our styles-->
   <link rel="stylesheet" href="style.css">
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Bangers|Kalam:300,400,700" rel="stylesheet">
   <title>Super hero game</title>
 </head>
-<body>
+<body class="circles-8">
 
-  <h1>this is a test</h1>
-  
+  <nav>
+    <img id="logo" src="assets/design/kapow_blue.png">
+    <section class="nav_inner"></section>    
+  </nav>
+
   <ng-view></ng-view>
+
+  <aside>
+    <section class="aside_inner">
+      <img id="spiderman" src="assets/images/spiderman.png" alt="spiderman swings in from right">
+    </section>
+  </aside>
+
+  <footer>
+    <section class="footer_inner">
+        <img src="assets/images/gotham.png" alt="graphic of gotham city buildings">
+    </section>
+  </footer>
+
+
 
   <script src='https://code.angularjs.org/1.6.5/angular.min.js'></script>
   <script src='https://code.angularjs.org/1.6.5/angular-route.min.js'></script>

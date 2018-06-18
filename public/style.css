@@ -23,7 +23,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .circles-8 { 
-  background-blend-mode: lighten;
+  /*TODO: make sure this blend mode isn't too "extra"*/ 
+  background-blend-mode: overlay;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8Y2lyY2xlIGN4PSc0LjUnIGN5PSc0LjUnIHI9JzQuNScgZmlsbD0nYmxhY2snLz4KPC9zdmc+"); 
   background-repeat: repeat; 
 }
@@ -35,33 +36,29 @@ nav {
   /* position: fixed; */
   top: -2rem;
   left: 0;
-  right: 0%;
+  right: 0;
   transform: rotate(-2deg);
-  background-color: white;
   border: .2rem solid black;
   z-index: 5;
 }
 
 .nav_inner {
   background: linear-gradient(to bottom, #972024,#f6343a);
-  background-size: cover;
   top: 1rem;
   bottom: 1rem;
   left: 1rem;
   right: 1rem;
   position: fixed;
-  margin: 0 auto;
   border: .2rem solid black;
-  overflow: hidden;
 }
 
-#nav_bg {
-  transform-origin: top right;
-  transform: rotate(5deg) translateY(1rem) scale(2);
-  width: 200%;
-  height: auto;
-  mix-blend-mode: luminosity;
-  display: none;
+#logo {
+  z-index: 34;
+  width: 43rem;
+  position: absolute;
+  right: 50%;
+  top: -11rem;
+  transform: translate(50%);
 }
 
 #spiderman{
@@ -96,15 +93,6 @@ aside {
   border: .2rem solid black;
 }
 
-#logo {
-  z-index: 34;
-  width: 43rem;
-  position: absolute;
-  right: 50%;
-  top: -11rem;
-  transform: translate(50%);
-}
-
 .aside_inner img{
   /* width: 200%;
   position: absolute; */
@@ -112,15 +100,12 @@ aside {
   top: 26%;
 }
 
-
 footer {
-  /* width: 100%; */
   height: 20rem;
   width: 105%;
   position: fixed;
   bottom: -1%;
   left: -.5%;
-  /* right: 0%; */
   -ms-transform-origin: top left; /* IE 9 */
   -webkit-transform-origin: top left; /* Safari 3-8 */
   transform-origin: left top;
@@ -154,7 +139,7 @@ footer img {
   top: -4rem;
   right: 35rem;
   transform: rotate(0deg);
-  mix-blend-mode: overlay;
+  mix-blend-mode: normal;
 }
 
 
