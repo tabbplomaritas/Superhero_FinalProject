@@ -31,6 +31,16 @@ template: `
 
     <button ng-click="$ctrl.goToHome();">home</button>
 
+        <p>{{$ctrl.questions[0].question}}</p>
+        <p> {{ $ctrl.questions[0].option_a}}</p>
+        <p> {{ $ctrl.questions[0].option_b}}</p>
+        <p> {{ $ctrl.questions[0].option_c}}</p>
+        <p> {{ $ctrl.questions[0].option_d}}</p>
+        <button>Submit</button>
+         
+        <li ng-repeat=option in $ctrl.questions[0].options</p>
+        <input type="radio" name="answer" value="{{option}}">{{option}}
+      
 </section>
 `,
 
@@ -42,6 +52,22 @@ controller: ["GameService", function (GameService){
     
 
     let opponent = {};    
+    let heroScore = 0;
+    let opponentScore = 0;
+    
+    vm.questions =[
+        { 
+         question: "What is half of 50?",
+        //  option_a : 10,
+        //  option_b: 4,
+        //  option_c :16,
+        //  option_d :25,
+        options: [10,4,16,25],
+         answer:3
+        },
+
+
+        ]
 
     //retrieving the user's character from Service
     vm.clickedHero = GameService.retrieveHero();
@@ -64,7 +90,8 @@ controller: ["GameService", function (GameService){
         vm.opponent = response;
         }
     });
-
+  
+   
 
 }]
 
