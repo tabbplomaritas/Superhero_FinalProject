@@ -34,13 +34,20 @@ function GameService ($http, $location) {
     $location.path("/battle");
   }
 
+  const goToHome = () => {
+    console.log("go to home in service working");
+    
+    $location.path("/home");
+  }
+
   
 
   return {
     getPlayer,
     sendHero,
     retrieveHero,
-    viewBattle
+    viewBattle, 
+    goToHome
   };
 
 
