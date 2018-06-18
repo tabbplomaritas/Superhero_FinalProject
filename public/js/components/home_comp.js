@@ -16,6 +16,7 @@ const home = {
         
         <section>
             <p ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
+            <img ng-model="$ctrl.clickedHero.image.url" ng-src="$ctrl.clickedHero.image.url">
         </section>
        
     </section>
@@ -26,38 +27,59 @@ const home = {
         vm.heroes = [
             {
             'name': "Captain America",
-            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/639.jpg',
-            'id': 1
+            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/274.jpg',
+            'id': 149
             }, 
             {
             'name': "Wonder Woman",
-            'url': '/assets/images/wonderwoman.jpg'
+            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/807.jpg',
+            'id': 720
             },  
             {
             'name': "Batman",
-            'url': ''
+            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/639.jpg',
+            'id': 70
             }
             , 
             {
             'name': "The Incredible Hulk",
-            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/83.jpg'
+            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/83.jpg',
+            'id': 332
             }, 
             {
             'name': "Spider Man",
-            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/133.jpg'
+            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/133.jpg',
+            'id': 620
             }, 
             {
             'name': "Storm",
-            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/135.jpg'
+            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/135.jpg', 
+            'id': 638
             }
             ]
         // make a function that connects each 6 pre-set heroes to respective character info --> character comp
         vm.hero = {};
+        vm.clickedHero = {};
         vm.viewHero = (hero) => {
-            // console.log(hero);
+            
+            //sends the clicked hero data to service so entire application can utilize
             GameService.sendHero(hero);
+
+            //retrieves that stored data from GameService
             vm.clickedHero = GameService.retrieveHero();
             console.log(vm.clickedHero);
+            
+            //api call to view hero at that id
+            GameService.getPlayer(vm.clickedHero.id).then((response)=> {
+                // vm.clickedHero = response;
+                console.log("get player is even doing a thing");
+                
+                console.log(response);
+                
+            })
+            
+            
+        
         };
     }]
 
