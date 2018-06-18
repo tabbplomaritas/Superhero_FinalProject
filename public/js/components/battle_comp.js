@@ -12,18 +12,21 @@
 //TODO:repeat that until one is defeated
 
 //TODO:change to the gamover over view/comp
+//TODO:change h3 health level to powerbar
 const battle = {
 template: `
 <section class="main">
     <section class="fighters">
         <div class="fighter_info">
             <h2>Player</h2>
+            <h3 ng-model="$ctrl.playerHealth">{{$ctrl.playerHealth}}</h3>
             <p ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
             <img ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
         </div>
 
         <div class="fighter_info">
             <h2>Opponent</h2>
+            <h3 ng-model="$ctrl.opponentHealth">{{$ctrl.opponentHealth}}</h3>
             <p ng-model="$ctrl.opponent.name"> {{ $ctrl.opponent.name }} </p>
             <img ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
         </div>
@@ -40,7 +43,10 @@ template: `
         {{option}}
         </p>
         </div>
+
+        <button ng-click="$ctrl.startBattle();">Start Battle</button>
       
+        <easy-questions></easy-questions>
 </section>
 `,
 
@@ -57,33 +63,29 @@ controller: ["GameService", function (GameService){
     vm.opponentHealth = 5;
     vm.questionsIndex = 0;
     vm.selectedAnswer;
+    vm.questions=[];
     
-    vm.questions =[
-        { 
-         question: "What is half of 50?",
-         options: [10,4,16,25],
-         answer:25
-        },
-        { 
-            question: "What is half of 100?",
-            options: [50,4,16,25],
-            answer:50
-           },
-        ]
+    //begins game: retrieve questions
+    //TODO: triggers animations
+    vm.startBattle = () =>{
+        vm.questions = GameService.getQuestions();
+        console.log(vm.questions);
+    }
+
 
     vm.checkAnswer = (option) => {
         vm.selectedAnswer = option;
         vm.correctAnswer = vm.questions[vm.questionsIndex].answer;
   
+        //check if selected answer equals correct ansswer
         if (vm.selectedAnswer == vm.correctAnswer){
-          
+            //if it does, reduce opp health
             vm.opponentHealth --;
-            console.log(vm.opponentHealth);
-           
-
+            console.log(`opp health is now: ${vm.opponentHealth}`);
         } else {
-            console.log("not a winnder");
+            //if it is not correct, reduce player health
             vm.playerHealth --;
+            `opp health is now: ${vm.playerHealth}`
         }
     }
     //retrieving the user's character from Service
@@ -98,7 +100,6 @@ controller: ["GameService", function (GameService){
     //gets opponent info from api using randomNum
     GameService.getPlayer(randomNum).then((response)=> {
     
-        
         if(response.powerstats.combat == null){
             console.log("combat was null");
             

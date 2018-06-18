@@ -44,7 +44,10 @@ function GameService ($http, $location) {
   const sendQuestions= (easyQuestions)  => {
     console.log(easyQuestions);
     
-    questionBank = easyQuestions; 
+    questionBank = easyQuestions;
+    
+    console.log(questionBank);
+    
   }
 
   const getQuestions = () => {
