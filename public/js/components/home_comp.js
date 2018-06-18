@@ -16,7 +16,21 @@ const home = {
         
         <section>
             <p ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
-            <img ng-model="$ctrl.clickedHero.image.url" ng-src="$ctrl.clickedHero.image.url">
+            <img ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
+            <h2>Hero Power stats:</h2>
+          
+            <p>Intelligence: </p>
+            <p>{{ $ctrl.clickedHero.powerstats.intelligence }} </p>
+            <p>Strength: </p>
+            <p>{{ $ctrl.clickedHero.powerstats.strength }} </p>
+            <p>Speed: </p>
+            <p>{{ $ctrl.clickedHero.powerstats.speed }} </p>
+            <p>Durability: </p>
+            <p>{{ $ctrl.clickedHero.powerstats.durability }} </p>
+            <p>Power: </p>
+            <p>{{ $ctrl.clickedHero.powerstats.power }} </p>
+            <p>Combat: </p>
+            <p>{{ $ctrl.clickedHero.powerstats.combat }} </p>
         </section>
        
     </section>
@@ -68,13 +82,17 @@ const home = {
             //retrieves that stored data from GameService
             vm.clickedHero = GameService.retrieveHero();
             console.log(vm.clickedHero);
+
             
             //api call to view hero at that id
             GameService.getPlayer(vm.clickedHero.id).then((response)=> {
-                // vm.clickedHero = response;
+                vm.clickedHero = response;
+                console.log(vm.clickedHero.image.url);
+                
                 console.log("get player is even doing a thing");
                 
-                console.log(response);
+                console.log(response.powerstats);
+
                 
             })
             
