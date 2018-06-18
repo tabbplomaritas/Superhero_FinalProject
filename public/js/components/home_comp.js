@@ -1,7 +1,10 @@
 "use strict";
 
+//TODO:make buttons/methods that allow user to say okay or go back for character 
+
 const home = {
-     
+    
+
     template: `
     <section class="main">
         <h2>Choose your character!</h2>
@@ -36,7 +39,7 @@ const home = {
     </section>
 
     `,
-    controller: ["GameService" , "$scope", function(GameService, $scope){
+    controller: ["GameService", function(GameService){
         const vm = this;
         vm.heroes = [
             {
@@ -87,16 +90,7 @@ const home = {
             //api call to view hero at that id
             GameService.getPlayer(vm.clickedHero.id).then((response)=> {
                 vm.clickedHero = response;
-                console.log(vm.clickedHero.image.url);
-                
-                console.log("get player is even doing a thing");
-                
-                console.log(response.powerstats);
-
-                
             })
-            
-            
         
         };
     }]

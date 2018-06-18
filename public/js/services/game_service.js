@@ -7,11 +7,6 @@ function GameService ($http) {
   let clickedHero = {};
 
   const getPlayer = (id) => {
-    // console.log(id);
-    // console.log(typeof id);
-    // let newId = id.toString();
-    // console.log(typeof newId);
-    
     
     return $http({
       method: "GET",
@@ -32,6 +27,8 @@ function GameService ($http) {
   const retrieveHero = () => {
   return clickedHero;
   }
+
+  
 
   return {
     getPlayer,
