@@ -11,3 +11,23 @@
 //TODO:repeat that until one is defeated
 
 //TODO:change to the gamover over view/comp
+const battle = {
+    // Math.floor(Math.random() * 750) + 1;
+
+template: `
+
+
+`,
+controller: function (){
+
+
+}
+
+
+
+
+}
+
+angular
+   .module("app")
+  .component("battle", battle);
