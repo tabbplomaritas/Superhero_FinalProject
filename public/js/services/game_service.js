@@ -4,7 +4,7 @@ console.log("service is working");
 function GameService ($http) { 
   let player = 1; 
   let data = {};
-
+  let clickedHero = {};
 
   const getPlayer = () => {
     
@@ -14,12 +14,19 @@ function GameService ($http) {
     });
   };
 
-  // const sendPlayer = () => {
-  //   return data;
-  // }
+  const sendHero = (hero) => {
+    clickedHero = hero;
+    // return hero;
+  }
+
+  const retrieveHero = () => {
+    return clickedHero;
+  }
 
   return {
-    getPlayer
+    getPlayer,
+    sendHero,
+    retrieveHero
   };
 
 
