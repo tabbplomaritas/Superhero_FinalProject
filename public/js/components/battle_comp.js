@@ -1,12 +1,13 @@
 "use strict";
 
+
 //generate an opponent with math.random 
 
 //another api call to get that opponent with that number^
 
-//TODO:generate questions
+//generate questions
 
-//TODO:if answer is correct or false, adjust power level
+//if answer is correct or false, adjust power level
 
 //TODO:repeat that until one is defeated
 

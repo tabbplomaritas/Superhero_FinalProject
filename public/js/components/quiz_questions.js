@@ -1,6 +1,20 @@
 "use strict";
 
-const question=[{
+const easyQuestions = {
+
+template: 
+`
+`,
+
+controller: ["GameService", function(GameService){
+const vm = this;
+
+
+GameService.sendQuestions(vm.easyQuestions);
+
+
+vm.easyQuestions=
+[{
 
          question: "What is half of 50?",
          options: [10,4,16,25],
@@ -67,20 +81,9 @@ const question=[{
  },
 
 ]
-
-module.exports = questionRouter;
-
-
-
-
-
-
-
-
-
-
-
+}]
+}
 
 angular
     .module("app")
-    .component("question",question)
+    .component("easyQuestion", easyQuestion);

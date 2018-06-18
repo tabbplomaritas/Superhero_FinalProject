@@ -5,6 +5,7 @@ function GameService ($http, $location) {
   let player = 1; 
   let data = {};
   let clickedHero = {};
+  let questionBank = [];
 
   const getPlayer = (id) => {
     
@@ -40,6 +41,17 @@ function GameService ($http, $location) {
     $location.path("/home");
   }
 
+  const sendQuestions= (easyQuestions)  => {
+    console.log(easyQuestions);
+    
+    questionBank = easyQuestions; 
+  }
+
+  const getQuestions = () => {
+    console.log(questionBank);
+    
+    return questionBank;
+  }
   
 
   return {
@@ -47,7 +59,9 @@ function GameService ($http, $location) {
     sendHero,
     retrieveHero,
     viewBattle, 
-    goToHome
+    goToHome,
+    sendQuestions,
+    getQuestions
   };
 
 

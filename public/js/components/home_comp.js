@@ -2,6 +2,8 @@
 
 //TODO:make buttons/methods that allow user to say okay or go back for character 
 
+
+
 const home = {
     
 
