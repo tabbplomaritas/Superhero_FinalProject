@@ -15,7 +15,7 @@ const battle = {
     // Math.floor(Math.random() * 750) + 1;
 
 template: `
-
+<h1>test battle comp</h1>
 
 `,
 controller: function (){

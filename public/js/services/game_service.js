@@ -29,6 +29,8 @@ function GameService ($http, $location) {
   }
 
   const viewBattle = () => {
+    console.log("service view battle working...ish");
+    
     $location.path("/battle");
   }
 
@@ -37,7 +39,8 @@ function GameService ($http, $location) {
   return {
     getPlayer,
     sendHero,
-    retrieveHero
+    retrieveHero,
+    viewBattle
   };
 
 

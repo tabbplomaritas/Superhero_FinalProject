@@ -102,7 +102,7 @@ const home = {
             console.log(vm.clickedHero);
         }
         vm.viewBattle = () => {
-            // GameService.viewBattle();
+            GameService.viewBattle();
             console.log("battle click");
         }
 
