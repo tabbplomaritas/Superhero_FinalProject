@@ -29,18 +29,17 @@ template: `
         </div>
 
     </section>
-
     <button ng-click="$ctrl.goToHome();">home</button>
 
-        <p>{{$ctrl.questions[0].question}}</p>
-        <p> {{ $ctrl.questions[0].option_a}}</p>
-        <p> {{ $ctrl.questions[0].option_b}}</p>
-        <p> {{ $ctrl.questions[0].option_c}}</p>
-        <p> {{ $ctrl.questions[0].option_d}}</p>
-        <button>Submit</button>
-         
-        <li ng-repeat=option in $ctrl.questions[0].options</p>
-        <input type="radio" name="answer" value="{{option}}">{{option}}
+        <h1>{{$ctrl.questions[$ctrl.questionsIndex].question}}</h1>
+
+        
+        
+        <div ng-repeat="option in $ctrl.questions[$ctrl.questionsIndex].options">
+        <p ng-click="$ctrl.checkAnswer(option);">
+        {{option}}
+        </p>
+        </div>
       
 </section>
 `,
@@ -50,26 +49,43 @@ controller: ["GameService", function (GameService){
     let clickedHero = {};
     //selects random number to use as opponent id for api call
     let randomNum = Math.floor(Math.random() * 750) + 1;
-    
 
     let opponent = {};    
-    let heroScore = 0;
-    let opponentScore = 0;
+
+    // GamePlay declaration code
+    vm.playerHealth = 5;
+    vm.opponentHealth = 5;
+    vm.questionsIndex = 0;
+    vm.selectedAnswer;
     
     vm.questions =[
         { 
          question: "What is half of 50?",
-        //  option_a : 10,
-        //  option_b: 4,
-        //  option_c :16,
-        //  option_d :25,
-        options: [10,4,16,25],
-         answer:3
+         options: [10,4,16,25],
+         answer:25
         },
-
-
+        { 
+            question: "What is half of 100?",
+            options: [50,4,16,25],
+            answer:50
+           },
         ]
 
+    vm.checkAnswer = (option) => {
+        vm.selectedAnswer = option;
+        vm.correctAnswer = vm.questions[vm.questionsIndex].answer;
+  
+        if (vm.selectedAnswer == vm.correctAnswer){
+          
+            vm.opponentHealth --;
+            console.log(vm.opponentHealth);
+           
+
+        } else {
+            console.log("not a winnder");
+            vm.playerHealth --;
+        }
+    }
     //retrieving the user's character from Service
     vm.clickedHero = GameService.retrieveHero();
     console.log(vm.clickedHero);
@@ -81,7 +97,7 @@ controller: ["GameService", function (GameService){
     
     //gets opponent info from api using randomNum
     GameService.getPlayer(randomNum).then((response)=> {
-        console.log(response.powerstats.combat);
+    
         
         if(response.powerstats.combat == null){
             console.log("combat was null");
@@ -91,9 +107,6 @@ controller: ["GameService", function (GameService){
         vm.opponent = response;
         }
     });
-  
-   
-
 }]
 
 
