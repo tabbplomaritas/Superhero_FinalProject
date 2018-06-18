@@ -1,7 +1,7 @@
 "use strict";
 console.log("service is working");
 
-function GameService ($http) { 
+function GameService ($http, $location) { 
   let player = 1; 
   let data = {};
   let clickedHero = {};
@@ -26,6 +26,10 @@ function GameService ($http) {
 
   const retrieveHero = () => {
   return clickedHero;
+  }
+
+  const viewBattle = () => {
+    $location.path("/battle");
   }
 
   
