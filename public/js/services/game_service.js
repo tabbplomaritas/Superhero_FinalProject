@@ -61,7 +61,7 @@ function GameService ($http, $location) {
     winner = theWinner;
     //logs winner of game
     console.log(winner.name);
-    // $location.path("/gameover");
+    $location.path("/gameover");
   }
 
   // returns us 
