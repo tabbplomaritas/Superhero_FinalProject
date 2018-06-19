@@ -8,6 +8,7 @@ function GameService ($http, $location) {
   let questionBank = [];
   let winner = {};
   let totalWins = 0;
+  let opponent = {};
 
   const getPlayer = (id) => {
     
@@ -17,6 +18,19 @@ function GameService ($http, $location) {
     }).then((response) => {
       clickedHero = response.data;
       return clickedHero;
+    }).catch((error) => {
+      console.log(error);
+    })
+  };
+
+  const getOpponent = (id) => {
+    
+    return $http({
+      method: "GET",
+      url: "/home/" + id,
+    }).then((response) => {
+      opponent = response.data;
+      return opponent;
     }).catch((error) => {
       console.log(error);
     })
@@ -88,7 +102,8 @@ function GameService ($http, $location) {
     sendWinner,
     getWinner,
     sendTotalWins,
-    getTotalWins
+    getTotalWins, 
+    getOpponent
   };
 }
 

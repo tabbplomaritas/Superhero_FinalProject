@@ -139,15 +139,10 @@ controller: ["GameService", function (GameService){
 
 
     //gets opponent info from api using randomNum
-    GameService.getPlayer(randomNum).then((response)=> {
+    GameService.getOpponent(randomNum).then((response)=> {
     
-        if(response.powerstats.combat == null){
-            console.log("combat was null");
-            
-            GameService.getPlayer(randomNum);
-        }else {
         vm.opponent = response;
-        }
+        
     });
 }]
 
