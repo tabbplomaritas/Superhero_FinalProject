@@ -72,12 +72,31 @@ controller: ["GameService", function (GameService){
     vm.selectedAnswer;
     vm.questions=[];
     vm.totalWins = 0;
+    vm.i = 0;
     
     //begins game: retrieve questions
     //TODO: triggers animations
     
-    vm.startBattle = () =>{
-    GameService.getQuestions().then(()=>{
+    //retrieves user info from service
+    vm.user = GameService.getUserInfo();
+ 
+    //based on users age range, sets the index for the array of questions
+    vm.setArrayIndex = () => {
+        console.log(vm.user);
+        if(vm.user.age == "8-10"){
+            vm.i = 0;
+        } else if (vm.user.age == "11-13"){
+            vm.i = 1;
+        } else if (vm.user.age == "14-16"){
+            vm.i = 2;
+        };
+    }
+
+    //calls the method above
+    vm.setArrayIndex();
+
+    vm.startBattle = () => {
+    GameService.getQuestions(vm.i).then(()=>{
         vm.questions=GameService.sendQuestions();
         })
     };

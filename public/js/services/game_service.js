@@ -9,6 +9,17 @@ function GameService ($http, $location) {
   let winner = {};
   let totalWins = 0;
   let opponent = {};
+  let userInfo = {};
+
+  const sendUserInfo = (user) => {
+    userInfo = user;
+    console.log(userInfo);
+    
+  }
+  
+  const getUserInfo = () => {
+    return userInfo;
+  }
 
   const getPlayer = (id) => {
     
@@ -36,12 +47,12 @@ function GameService ($http, $location) {
     })
   };
 
-  const getQuestions = () => {
+  const getQuestions = (i) => {
      return $http({
       method: "GET",
       url: "/questions/",
     }).then((response) => {
-      questionBank =response.data;
+      questionBank =response.data[i];
     }).catch((error) => {
       console.log(error);
     })
@@ -107,7 +118,9 @@ function GameService ($http, $location) {
     sendTotalWins,
     getTotalWins, 
     getOpponent,
-    goToBattle
+    goToBattle,
+    sendUserInfo,
+    getUserInfo
   };
 }
 

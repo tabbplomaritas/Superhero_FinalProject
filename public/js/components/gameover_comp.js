@@ -17,6 +17,9 @@ const gameover = {
       <button class="button_battle" ng-click="$ctrl.goToHome();">home</button>
       <button class="button_battle" ng-click="$ctrl.goToBattle();">Rematch</button>
     </div>
+
+<h1> Congrats {{$ctrl.user.name}}!!!</h1>
+
   </section>
   `,
 
@@ -30,6 +33,11 @@ const gameover = {
     vm.goToBattle = () => {
       GameService.goToBattle();
     };  
+
+   vm.user = GameService.getUserInfo();
+   
+
+
   }]
 
 }

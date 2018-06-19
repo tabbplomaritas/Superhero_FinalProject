@@ -1,6 +1,7 @@
 const questions=
 
         [
+                [
             {
                 "question": "What is half of 50?",
                 "options": [10,4,16,25],
@@ -61,7 +62,26 @@ const questions=
                 "question":"If you are outside and your shadow is in front of you then the Sun is ... ?",
                 "options":["In front of you","Behind you"],
                 "answer":"Behind you"
-        }
+        }],
+
+
+
+
+        //**TODO: THESE ARE NEW TEST QUESTIONS. NOT REAL QUESTIONS. MUST. UP. DATEEEEEE */
+
+        [
+                {
+                "question":"***  1 ***If you are outside and your shadow is in front of you then the Sun is ... ?",
+                "options":["In front of you","Behind you"],
+                "answer":"Behind you"
+                },
+                {
+                        "question":"***  1 *** If you are outside and your shadow is in front of you then the Sun is ... ?",
+                        "options":["In front of you","Behind you"],
+                        "answer":"Behind you"
+                        }
+
+        ]
 
         ]
 
