@@ -20,24 +20,45 @@ const home = {
         </section>
         
         <section class="clickedHero_stats">
-            <p ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
-            <img ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
-            <h2>Hero Power stats:</h2>
-            <p>Intelligence: </p>
-            <p>{{ $ctrl.clickedHero.powerstats.intelligence }} </p>
-            <p>Strength: </p>
-            <p>{{ $ctrl.clickedHero.powerstats.strength }} </p>
-            <p>Speed: </p>
-            <p>{{ $ctrl.clickedHero.powerstats.speed }} </p>
-            <p>Durability: </p>
-            <p>{{ $ctrl.clickedHero.powerstats.durability }} </p>
-            <p>Power: </p>
-            <p>{{ $ctrl.clickedHero.powerstats.power }} </p>
-            <p>Combat: </p>
-            <p>{{ $ctrl.clickedHero.powerstats.combat }} </p>
-            <button ng-click="$ctrl.viewBattle()">Select Hero</button>
-            <button ng-click="$ctrl.chooseDifHero();">Choose a Differerent Hero</button>
+            <p class="clickedHero_name" ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
 
+            <img ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
+
+            <h3>Hero Power stats:</h3>
+
+            <section class="clickedHero_powerstats">
+                <div class="clickedHero_powerstats_trait">
+                    <p>Intelligence: </p>
+                    <p>{{ $ctrl.clickedHero.powerstats.intelligence }} </p>
+                </div>
+                <div class="clickedHero_powerstats_trait">
+                    <p>Strength: </p>
+                    <p>{{ $ctrl.clickedHero.powerstats.strength }} </p>
+                </div>
+                <div class="clickedHero_powerstats_trait">
+                    <p>Speed: </p>
+                    <p>{{ $ctrl.clickedHero.powerstats.speed }} </p>
+                </div>
+                <div class="clickedHero_powerstats_trait">
+                    <p>Durability: </p>
+                    <p>{{ $ctrl.clickedHero.powerstats.durability }} </p>
+                </div>
+                <div class="clickedHero_powerstats_trait">
+                    <p>Power: </p>
+                    <p>{{ $ctrl.clickedHero.powerstats.power }} </p>
+                </div>
+                <div class="clickedHero_powerstats_trait">
+                    <p>Combat: </p>
+                    <p>{{ $ctrl.clickedHero.powerstats.combat }} </p>
+                </div>
+            </section>
+
+            <div class="clickedHero_buttons">
+                <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
+                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readyToBattle-01.png">
+                
+               
+            </div>
         </section>
        
     </section>

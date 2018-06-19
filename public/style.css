@@ -147,14 +147,90 @@ footer img {
 /* ng-view styles */
 
 .clickedHero_stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
     z-index: 6;
     background-color: white;
-    padding: 2rem;
+    padding: 2rem 2rem 5rem 2rem;
+    -webkit-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+    -moz-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+    box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
 }
+
+.clickedHero_name {
+  font-size: 2rem;
+  text-align: center;
+  color: #d01e00;
+}
+
+.clickedHero_stats h3 {
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  text-align: center;
+  padding: .5rem 0;
+}
+
+.clickedHero_stats img {
+  width: 17rem;
+  border: .2rem solid black;
+}
+
+.clickedHero_powerstats {
+  width: 100%;
+  /* background-color: #41a6de; */
+}
+.clickedHero_powerstats_trait {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: .5rem;
+}
+
+.clickedHero_powerstats_trait:nth-child(odd) {
+  background-color: #41a7de46;
+}
+
+.clickedHero_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+#backToHeroes {
+  width: 11rem;
+  height: 10rem;
+  border: none;
+  position: absolute;
+  left: -3rem;
+  bottom: -3rem;
+  transform: rotate(15deg);
+  transition: .7s all;
+}
+
+#backToHeroes:hover {
+  /* transform: rotate3d(45); */
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+
+#readyToBattle {
+  width: 11rem;
+  height: 10rem;
+  border: none;
+  position: absolute;
+  right: -3rem;
+  bottom: -5rem;
+  transform: rotate(-15deg);
+  transition: .3s all;
+}
+
 
 .main {
   margin: 3rem 19rem 20rem 3rem;
@@ -304,7 +380,7 @@ footer img {
 
 
 
-#f6343c
+
 #f6343c
 #d01e00
 #fedb0e
