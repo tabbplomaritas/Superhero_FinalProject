@@ -67,6 +67,9 @@ function GameService ($http, $location) {
   const goToHome = () => { 
     $location.path("/home");
   }
+  const goToBattle = () => {
+    $location.path("/battle");
+  };
 
   // returns us winner of game in gameover_comp
   const sendWinner = (theWinner) =>{
@@ -103,7 +106,8 @@ function GameService ($http, $location) {
     getWinner,
     sendTotalWins,
     getTotalWins, 
-    getOpponent
+    getOpponent,
+    goToBattle
   };
 }
 

@@ -15,6 +15,7 @@ const gameover = {
       <h2 ng-model="$ctrl.winner.name"> {{ $ctrl.winner.name }} </h2>
       <img ng-model="$ctrl.opponent.image.url" src="{{$ctrl.winner.image.url}}">
       <button class="button_battle" ng-click="$ctrl.goToHome();">home</button>
+      <button class="button_battle" ng-click="$ctrl.goToBattle();">Rematch</button>
     </div>
   </section>
   `,
@@ -25,6 +26,9 @@ const gameover = {
     vm.winner = GameService.getWinner();
      vm.goToHome = () => {
         GameService.goToHome();
+    };
+    vm.goToBattle = () => {
+      GameService.goToBattle();
     };  
   }]
 
