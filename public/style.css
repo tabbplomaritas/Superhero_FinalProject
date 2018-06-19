@@ -254,15 +254,42 @@ footer img {
 .fighter_info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 40%;
   height: auto;
 }
 
 .fighter_info img {
-  width: 100%;
-
+  width: 50%;
+  border-radius: 50%;
 }
 
+.fighter_info h3 {
+  font-family: 'Kalam', cursive;
+  font-size: 3rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: #d01e00;
+  background-color: #fedb0e;
+}
+
+.button_battle {
+  width: 5rem;
+  background-color: #41a6de;
+  color: white;
+  padding: 1rem;
+  border: .2rem solid #0a1c20;
+}
+
+.button_battle:nth-of-type(2){
+  background-color: #ee7c47;
+}
+
+.question {
+  font-size: 2rem;
+  margin: 0 auto;
+}
 
 
 

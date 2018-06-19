@@ -32,19 +32,19 @@ template: `
         </div>
 
     </section>
-    <button ng-click="$ctrl.goToHome();">home</button>
+    <button class="button_battle" ng-click="$ctrl.goToHome();">home</button>
 
+    <div class="question">
         <h1>{{$ctrl.questions[$ctrl.qIndex].question}}</h1>
 
-        
         
         <div ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options">
         <p ng-click="$ctrl.checkAnswer(option);">
         {{option}}
         </p>
         </div>
-
-        <button ng-click="$ctrl.startBattle();">Start Battle</button>
+    </div>
+        <button class="button_battle" ng-click="$ctrl.startBattle();">Start Battle</button>
       
         <easy-questions></easy-questions>
 </section>
