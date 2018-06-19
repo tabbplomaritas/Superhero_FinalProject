@@ -99,15 +99,18 @@ controller: ["GameService", function (GameService){
             vm.qIndex++;
         } else if (vm.playerHealth === 0){
             vm.winner = "Opponent";
+            console.log(vm.winner);
+            GameService.getWinner(vm.winner);
             //end round, change to view to gameover view
         } else if (vm.opponentHealth === 0 ){
             vm.winner = "Player";
+            console.log(vm.winner);
+            GameService.getWinner(vm.winner);
             //end round, change to view to gameover view
             //vm.gameOver;
         }
     }
 
- 
 
     //retrieving the user's character from Service
     vm.clickedHero = GameService.retrieveHero();
