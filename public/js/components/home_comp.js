@@ -19,7 +19,7 @@ const home = {
          </div>
         </section>
         
-        <section>
+        <section class="clickedHero_stats">
             <p ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
             <img ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
             <h2>Hero Power stats:</h2>

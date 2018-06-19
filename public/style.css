@@ -146,6 +146,16 @@ footer img {
 
 /* ng-view styles */
 
+.clickedHero_stats {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 6;
+    background-color: white;
+    padding: 2rem;
+}
+
 .main {
   margin: 3rem 19rem 20rem 3rem;
   padding: 6rem 1rem 1rem 1rem;
@@ -243,6 +253,7 @@ footer img {
   z-index: 2;
 }
 
+/* battle styles */
 .fighters {
   display: flex;
   flex-direction: row;
