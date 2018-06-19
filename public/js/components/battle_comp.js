@@ -66,8 +66,8 @@ controller: ["GameService", function (GameService){
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 5;
-    vm.opponentHealth = 5;
+    vm.playerHealth = 1;
+    vm.opponentHealth = 1;
     vm.qIndex = 0;
     vm.selectedAnswer;
     vm.questions=[];
@@ -79,8 +79,6 @@ controller: ["GameService", function (GameService){
     vm.startBattle = () =>{
     GameService.getQuestions().then(()=>{
         vm.questions=GameService.sendQuestions();
-            console.log(vm.questions);
-
         })
     };
 
@@ -93,7 +91,6 @@ controller: ["GameService", function (GameService){
         if (vm.selectedAnswer == vm.correctAnswer){
             //if it does, reduce opp health
             vm.opponentHealth --;
-            console.log(`opp health is now: ${vm.opponentHealth}`);
         } else {
             //if it is not correct, reduce player health
             vm.playerHealth --;
@@ -105,12 +102,11 @@ controller: ["GameService", function (GameService){
     vm.checkForWinner = () => {
         if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
             vm.qIndex++;
-            console.log(vm.playerHealth);
         } else if (vm.playerHealth == 0){
-            //vm.winner = "Opponent";
-            console.log(vm.opponent.name);
-            console.log(opponent);
+            // Send the opponent to the Gameover Screen
             GameService.sendWinner(vm.opponent);
+<<<<<<< HEAD
+=======
             //end round, change to view to gameover view
         } else if (vm.opponentHealth == 0){
             // winner = vm.clickedHero;
@@ -120,13 +116,13 @@ controller: ["GameService", function (GameService){
             GameService.sendWinner(vm.clickedHero); 
             //end round, change to view to gameover view
             //vm.gameOver;
+>>>>>>> 30c28cf245969bb88bd992b80ab3b9eb7d4d8313
             
-        }
-        
+        } else if (vm.opponentHealth == 0){
+            // Send the selected hero to the Gameover Screen
+            GameService.sendWinner(vm.clickedHero);          
+        } 
     }
-
-    //vm.sendWinner = GameService.sendWinner();
-
     //retrieving the user's character from Service
     vm.clickedHero = GameService.retrieveHero();
     

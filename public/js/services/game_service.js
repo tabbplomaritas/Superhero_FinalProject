@@ -26,7 +26,6 @@ function GameService ($http, $location) {
       method: "GET",
       url: "/questions/",
     }).then((response) => {
-      console.log(response.data);
       questionBank =response.data;
     }).catch((error) => {
       console.log(error);
@@ -50,17 +49,18 @@ function GameService ($http, $location) {
     $location.path("/battle");
   }
 
-  const goToHome = () => {
-    console.log("go to home in service working");
-    
+  const goToHome = () => { 
     $location.path("/home");
   }
 
   // returns us winner of game in gameover_comp
   const sendWinner = (theWinner) =>{
     winner = theWinner;
+<<<<<<< HEAD
+=======
     //logs winner of game
     console.log(winner.name);
+>>>>>>> 30c28cf245969bb88bd992b80ab3b9eb7d4d8313
     $location.path("/gameover");
   }
 
@@ -68,9 +68,6 @@ function GameService ($http, $location) {
   const getWinner = () => {
     return winner;
   }
-
-  
-  
 
   return {
     getPlayer,
@@ -83,9 +80,6 @@ function GameService ($http, $location) {
     sendWinner,
     getWinner
   };
-
-
-
 }
 
 angular 
