@@ -18,7 +18,10 @@ angular
         .when("/gameover",{
             template:"<gameover></gameover>"
         })
+        .when("/startgame",{
+            template:"<start-game></start-game>"
+        })
         .otherwise({
-            redirectTo:"/home"
+            redirectTo:"/startgame"
         });
     });  
