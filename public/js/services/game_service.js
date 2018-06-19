@@ -56,11 +56,8 @@ function GameService ($http, $location) {
   // returns us winner of game in gameover_comp
   const sendWinner = (theWinner) =>{
     winner = theWinner;
-<<<<<<< HEAD
-=======
     //logs winner of game
     console.log(winner.name);
->>>>>>> 30c28cf245969bb88bd992b80ab3b9eb7d4d8313
     $location.path("/gameover");
   }
 
