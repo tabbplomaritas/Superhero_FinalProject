@@ -1,19 +1,20 @@
 //TODO:generates  the winner announcement 
-
+// TODO: GET winner from battle comp
 //TODO:create a button to to back to home screen
 
 //TODO:reset power levels
 
 
 "use strict";
-console.log("gameove comp is working");
+console.log("gameover comp is working");
 
 const gameover = {
 
   template:`
   <section class="main">
-  <p> TEST </p>
-
+    <h2>
+    {{ $ctrl.winner.name }}
+    </h2>
   </section>
  
 
@@ -21,6 +22,10 @@ const gameover = {
 
   controller: ["GameService", function (GameService) {
     const vm = this;
+
+    // gets winner from battle comp
+    vm.winner = GameService.getWinner();
+    console.log(vm.winner);
 }]
 
 }

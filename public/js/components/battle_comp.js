@@ -52,11 +52,14 @@ template: `
 
 controller: ["GameService", function (GameService){
     const vm = this;
+
+    // hero that player is using for the game
     let clickedHero = {};
     //selects random number to use as opponent id for api call
     let randomNum = Math.floor(Math.random() * 750) + 1;
 
-    let opponent = {};    
+    let opponent = {}; 
+    let winner = {};   
 
     // GamePlay declaration code
     vm.playerHealth = 5;
@@ -89,38 +92,46 @@ controller: ["GameService", function (GameService){
         } else {
             //if it is not correct, reduce player health
             vm.playerHealth --;
-            `opp health is now: ${vm.playerHealth}`
+            `player health is now: ${vm.playerHealth}`
         }
         vm.checkForWinner();
     }
 
     vm.checkForWinner = () => {
-        if(vm.playerHealth > 0 && vm.opponentHealth > 0) {
+        if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
             vm.qIndex++;
-        } else if (vm.playerHealth === 0){
-            vm.winner = "Opponent";
-            console.log(vm.winner);
-            GameService.getWinner(vm.winner);
+            console.log(vm.playerHealth);
+        } else if (vm.playerHealth == 0){
+            //vm.winner = "Opponent";
+            console.log(vm.opponent.name);
+            console.log(opponent);
+            GameService.sendWinner(vm.opponent);
             //end round, change to view to gameover view
-        } else if (vm.opponentHealth === 0 ){
-            vm.winner = "Player";
-            console.log(vm.winner);
-            GameService.getWinner(vm.winner);
+        } else if (vm.opponentHealth == 0){
+            // winner = vm.clickedHero;
+            // console.log(winner);
+            //  vm.sendWinner(winner);
+            GameService.sendWinner(vm.clickedHero); 
             //end round, change to view to gameover view
             //vm.gameOver;
+            
         }
+        
     }
 
+    //vm.sendWinner = GameService.sendWinner();
 
     //retrieving the user's character from Service
     vm.clickedHero = GameService.retrieveHero();
-    console.log(vm.clickedHero);
+    
 
     //takes user back to home view/component
     vm.goToHome = () => {
         GameService.goToHome();
     };  
     
+
+
     //gets opponent info from api using randomNum
     GameService.getPlayer(randomNum).then((response)=> {
     
