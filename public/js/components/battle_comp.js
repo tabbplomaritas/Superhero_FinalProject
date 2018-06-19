@@ -17,7 +17,7 @@ const battle = {
 template: `
 <section class="main">
         <p class="totalWins" ng-model="$ctrl.totalWins">
-         Total Victories:{{$ctrl.totalWins}}
+         Total Victories:{{$ctrl.victories}}
 
     </p>
     <section class="fighters">
@@ -59,8 +59,8 @@ controller: ["GameService", function (GameService){
 
     // hero that player is using for the game
     let clickedHero = {};
-    //selects random number to use as opponent id for api call
-    let randomNum = Math.floor(Math.random() * 750) + 1;
+    let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687]
+    let randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
 
     let opponent = {}; 
     let winner = {};   
@@ -105,8 +105,6 @@ controller: ["GameService", function (GameService){
         } else if (vm.playerHealth == 0){
             // Send the opponent to the Gameover Screen
             GameService.sendWinner(vm.opponent);
-<<<<<<< HEAD
-=======
             //end round, change to view to gameover view
         } else if (vm.opponentHealth == 0){
             // winner = vm.clickedHero;
@@ -114,9 +112,10 @@ controller: ["GameService", function (GameService){
             //  vm.sendWinner(winner);
             vm.totalWins++;
             GameService.sendWinner(vm.clickedHero); 
+            GameService.sendTotalWins(vm.totalWins);
             //end round, change to view to gameover view
             //vm.gameOver;
->>>>>>> 30c28cf245969bb88bd992b80ab3b9eb7d4d8313
+            console.log(vm.totalWins);
             
         } else if (vm.opponentHealth == 0){
             // Send the selected hero to the Gameover Screen
@@ -125,6 +124,11 @@ controller: ["GameService", function (GameService){
     }
     //retrieving the user's character from Service
     vm.clickedHero = GameService.retrieveHero();
+
+    vm.victories = GameService.getTotalWins();
+
+
+    
     
 
     //takes user back to home view/component

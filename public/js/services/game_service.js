@@ -7,6 +7,7 @@ function GameService ($http, $location) {
   let clickedHero = {};
   let questionBank = [];
   let winner = {};
+  let totalWins = 0;
 
   const getPlayer = (id) => {
     
@@ -66,6 +67,16 @@ function GameService ($http, $location) {
     return winner;
   }
 
+  const sendTotalWins = (wins) =>{
+    totalWins += wins;
+    console.log(totalWins);
+    return totalWins
+  }
+
+  const getTotalWins = () => {
+    return totalWins
+  }
+
   return {
     getPlayer,
     sendHero,
@@ -75,7 +86,9 @@ function GameService ($http, $location) {
     getQuestions,
     sendQuestions,
     sendWinner,
-    getWinner
+    getWinner,
+    sendTotalWins,
+    getTotalWins
   };
 }
 
