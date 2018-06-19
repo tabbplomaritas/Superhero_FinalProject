@@ -69,10 +69,12 @@ controller: ["GameService", function (GameService){
     //TODO: triggers animations
     
     vm.startBattle = () =>{
-        vm.questions = GameService.getQuestions();
-        console.log(vm.questions);
-    }
+    GameService.getQuestions().then(()=>{
+        vm.questions=GameService.sendQuestions();
+            console.log(vm.questions);
 
+        })
+    };
 
 
     vm.checkAnswer = (option) => {

@@ -3,6 +3,7 @@
 const express = require("express");
 const homeRouter = express.Router();
 let request = require('request');
+const questions = require('../data/quiz_questions_json');
 
 homeRouter.get("/home/:id", (req, res) => {
   console.log(req.params.id);
@@ -14,5 +15,14 @@ homeRouter.get("/home/:id", (req, res) => {
   });
 
 });
+
+homeRouter.get("/questions/",(req,res) =>{
+
+  
+  res.send(questions);
+
+});
+
+
 
 module.exports = homeRouter;

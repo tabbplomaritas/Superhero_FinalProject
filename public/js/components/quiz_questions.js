@@ -1,17 +1,7 @@
-"use strict";
-console.log("quiz questions here");
 
-const easyQuestions = {
 
-template: 
-`
-`,
-
-controller: ["GameService", function(GameService){
-        const vm = this;
-
-        vm.questions=
-        [{
+        [
+            {
                 question: "What is half of 50?",
                 options: [10,4,16,25],
                 answer:25
@@ -74,16 +64,3 @@ controller: ["GameService", function(GameService){
         },
 
         ]
-
-        console.log("hi is this working? ");
-        console.log(vm.questions);
-
-
-        GameService.sendQuestions(vm.questions);
-
-}]
-}
-
-angular
-    .module("app")
-    .component("easyQuestions", easyQuestions);

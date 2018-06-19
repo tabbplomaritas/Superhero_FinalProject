@@ -21,6 +21,21 @@ function GameService ($http, $location) {
     })
   };
 
+  const getQuestions = () => {
+     return $http({
+      method: "GET",
+      url: "/questions/",
+    }).then((response) => {
+      console.log(response.data);
+      questionBank =response.data;
+    }).catch((error) => {
+      console.log(error);
+    })
+  };
+
+  const sendQuestions = () =>{
+    return questionBank;
+  }
   const sendHero = (hero) => {
     clickedHero = hero;
   }
@@ -41,20 +56,7 @@ function GameService ($http, $location) {
     $location.path("/home");
   }
 
-  const sendQuestions= (easyQuestions)  => {
-    console.log(easyQuestions);
-    
-    questionBank = easyQuestions;
-    
-    console.log(questionBank);
-    
-  }
-
-  const getQuestions = () => {
-    console.log(questionBank);
-    
-    return questionBank;
-  }
+  
   
 
   return {
@@ -63,8 +65,8 @@ function GameService ($http, $location) {
     retrieveHero,
     viewBattle, 
     goToHome,
-    sendQuestions,
-    getQuestions
+    getQuestions,
+    sendQuestions
   };
 
 
