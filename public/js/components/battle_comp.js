@@ -67,12 +67,13 @@ controller: ["GameService", function (GameService){
     
     //begins game: retrieve questions
     //TODO: triggers animations
+    
     vm.startBattle = () =>{
         vm.questions = GameService.getQuestions();
         console.log(vm.questions);
     }
 
-
+    
     vm.checkAnswer = (option) => {
         vm.selectedAnswer = option;
         vm.correctAnswer = vm.questions[vm.questionsIndex].answer;
