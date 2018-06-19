@@ -15,7 +15,6 @@ function GameService ($http, $location) {
       url: "/home/" + id,
     }).then((response) => {
       clickedHero = response.data;
-      console.log(response.data);
       return clickedHero;
     }).catch((error) => {
       console.log(error);
@@ -57,8 +56,16 @@ function GameService ($http, $location) {
     $location.path("/home");
   }
 
-  const getWinner = (winner) =>{
-    console.log(winner);
+  // returns us winner of game in gameover_comp
+  const sendWinner = (theWinner) =>{
+    winner = theWinner;
+    //logs winner of game
+    console.log(winner.name);
+    // $location.path("/gameover");
+  }
+
+  // returns us 
+  const getWinner = () => {
     return winner;
   }
 
@@ -73,6 +80,7 @@ function GameService ($http, $location) {
     goToHome,
     getQuestions,
     sendQuestions,
+    sendWinner,
     getWinner
   };
 
