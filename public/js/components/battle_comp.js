@@ -72,7 +72,7 @@ controller: ["GameService", function (GameService){
         console.log(vm.questions);
     }
 
-
+//checks to see if users selected answer is correct or not then adjusts appropriate health level
     vm.checkAnswer = (option) => {
         vm.selectedAnswer = option;
         vm.correctAnswer = vm.questions[vm.questionsIndex].answer;
@@ -87,7 +87,18 @@ controller: ["GameService", function (GameService){
             vm.playerHealth --;
             `opp health is now: ${vm.playerHealth}`
         }
+        //vm.checkForWinner();
     }
+
+    //vm.checkForWinner = () => {
+        //if both health is >0, qIndex++
+        //the end
+
+        //if playerHealth === 0 --> vm.winner = opponent (pass this data, who won, to GameService so that gameover view can use it)
+        //if oppHealth === 0 --> vm.winner = player
+        //change to gameover view... (vm.changeToGameover)
+    
+
     //retrieving the user's character from Service
     vm.clickedHero = GameService.retrieveHero();
     console.log(vm.clickedHero);
@@ -110,11 +121,15 @@ controller: ["GameService", function (GameService){
     });
 }]
 
-
-
-
 }
 
 angular
    .module("app")
   .component("battle", battle);
+
+
+  //change getPlayer to more generic title because it gets player OR opponent charecter. Suggest: get charecter
+
+  //finish check answer method
+
+  //write checkForWinner method 
