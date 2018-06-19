@@ -109,7 +109,7 @@ const home = {
 
             //retrieves that stored data from GameService
             vm.clickedHero = GameService.retrieveHero();
-            console.log(vm.clickedHero);
+            
 
             
             //api call to view hero at that id
@@ -126,10 +126,7 @@ const home = {
         }
         vm.viewBattle = () => {
             GameService.viewBattle();
-            console.log("battle click");
         }
-
-
     }]
 
 
