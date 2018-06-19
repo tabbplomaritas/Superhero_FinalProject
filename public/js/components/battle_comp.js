@@ -34,11 +34,11 @@ template: `
     </section>
     <button ng-click="$ctrl.goToHome();">home</button>
 
-        <h1>{{$ctrl.questions[$ctrl.questionsIndex].question}}</h1>
+        <h1>{{$ctrl.questions[$ctrl.qIndex].question}}</h1>
 
         
         
-        <div ng-repeat="option in $ctrl.questions[$ctrl.questionsIndex].options">
+        <div ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options">
         <p ng-click="$ctrl.checkAnswer(option);">
         {{option}}
         </p>
@@ -61,7 +61,7 @@ controller: ["GameService", function (GameService){
     // GamePlay declaration code
     vm.playerHealth = 5;
     vm.opponentHealth = 5;
-    vm.questionsIndex = 0;
+    vm.qIndex = 0;
     vm.selectedAnswer;
     vm.questions=[];
     
@@ -79,7 +79,7 @@ controller: ["GameService", function (GameService){
 
     vm.checkAnswer = (option) => {
         vm.selectedAnswer = option;
-        vm.correctAnswer = vm.questions[vm.questionsIndex].answer;
+        vm.correctAnswer = vm.questions[vm.qIndex].answer;
   
         //check if selected answer equals correct ansswer
         if (vm.selectedAnswer == vm.correctAnswer){
@@ -91,17 +91,23 @@ controller: ["GameService", function (GameService){
             vm.playerHealth --;
             `opp health is now: ${vm.playerHealth}`
         }
-        //vm.checkForWinner();
+        vm.checkForWinner();
     }
 
-    //vm.checkForWinner = () => {
-        //if both health is >0, qIndex++
-        //the end
+    vm.checkForWinner = () => {
+        if(vm.playerHealth > 0 && vm.opponentHealth > 0) {
+            vm.qIndex++;
+        } else if (vm.playerHealth === 0){
+            vm.winner = "Opponent";
+            //end round, change to view to gameover view
+        } else if (vm.opponentHealth === 0 ){
+            vm.winner = "Player";
+            //end round, change to view to gameover view
+            //vm.gameOver;
+        }
+    }
 
-        //if playerHealth === 0 --> vm.winner = opponent (pass this data, who won, to GameService so that gameover view can use it)
-        //if oppHealth === 0 --> vm.winner = player
-        //change to gameover view... (vm.changeToGameover)
-    
+ 
 
     //retrieving the user's character from Service
     vm.clickedHero = GameService.retrieveHero();
