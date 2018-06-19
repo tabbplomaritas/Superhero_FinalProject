@@ -211,11 +211,12 @@ footer img {
   position: absolute;
   left: -3rem;
   bottom: -3rem;
-  transform: rotate(15deg);
-  transition: .7s all;
+  transform: rotate(-15deg);
+  transition: .5s all;
 }
 
-#backToHeroes:hover {
+#backToHeroes:hover,
+#readyToBattle:hover {
   /* transform: rotate3d(45); */
   transform: rotate3d(1, 1, 1, 45deg);
 }
@@ -228,7 +229,7 @@ footer img {
   right: -3rem;
   bottom: -5rem;
   transform: rotate(-15deg);
-  transition: .3s all;
+  transition: .5s all;
 }
 
 

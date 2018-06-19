@@ -16,6 +16,10 @@
 const battle = {
 template: `
 <section class="main">
+        <p class="totalWins" ng-model="$ctrl.totalWins">
+         Total Victories:{{$ctrl.totalWins}}
+
+    </p>
     <section class="fighters">
         <div class="fighter_info">
             <h2>Player</h2>
@@ -67,6 +71,7 @@ controller: ["GameService", function (GameService){
     vm.qIndex = 0;
     vm.selectedAnswer;
     vm.questions=[];
+    vm.totalWins = 0;
     
     //begins game: retrieve questions
     //TODO: triggers animations
@@ -100,6 +105,18 @@ controller: ["GameService", function (GameService){
         } else if (vm.playerHealth == 0){
             // Send the opponent to the Gameover Screen
             GameService.sendWinner(vm.opponent);
+<<<<<<< HEAD
+=======
+            //end round, change to view to gameover view
+        } else if (vm.opponentHealth == 0){
+            // winner = vm.clickedHero;
+            // console.log(winner);
+            //  vm.sendWinner(winner);
+            vm.totalWins++;
+            GameService.sendWinner(vm.clickedHero); 
+            //end round, change to view to gameover view
+            //vm.gameOver;
+>>>>>>> 30c28cf245969bb88bd992b80ab3b9eb7d4d8313
             
         } else if (vm.opponentHealth == 0){
             // Send the selected hero to the Gameover Screen
