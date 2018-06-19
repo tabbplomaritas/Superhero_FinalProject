@@ -19,7 +19,7 @@ const home = {
          </div>
         </section>
         
-        <section class="clickedHero_stats">
+        <section ng-show="$ctrl.showMe" class="clickedHero_stats">
             <p class="clickedHero_name" ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
 
             <img ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
@@ -102,14 +102,19 @@ const home = {
         // make a function that connects each 6 pre-set heroes to respective character info --> character comp
         vm.hero = {};
         vm.clickedHero = {};
+        //initiate the ng-show on the character stats pop up to false
+        vm.showMe = false;
         vm.viewHero = (hero) => {
+            //change ng-show me to true to display the pop up
+            vm.showMe= true;
+            console.log(vm.showMe);
             
             //sends the clicked hero data to service so entire application can utilize
             GameService.sendHero(hero);
 
             //retrieves that stored data from GameService
             vm.clickedHero = GameService.retrieveHero();
-            console.log(vm.clickedHero);
+            
 
             
             //api call to view hero at that id
@@ -119,6 +124,8 @@ const home = {
         };
 
         vm.chooseDifHero = () => {
+            //hide the character stats popup
+            vm.showMe = false;
             console.log(vm.clickedHero);
             console.log("click");
             vm.clickedHero = {};
@@ -126,10 +133,7 @@ const home = {
         }
         vm.viewBattle = () => {
             GameService.viewBattle();
-            console.log("battle click");
         }
-
-
     }]
 
 

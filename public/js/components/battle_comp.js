@@ -17,7 +17,7 @@ const battle = {
 template: `
 <section class="main">
         <p class="totalWins" ng-model="$ctrl.totalWins">
-         Total Victories:{{$ctrl.totalWins}}
+         Total Victories:{{$ctrl.victories}}
 
     </p>
     <section class="fighters">
@@ -59,15 +59,15 @@ controller: ["GameService", function (GameService){
 
     // hero that player is using for the game
     let clickedHero = {};
-    //selects random number to use as opponent id for api call
-    let randomNum = Math.floor(Math.random() * 750) + 1;
+    let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687]
+    let randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
 
     let opponent = {}; 
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 5;
-    vm.opponentHealth = 5;
+    vm.playerHealth = 1;
+    vm.opponentHealth = 1;
     vm.qIndex = 0;
     vm.selectedAnswer;
     vm.questions=[];
@@ -79,8 +79,6 @@ controller: ["GameService", function (GameService){
     vm.startBattle = () =>{
     GameService.getQuestions().then(()=>{
         vm.questions=GameService.sendQuestions();
-            console.log(vm.questions);
-
         })
     };
 
@@ -93,7 +91,6 @@ controller: ["GameService", function (GameService){
         if (vm.selectedAnswer == vm.correctAnswer){
             //if it does, reduce opp health
             vm.opponentHealth --;
-            console.log(`opp health is now: ${vm.opponentHealth}`);
         } else {
             //if it is not correct, reduce player health
             vm.playerHealth --;
@@ -105,11 +102,8 @@ controller: ["GameService", function (GameService){
     vm.checkForWinner = () => {
         if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
             vm.qIndex++;
-            console.log(vm.playerHealth);
         } else if (vm.playerHealth == 0){
-            //vm.winner = "Opponent";
-            console.log(vm.opponent.name);
-            console.log(opponent);
+            // Send the opponent to the Gameover Screen
             GameService.sendWinner(vm.opponent);
             //end round, change to view to gameover view
         } else if (vm.opponentHealth == 0){
@@ -118,17 +112,23 @@ controller: ["GameService", function (GameService){
             //  vm.sendWinner(winner);
             vm.totalWins++;
             GameService.sendWinner(vm.clickedHero); 
+            GameService.sendTotalWins(vm.totalWins);
             //end round, change to view to gameover view
             //vm.gameOver;
+            console.log(vm.totalWins);
             
-        }
-        
+        } else if (vm.opponentHealth == 0){
+            // Send the selected hero to the Gameover Screen
+            GameService.sendWinner(vm.clickedHero);          
+        } 
     }
-
-    //vm.sendWinner = GameService.sendWinner();
-
     //retrieving the user's character from Service
     vm.clickedHero = GameService.retrieveHero();
+
+    vm.victories = GameService.getTotalWins();
+
+
+    
     
 
     //takes user back to home view/component

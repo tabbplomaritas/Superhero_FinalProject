@@ -7,6 +7,7 @@ function GameService ($http, $location) {
   let clickedHero = {};
   let questionBank = [];
   let winner = {};
+  let totalWins = 0;
 
   const getPlayer = (id) => {
     
@@ -26,7 +27,6 @@ function GameService ($http, $location) {
       method: "GET",
       url: "/questions/",
     }).then((response) => {
-      console.log(response.data);
       questionBank =response.data;
     }).catch((error) => {
       console.log(error);
@@ -50,9 +50,7 @@ function GameService ($http, $location) {
     $location.path("/battle");
   }
 
-  const goToHome = () => {
-    console.log("go to home in service working");
-    
+  const goToHome = () => { 
     $location.path("/home");
   }
 
@@ -69,8 +67,15 @@ function GameService ($http, $location) {
     return winner;
   }
 
-  
-  
+  const sendTotalWins = (wins) =>{
+    totalWins += wins;
+    console.log(totalWins);
+    return totalWins
+  }
+
+  const getTotalWins = () => {
+    return totalWins
+  }
 
   return {
     getPlayer,
@@ -81,11 +86,10 @@ function GameService ($http, $location) {
     getQuestions,
     sendQuestions,
     sendWinner,
-    getWinner
+    getWinner,
+    sendTotalWins,
+    getTotalWins
   };
-
-
-
 }
 
 angular 
