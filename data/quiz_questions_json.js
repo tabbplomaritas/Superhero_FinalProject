@@ -1,88 +1,67 @@
 const questions=
+// ROOT INDEX
+[
+  // 6th Grade Root Index
+  [
 
-        [
-                [
-            {
-                "question": "What is half of 50?",
-                "options": [10,4,16,25],
-                "answer":25
-        },
-        {
-                "question": "Which of the following is not a type of liquid associated with a erupting volcano?", 
-                "options":["Magma","Water","Lava"],
-                "answer":"Water"
-        },
-        {
-        
-                "question": "Glass is made from ... ?",
-                "options":["Heating sand","Weaving fibres","Wood from trees"],
-                "answer":"Heating sand"
-                
-        
+  ],
+  // 7th Grade Root Index
+  [ 
+    {
+      "question":"-5 + ? = -1 ",
+      "options":[2,-4,4,0],
+      "answer":4
+    },
+    {
+      "question":"? - -8 = 6",
+      "options":[-2,6,2,7],
+      "answer":4
+    },
+    {
+      "question":"What is the square root of 25?",
+      "options":[5,2.5,6,12.5],
+      "answer":5
+    },
+    {
+      "question":"Find the mode of these numbers 5 7 2 3 4 1 8 9 4",
+      "options":[3,7,9,4],
+      "answer":4
+    },
+    {
+      "question":"How many terms are in this expression? d+6c+3b",
+      "options":[0,3,2,1],
+      "answer":3
+    },
+    {
+      "question":"The audience's thunderous applause left me completely speechless!",
+      "options":["declarative","iterrogative","exclamatory","question"],
+      "answer":"exclamatory"
+    },
+    {
+      "question":"The root cred means trust or believe. What does the word incredulous mean?",
+      "options":["unwilling to accept something as true","unwilling to give something away","unwilling to do harm to others","unwilling to give advice."],
+      "answer":"unwilling to accept something as true"
+    },
+    {
+      "question":"A job candidate must find some way to distinguish ______ from the rest of the pack.",
+      "options":["herself","ourselves","he","she"],
+      "answer":"herself"
+    },
+    {
+      "question":"Mrs. Shen gave Marshall the solo because he sang it the ______ of everyone who auditioned.",
+      "options":["worse","best","well","better"],
+      "answer":"best"
+    },
+    {
+      "question":"Alphabetically, which word comes first?: upstairs, upon, upward, upper",
+      "options":["upper","upstairs","upon","upward"],
+      "answer":"upon"
+    },
+  ],
+  // 8th grade Root Index
+  [
 
-        },
-        {
-                "question":"You have a shadow because...?",
-                "options":["You give off light","Light curves around you","You are blocking light"],
-                "answer":"You are blocking light"
+  ]
+]
 
-        },
-        {
-
-                "question":"How many continents are there?",
-                "options":[5,8,9,7],
-                "answer":7
-
-        },
-        {
-                "question":"what is a baby kangaroo called?",
-                "options":["worm","pup","Joey","cub"],
-                "answer":"Joey"
-
-        },
-        {
-
-                "question":"Who invented the Telephone?",
-                "options":["Nikola Tesla","Thomas Edison","Johann Danial","Alexander Graham Bell"],
-                "answer":"Alexander Graham Bell"
-        },
-        {
-                "question":" If you boil water, what do you get??",
-                "options":["Ice","Steam","Nothing","Freeze"],
-                "answer":"Steam"
-
-        },
-        {
-                "question":"What color are the stars on the United States of America Flag?",
-                "options":["Red","White","Blue"],
-                "answer":"White"
-
-        },
-        {
-                "question":"If you are outside and your shadow is in front of you then the Sun is ... ?",
-                "options":["In front of you","Behind you"],
-                "answer":"Behind you"
-        }],
-
-
-
-
-        //**TODO: THESE ARE NEW TEST QUESTIONS. NOT REAL QUESTIONS. MUST. UP. DATEEEEEE */
-
-        [
-                {
-                "question":"***  1 ***If you are outside and your shadow is in front of you then the Sun is ... ?",
-                "options":["In front of you","Behind you"],
-                "answer":"Behind you"
-                },
-                {
-                        "question":"***  1 *** If you are outside and your shadow is in front of you then the Sun is ... ?",
-                        "options":["In front of you","Behind you"],
-                        "answer":"Behind you"
-                        }
-
-        ]
-
-        ]
-
-        module.exports =questions;
+module.exports =questions;
