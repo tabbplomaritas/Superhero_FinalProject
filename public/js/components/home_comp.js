@@ -1,12 +1,6 @@
 "use strict";
 
-//TODO:make buttons/methods that allow user to say okay or go back for character 
-
-
-
-const home = {
-    
-
+const home = { 
     template: `
     <section class="main">
         <h2>Choose your character!</h2>
@@ -55,14 +49,10 @@ const home = {
 
             <div class="clickedHero_buttons">
                 <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
-                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readyToBattle-01.png">
-                
-               
+                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readyToBattle-01.png">  
             </div>
-        </section>
-       
+        </section> 
     </section>
-
     `,
     controller: ["GameService", function(GameService){
         const vm = this;
@@ -107,15 +97,12 @@ const home = {
         vm.viewHero = (hero) => {
             //change ng-show me to true to display the pop up
             vm.showMe= true;
-            console.log(vm.showMe);
-            
+                   
             //sends the clicked hero data to service so entire application can utilize
             GameService.sendHero(hero);
 
             //retrieves that stored data from GameService
             vm.clickedHero = GameService.retrieveHero();
-            
-
             
             //api call to view hero at that id
             GameService.getPlayer(vm.clickedHero.id).then((response)=> {
@@ -126,21 +113,13 @@ const home = {
         vm.chooseDifHero = () => {
             //hide the character stats popup
             vm.showMe = false;
-            console.log(vm.clickedHero);
-            console.log("click");
             vm.clickedHero = {};
-            console.log(vm.clickedHero);
         }
+        
         vm.viewBattle = () => {
             GameService.viewBattle();
         }
     }]
-
-
-
-
-
-
 }
 
 angular
