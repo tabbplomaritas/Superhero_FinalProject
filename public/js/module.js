@@ -1,6 +1,6 @@
 "use strict"
 
-console.log("Module is Working");
+
 
 angular 
     .module("app",["ngRoute"])
