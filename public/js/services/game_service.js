@@ -8,8 +8,9 @@ function GameService ($http, $location) {
   let questionBank = [];
   let winner = {};
   let totalWins = 0;
-  let opponent = {};
+  let opponent = false;
   let userInfo = {};
+
 
   const sendUserInfo = (user) => {
     userInfo = user;

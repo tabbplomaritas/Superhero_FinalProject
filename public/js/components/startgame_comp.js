@@ -9,9 +9,9 @@ const startGame ={
          <h3>Enter Your Name and Age to defeat Villains of the Galaxy </h3>
         <input type="text" placeholder="Name" ng-model="$ctrl.user.name">
         <div class="userInfoForm_Grade">
-            <p ng-click="$ctrl.setAge('8-10', $event);">8-10</p>
-            <p ng-click="$ctrl.setAge('11-13', $event);">11-13</p>
-            <p ng-click="$ctrl.setAge('14-16', $event);">14-16</p>
+            <p ng-click="$ctrl.setGrade(6, $event);">6TH GRADE!</p>
+            <p ng-click="$ctrl.setGrade(7, $event);">7TH GRADE!</p>
+            <p ng-click="$ctrl.setGrade(8, $event);">8TH GRADE!</p>
          </div>
         <button> Begin the Adventure </button>
       </form>
@@ -23,11 +23,11 @@ const startGame ={
         vm.user = {};
 
 
-        vm.setAge = (age, $event) =>{
+        vm.setGrade = (grade, $event) =>{
             console.log($event.target);
             angular.element($event.target).css("background-color", "#FFFFFF");
-            vm.user.age = age;
-            console.log(vm.user.age);
+            vm.user.grade = grade;
+            console.log(vm.user.grade);
         }
 
          vm.sendUserInfo = (user) => {

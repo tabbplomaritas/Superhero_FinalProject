@@ -35,7 +35,8 @@ template: `
         <div class="fighter_info">
             <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
             <div class="speechBubble">
-                <p id="opp_speech">Opponenet test test</p>
+                <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}</p>
+                <button class="button_battle" ng-click="$ctrl.startBattle();">Click to being battle!</button>
                 <img src="/assets/design/speechBubble_wide.png">
             </div>
             
@@ -43,11 +44,15 @@ template: `
 
         <h2>Player</h2>
         <div class="fighter_info">
-            <img class="fighter_info_img" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
+            <img class="fighter_info_img" id="playerImg" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
             
             <div class="speechBubble">
-                <p id="player_speech">player test test</p>
-                <img src="/assets/design/speechBubble_wide.png">
+                <div class="speechBubble_answers">
+                    <p class="answer_options" ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options" ng-click="$ctrl.checkAnswer(option);">
+                        {{option}} 
+                    </p>
+                </div>
+                <img id="playerSpeech_flipped" src="/assets/design/speechBubble_wide.png">
             </div>
 
         </div>
@@ -60,8 +65,6 @@ template: `
             <p ng-click="$ctrl.checkAnswer(option);"> {{option}} </p>
         </div>
     </div>
-
-    <button class="button_battle" ng-click="$ctrl.startBattle();">Start Battle</button>
       
 </section>
 `,
@@ -71,15 +74,13 @@ controller: ["GameService", function (GameService){
 
     // hero that player is using for the game
     let clickedHero = {};
-    let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687]
-    let randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
-
-    let opponent = {}; 
+   
+    let opponent = false; 
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 1;
-    vm.opponentHealth = 1;
+    vm.playerHealth = 3;
+    vm.opponentHealth = 3;
     vm.qIndex = 0;
     vm.selectedAnswer;
     vm.questions=[];
@@ -91,15 +92,15 @@ controller: ["GameService", function (GameService){
     
     //retrieves user info from service
     vm.user = GameService.getUserInfo();
- 
+  
     //based on users age range, sets the index for the array of questions
     vm.setArrayIndex = () => {
         console.log(vm.user);
-        if(vm.user.age == "8-10"){
+        if(vm.user.grade == 6){
             vm.i = 0;
-        } else if (vm.user.age == "11-13"){
+        } else if (vm.user.grade == 7){
             vm.i = 1;
-        } else if (vm.user.age == "14-16"){
+        } else if (vm.user.grade == 8){
             vm.i = 2;
         };
     }
@@ -168,20 +169,28 @@ controller: ["GameService", function (GameService){
     };  
     
 
+    vm.getNewOpp = () => {
+        if(opponent === false){
 
-    //gets opponent info from api using randomNum
-    GameService.getOpponent(randomNum).then((response)=> {
+            let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687];
+
+            let randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
+
+            GameService.getOpponent(randomNum).then((response)=> {
+                console.log(randomNum);
+                vm.opponent = response;
+            });
+        }
+    }
+    vm.getNewOpp();
     
-        vm.opponent = response;
-        
-    });
 }]
-
 }
 
+
 angular
-   .module("app")
-  .component("battle", battle);
+    .module("app")
+    .component("battle", battle);
 
 
   //change getPlayer to more generic title because it gets player OR opponent charecter. Suggest: get charecter
