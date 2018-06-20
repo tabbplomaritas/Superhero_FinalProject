@@ -1,5 +1,4 @@
 "use strict";
-console.log("start game comp is alive");
 
 const startGame ={
 
@@ -28,11 +27,9 @@ const startGame ={
             console.log($event.target);
             angular.element($event.target).css("background-color", "#FFFFFF");
             vm.user.grade = grade;
-            console.log(vm.user.grade);
         }
 
          vm.sendUserInfo = (user) => {
-             console.log(user);
             GameService.sendUserInfo(user);
          }
 

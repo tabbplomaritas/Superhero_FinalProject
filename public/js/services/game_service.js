@@ -1,5 +1,4 @@
 "use strict";
-console.log("service is working");
 
 function GameService ($http, $location) { 
   let player = 1; 
@@ -16,9 +15,6 @@ function GameService ($http, $location) {
   const sendUserInfo = (user) => {
     userInfo = user;
     $location.path("/home");
-
-    console.log(userInfo);
-    
   }
   
   const getUserInfo = () => {
@@ -74,8 +70,6 @@ function GameService ($http, $location) {
   }
 
   const viewBattle = () => {
-    console.log("service view battle working...ish");
-    
     $location.path("/battle");
   }
 
@@ -89,8 +83,6 @@ function GameService ($http, $location) {
   // returns us winner of game in gameover_comp
   const sendWinner = (theWinner) =>{
     winner = theWinner;
-    //logs winner of game
-    console.log(winner.name);
     $location.path("/gameover");
   }
 
@@ -117,7 +109,7 @@ function GameService ($http, $location) {
   }
 
   const getRandomNum = (randomNum) => {
-    console.log("hi")
+    console.log("hi from getrandomnum service")
     return randomNum
   }
 

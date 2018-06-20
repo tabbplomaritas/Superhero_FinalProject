@@ -4,7 +4,6 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const home = require("./routes/home-routes");
-// const home = require("./routes/character-routes");
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname+ "/public"));

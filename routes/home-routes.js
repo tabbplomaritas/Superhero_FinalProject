@@ -17,10 +17,7 @@ homeRouter.get("/home/:id", (req, res) => {
 });
 
 homeRouter.get("/questions/",(req,res) =>{
-
-  
   res.send(questions);
-
 });
 
 
