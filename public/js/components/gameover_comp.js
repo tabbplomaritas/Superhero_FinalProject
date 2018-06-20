@@ -4,7 +4,7 @@
 
 //TODO:reset power levels
 "use strict";
-console.log("gameover comp is working");
+
 
 const gameover = {
 
