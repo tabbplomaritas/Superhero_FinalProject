@@ -22,6 +22,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .circles-8 { 
+  
   background-size: 5.8rem 5.8rem;
 
   /*TODO: make sure this blend mode isn't too "extra"*/ 
@@ -543,6 +544,8 @@ footer img {
 
 .totalWins {
 font-size: 1.4rem;
+text-align: center;
+width: 25%;
 }
 
 #f6343c

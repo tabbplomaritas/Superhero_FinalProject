@@ -10,14 +10,15 @@
 const battle = {
 template: `
 <section class="main">
-        <p class="totalWins" ng-model="$ctrl.totalWins">
-         Total Victories:{{$ctrl.victories}}</p>
+      
 
 
         <div class="healthBar_div">
             <div class="healthBar_outer">
                 <div class="healthBar_inner"></div>
             </div>
+            <p class="totalWins" ng-model="$ctrl.totalWins">
+         Total Victories: {{$ctrl.victories}}</p>
             <div class="healthBar_outer">
                 <div class="healthBar_inner"></div>
             </div>
@@ -25,18 +26,23 @@ template: `
 
     
         <section class="fighters">
-          <h2>Opponent</h2>
+
           <div class="fighter_info">
+          <h2>Opponent</h2>
               <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
               <div class="speechBubble">
                   <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}</p>
-                  <button class="button_battle" ng-show="$ctrl.showMe" ng-click="$ctrl.startBattle();">Click to begin battle!</button>
+                 
                   <img src="/assets/design/speechBubble_wide.png">
               </div>
           </div>
 
-          <h2>Player</h2>
+          <button class="button_battle" ng-show="$ctrl.showMe" ng-click="$ctrl.startBattle();">Click to begin battle!</button>
+
+
+         
           <div class="fighter_info">
+          <h2>Player</h2>
               <img class="fighter_info_img" id="playerImg" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
               
               <div class="speechBubble">
