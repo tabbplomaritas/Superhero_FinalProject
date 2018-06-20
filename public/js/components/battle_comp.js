@@ -30,7 +30,7 @@ template: `
               <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
               <div class="speechBubble">
                   <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}</p>
-                  <button class="button_battle" ng-click="$ctrl.startBattle();">Click to being battle!</button>
+                  <button class="button_battle" ng-show="$ctrl.showMe" ng-click="$ctrl.startBattle();">Click to begin battle!</button>
                   <img src="/assets/design/speechBubble_wide.png">
               </div>
           </div>
@@ -80,6 +80,7 @@ controller: ["GameService", function (GameService){
     vm.questions=[];
     vm.totalWins = 0;
     vm.i = 0;
+    vm.showMe = true;
     
     //retrieves user info from service
     vm.user = GameService.getUserInfo();
@@ -100,7 +101,9 @@ controller: ["GameService", function (GameService){
     vm.setArrayIndex();
 
     vm.startBattle = () => {
+    
     GameService.getQuestions(vm.i).then(()=>{
+        vm.showMe= false;
         vm.questions=GameService.sendQuestions();
         })
     };
