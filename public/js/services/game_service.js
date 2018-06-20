@@ -10,6 +10,7 @@ function GameService ($http, $location) {
   let totalWins = 0;
   let opponent = {};
   let userInfo = {};
+  let randomNum = {};
 
   const sendUserInfo = (user) => {
     userInfo = user;
@@ -106,6 +107,19 @@ function GameService ($http, $location) {
   const getTotalWins = () => {
     return totalWins
   }
+  
+  const createRandomNum = () =>{
+    let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687]
+    let randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
+    console.log(randomNum);
+    return randomNum
+  }
+
+  const getRandomNum = (randomNum) => {
+    console.log("hi")
+    return randomNum
+  }
+
 
   return {
     getPlayer,
@@ -122,7 +136,9 @@ function GameService ($http, $location) {
     getOpponent,
     goToBattle,
     sendUserInfo,
-    getUserInfo
+    getUserInfo,
+    createRandomNum,
+    getRandomNum
   };
 }
 

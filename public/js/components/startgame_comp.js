@@ -21,6 +21,7 @@ const startGame ={
         const vm = this;
        
         vm.user = {};
+        GameService.createRandomNum(); 
 
 
         vm.setAge = (age, $event) =>{

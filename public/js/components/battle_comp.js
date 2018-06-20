@@ -69,10 +69,7 @@ template: `
 controller: ["GameService", function (GameService){
     const vm = this;
 
-    // hero that player is using for the game
-    let clickedHero = {};
-    let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687]
-    let randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
+   
 
     let opponent = {}; 
     let winner = {};   
@@ -170,11 +167,24 @@ controller: ["GameService", function (GameService){
 
 
     //gets opponent info from api using randomNum
-    GameService.getOpponent(randomNum).then((response)=> {
-    
-        vm.opponent = response;
-        
-    });
+     // hero that player is using for the game
+     let clickedHero = {};
+    //  let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687]
+    //  let randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
+     
+    let randomNum = {};
+   
+
+    // GameService.getRandomNum = (response) =>{
+    //     randomNum = response;
+    //     console.log(randomNum);
+    // }
+    vm.randomNum = GameService.getRandomNum();
+    console.log(vm.randomNum);
+     
+    // GameService.getOpponent(vm.randomNum).then((response)=> {
+    //     vm.opponent = response;
+    // });
 }]
 
 }
