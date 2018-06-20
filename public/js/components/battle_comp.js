@@ -1,17 +1,11 @@
 "use strict";
 
-
-//generate an opponent with math.random 
-
-//another api call to get that opponent with that number^
-
-//generate questions
-
-//if answer is correct or false, adjust power level
+//TODO:add percentage decrement to health bar (here and in CSS)
 
 //TODO:repeat that until one is defeated
 
 //TODO:change to the gamover over view/comp
+
 //TODO:change h3 health level to powerbar
 const battle = {
 template: `
@@ -39,7 +33,6 @@ template: `
                 <button class="button_battle" ng-click="$ctrl.startBattle();">Click to being battle!</button>
                 <img src="/assets/design/speechBubble_wide.png">
             </div>
-            
         </div>
 
         <h2>Player</h2>
@@ -54,13 +47,11 @@ template: `
                 </div>
                 <img id="playerSpeech_flipped" src="/assets/design/speechBubble_wide.png">
             </div>
-
         </div>
     </section>
 
     <div class="question">
         <h1>{{$ctrl.questions[$ctrl.qIndex].question}}</h1>
-
         <div ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options">
             <p ng-click="$ctrl.checkAnswer(option);"> {{option}} </p>
         </div>
@@ -72,7 +63,7 @@ template: `
 controller: ["GameService", function (GameService){
     const vm = this;
 
-    // hero that player is using for the game
+    // hero that user has chosen to play with
     let clickedHero = {};
    
     let opponent = false; 
@@ -86,9 +77,6 @@ controller: ["GameService", function (GameService){
     vm.questions=[];
     vm.totalWins = 0;
     vm.i = 0;
-    
-    //begins game: retrieve questions
-    //TODO: triggers animations
     
     //retrieves user info from service
     vm.user = GameService.getUserInfo();
@@ -139,14 +127,9 @@ controller: ["GameService", function (GameService){
             GameService.sendWinner(vm.opponent);
             //end round, change to view to gameover view
         } else if (vm.opponentHealth == 0){
-            // winner = vm.clickedHero;
-            // console.log(winner);
-            //  vm.sendWinner(winner);
             vm.totalWins++;
             GameService.sendWinner(vm.clickedHero); 
             GameService.sendTotalWins(vm.totalWins);
-            //end round, change to view to gameover view
-            //vm.gameOver;
             console.log(vm.totalWins);
             
         } else if (vm.opponentHealth == 0){
@@ -158,10 +141,6 @@ controller: ["GameService", function (GameService){
     vm.clickedHero = GameService.retrieveHero();
 
     vm.victories = GameService.getTotalWins();
-
-
-    
-    
 
     //takes user back to home view/component
     vm.goToHome = () => {
@@ -200,10 +179,3 @@ controller: ["GameService", function (GameService){
 angular
     .module("app")
     .component("battle", battle);
-
-
-  //change getPlayer to more generic title because it gets player OR opponent charecter. Suggest: get charecter
-
-  //finish check answer method
-
-  //write checkForWinner method 
