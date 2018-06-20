@@ -69,6 +69,7 @@ nav {
 }
 
 aside {
+  display: none;
   background-color: white;
   width: 20rem;
   height: 100%;
@@ -100,44 +101,31 @@ aside {
   top: 26%;
 }
 
+
 footer {
-  height: 20rem;
+  /* background: linear-gradient(to top, #32a3e0a2 25%,#85c4e67e); */
+  height: 15rem;
   width: 105%;
   position: fixed;
   bottom: -1%;
-  left: -.5%;
+  left: s;
   -ms-transform-origin: top left; /* IE 9 */
   -webkit-transform-origin: top left; /* Safari 3-8 */
   transform-origin: left top;
-  transform: rotate(3deg);
-  background-color: white;
-  border: .2rem solid black;
+  /* transform: rotate(3deg); */
+  /* background-color: white; */
+  /* border: .2rem solid black; */
   z-index: 3;
-  overflow: hidden;
-}
-
-.footer_inner {
-  background: linear-gradient(to top, #32a3e0a2 25%,#85c4e67e);
-  background-size: 100%;
-  width: 100%;
-  height: 100%;
-  top: 1rem;
-  bottom: 1rem;
-  left: -8rem;
-  right: 1rem;
-  position: fixed;
-  margin: 0 auto;
-  border: .2rem solid black;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 footer img {
   opacity: 1;
-  width: 59%;
-  height: auto;
+  width: auto;
+  height: 14rem;
   position: absolute;
-  top: -4rem;
-  right: 35rem;
+  bottom: 0;
+  right: 0;
   transform: rotate(0deg);
   mix-blend-mode: normal;
 }
@@ -145,6 +133,50 @@ footer img {
 
 
 /* ng-view styles */
+
+.userInfoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 55%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  height: 50%;
+  width: 90%;
+  padding: 1.3rem;
+  background-color: #f75002e0;
+  font-size: 1.4rem;
+  border-radius: .5rem;
+  -webkit-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+    -moz-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+    box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+}
+
+.userInfoForm button, input {
+  background-color: #feda0e;
+  padding: 1rem;
+  font-family: 'bangers';
+  font-size: 3rem;
+  border-radius: .5rem;
+}
+
+.userInfoForm h3 {
+  color: #0a1c20;
+  font-size: 3rem;
+}
+
+.userInfoForm p {
+  font-size: 2rem;
+  border: .2rem solid white;
+  padding: .5rem;
+  margin: .5rem;
+  border-radius: .5rem;
+  width: 20rem;
+
+}
 
 .clickedHero_stats {
     display: flex;
