@@ -13,6 +13,8 @@ function GameService ($http, $location) {
 
   const sendUserInfo = (user) => {
     userInfo = user;
+    $location.path("/home");
+
     console.log(userInfo);
     
   }
