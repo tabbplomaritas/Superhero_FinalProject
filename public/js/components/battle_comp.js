@@ -18,6 +18,14 @@ template: `
 <section class="main">
         <p class="totalWins" ng-model="$ctrl.totalWins">
          Total Victories:{{$ctrl.victories}}
+         <div class="healthBar_div">
+            <div class="healthBar_outer">
+                <div class="healthBar_inner"></div>
+            </div>
+            <div class="healthBar_outer">
+                <div class="healthBar_inner"></div>
+            </div>
+        </div>
 
     </p>
     <section class="fighters">
@@ -36,7 +44,6 @@ template: `
         </div>
 
     </section>
-    <button class="button_battle" ng-click="$ctrl.goToHome();">home</button>
 
     <div class="question">
         <h1>{{$ctrl.questions[$ctrl.qIndex].question}}</h1>
@@ -50,7 +57,6 @@ template: `
     </div>
         <button class="button_battle" ng-click="$ctrl.startBattle();">Start Battle</button>
       
-        <easy-questions></easy-questions>
 </section>
 `,
 
