@@ -263,8 +263,8 @@ footer img {
   border: none;
   position: absolute;
   right: -3rem;
-  bottom: -5rem;
-  transform: rotate(-15deg);
+  bottom: -2.5rem;
+  transform: rotate(16deg);
   transition: .5s all;
 }
 
@@ -363,7 +363,7 @@ footer img {
 
 /* battle styles */
 .fighters {
-  margin-top: 1rem;
+  margin: 1rem 0 9rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -372,21 +372,18 @@ footer img {
 }
 
 .fighter_info {
-  /* background-color: #d01f00d2; */
   margin: 1rem 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
   min-height: 18rem;
   position: relative;
-}
+} 
 
 .fighter_info_img {
-  display: flex;
-  flex-direction: row;
   position: absolute;
   right: -2rem;
   z-index: 1;
@@ -413,6 +410,7 @@ footer img {
 
 .speechBubble img {
   width: 115%;
+  max-width: 49.7rem;
 }
 
 .speechBubble_questions {
@@ -421,7 +419,7 @@ footer img {
   position: absolute;
   top: 50%;
   right: 50%;
-  font-size: 4vw;
+  font-size: 1.5rem;
   transform: translate(50%, -50%);
 }
 
@@ -430,7 +428,8 @@ footer img {
   position: absolute;
   top: 50%;
   right: 50%;
-  font-size: 4vw;
+  line-height: 1rem;
+  font-size: 1.5rem;
   transform: translate(50%, -50%);
   z-index: 500;
 }
@@ -505,8 +504,9 @@ footer img {
   padding: 1rem;
   border: .2rem solid #0a1c20;
   position: fixed;
-  bottom: 20rem;
-  right: 15rem;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
 .button_battle:nth-of-type(2){
@@ -522,7 +522,7 @@ footer img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 1rem;
+  margin: .5rem;
   padding: .5rem;
   transition: .3s all;
   text-align: left;
@@ -542,11 +542,7 @@ footer img {
 }
 
 .totalWins {
-  z-index: 500;
-  font-size: 3rem;
-  position: fixed;
-  top: 50%;
-  right: 50%;
+font-size: 1.4rem;
 }
 
 #f6343c

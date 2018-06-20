@@ -25,6 +25,7 @@ const startGame ={
 
         vm.setGrade = (grade, $event) =>{
             console.log($event.target);
+            
             angular.element($event.target).css("background-color", "#FFFFFF");
             vm.user.grade = grade;
         }
