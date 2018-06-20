@@ -6,7 +6,7 @@ const questions=
 
  
         
-    { "question":"In the number '1350', in which place is the 0?",
+  { "question":"In the number '1350', in which place is the 0?",
       "options": ["tens","thousands","ones","hundreds"],
       "answers":"ones"
   },
@@ -137,72 +137,72 @@ const questions=
   ],
   // 8th grade Root Index
   [
-      {
-        "question":"The _________ is the largest inland body of water on Earth.",
-        "options":["Dead Sea","Aral Sea","Caspian Sea","Red Sea",""],
-        "answer":"Caspian Sea"
-      },
-      {
-        "question":"What language do most Brazilians speak?",
-        "options":["Spanish","Portuguese","French","English"],
-        "answer":"Portuguese"
-      },
-      {
-        "question":"Rainfall (precipitation) is measured in?",
-        "options":["km","inches","cm","mm"],
-        "answer":"mm"
-      },
-      {
-        "question":"The Louisiana Purchase took place in what year?",
-        "options":["1802","1800","1803","1811"],
-        "answer":"1803"
-      },
-      {
-        "question":"What year did the First World War begin?",
-        "options":["1904","1914","1945","1916"],
-        "answer":"1914"
-      },
-      {
-        "question":"Who was first explorer to attempt to circumnavigate the globe?",
-        "options":["Hernando De Soto","Christopher Columbus","Marco Polo","Ferdinand Magellan"],
-        "answer":"Ferdinand Magellan"
-      },
-      {
-        "question": "Amelia was the first woman to fly solo across the Atlantic. What other record did she hold in relation to the Atlantic Ocean?",
-        "options": ["She was the first woman to fly across the Atlantic Ocean in both directions",
-        "She was the first person, male or female, to fly solo across the Atlantic Ocean",
-        "She was the first woman to cross the Atlantic Ocean in a plane",
-        "She was the first woman to sail solo across the Atlantic Ocean"],
-        "answer": "She was the first woman to cross the Atlantic Ocean in a plane"
-      },
-      {
-        "question":"What is a 20% tip of $24.00",
-        "options":[4.80, 4.50, 2.40, 4.40],
-        "answer":4.80
-      },
-      {
-        "question":"4 = 2b. What is b?",
-        "options":[1, .5, 2, 0],
-        "answer":2
-      },
-      {
-        "question":"What is weightless?",
-        "options":["light","lightbulb","bulb","grapes"],
-        "answer":"light"
-      },
-      {
-        "question":"What is 3?",
-        "options":["A quadnomial","A binomial","A monomial","trinomial "],
-        "answer":"A monomial"
-      },
-      {
-        "question":"What does deteroriate mean?",
-        "options":["to be purchased",
-        "to become lower in quality",
-        "to expand or grow heavier",
-        "to try again"],
-        "answer":"to become lower in quality"
-      },
+    {
+      "question":"The _________ is the largest inland body of water on Earth.",
+      "options":["Dead Sea","Aral Sea","Caspian Sea","Red Sea",""],
+      "answer":"Caspian Sea"
+    },
+    {
+      "question":"What language do most Brazilians speak?",
+      "options":["Spanish","Portuguese","French","English"],
+      "answer":"Portuguese"
+    },
+    {
+      "question":"Rainfall (precipitation) is measured in?",
+      "options":["km","inches","cm","mm"],
+      "answer":"mm"
+    },
+    {
+      "question":"The Louisiana Purchase took place in what year?",
+      "options":["1802","1800","1803","1811"],
+      "answer":"1803"
+    },
+    {
+      "question":"What year did the First World War begin?",
+      "options":["1904","1914","1945","1916"],
+      "answer":"1914"
+    },
+    {
+      "question":"Who was first explorer to attempt to circumnavigate the globe?",
+      "options":["Hernando De Soto","Christopher Columbus","Marco Polo","Ferdinand Magellan"],
+      "answer":"Ferdinand Magellan"
+    },
+    {
+      "question": "Amelia was the first woman to fly solo across the Atlantic. What other record did she hold in relation to the Atlantic Ocean?",
+      "options": ["She was the first woman to fly across the Atlantic Ocean in both directions",
+      "She was the first person, male or female, to fly solo across the Atlantic Ocean",
+      "She was the first woman to cross the Atlantic Ocean in a plane",
+      "She was the first woman to sail solo across the Atlantic Ocean"],
+      "answer": "She was the first woman to cross the Atlantic Ocean in a plane"
+    },
+    {
+      "question":"What is a 20% tip of $24.00",
+      "options":[4.80, 4.50, 2.40, 4.40],
+      "answer":4.80
+    },
+    {
+      "question":"4 = 2b. What is b?",
+      "options":[1, .5, 2, 0],
+      "answer":2
+    },
+    {
+      "question":"What is weightless?",
+      "options":["light","lightbulb","bulb","grapes"],
+      "answer":"light"
+    },
+    {
+      "question":"What is 3?",
+      "options":["A quadnomial","A binomial","A monomial","trinomial "],
+      "answer":"A monomial"
+    },
+    {
+      "question":"What does deteroriate mean?",
+      "options":["to be purchased",
+      "to become lower in quality",
+      "to expand or grow heavier",
+      "to try again"],
+      "answer":"to become lower in quality"
+    },
   ]
 ]
 
