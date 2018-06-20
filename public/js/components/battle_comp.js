@@ -10,7 +10,7 @@
 const battle = {
 template: `
 <section class="main">
-        <p class="totalWins" ng-model="$ctrl.totalWins"
+        <p class="totalWins" ng-model="$ctrl.totalWins">
          Total Victories:{{$ctrl.victories}}</p>
 
 
@@ -25,29 +25,32 @@ template: `
 
     
         <section class="fighters">
-        <h2>Opponent</h2>
-        <div class="fighter_info">
-            <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
-            <div class="speechBubble">
-                <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}</p>
-                <button class="button_battle" ng-click="$ctrl.startBattle();">Click to being battle!</button>
-                <img src="/assets/design/speechBubble_wide.png">
-            </div>
-        </div>
+          <h2>Opponent</h2>
+          <div class="fighter_info">
+              <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
+              <div class="speechBubble">
+                  <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}</p>
+                  <button class="button_battle" ng-click="$ctrl.startBattle();">Click to being battle!</button>
+                  <img src="/assets/design/speechBubble_wide.png">
+              </div>
+          </div>
 
-        <h2>Player</h2>
-        <div class="fighter_info">
-            <img class="fighter_info_img" id="playerImg" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
-            
-            <div class="speechBubble">
-                <div class="speechBubble_answers">
-                    <p class="answer_options" ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options" ng-click="$ctrl.checkAnswer(option);">
-                        {{option}} 
-                    </p>
-                </div>
-                <img id="playerSpeech_flipped" src="/assets/design/speechBubble_wide.png">
-            </div>
-        </div>
+          <h2>Player</h2>
+          <div class="fighter_info">
+              <img class="fighter_info_img" id="playerImg" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
+              
+              <div class="speechBubble">
+                  <div class="speechBubble_answers">
+                      <div class="answer_options" ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options">
+                        <p ng-click="$ctrl.checkAnswer(option);">
+                            {{option}} 
+                        </p>
+                         
+                      </div>
+                  </div>
+                  <img id="playerSpeech_flipped" src="/assets/design/speechBubble_wide.png">
+              </div>
+          </div>
     </section>
 
     <div class="question">
@@ -70,8 +73,8 @@ controller: ["GameService", function (GameService){
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 3;
-    vm.opponentHealth = 3;
+    vm.playerHealth = 5;
+    vm.opponentHealth = 5;
     vm.qIndex = 0;
     vm.selectedAnswer;
     vm.questions=[];
@@ -106,15 +109,22 @@ controller: ["GameService", function (GameService){
     vm.checkAnswer = (option) => {
         vm.selectedAnswer = option;
         vm.correctAnswer = vm.questions[vm.qIndex].answer;
+        console.log(option);
+        console.log(vm.selectedAnswer);
+        console.log(vm.correctAnswer);
+        
+        
+        
   
         //check if selected answer equals correct ansswer
         if (vm.selectedAnswer == vm.correctAnswer){
             //if it does, reduce opp health
             vm.opponentHealth --;
+            console.log(`opponent health is now: ${vm.opponentHealth}`);
         } else {
             //if it is not correct, reduce player health
             vm.playerHealth --;
-            `player health is now: ${vm.playerHealth}`
+           console.log(`player health is now: ${vm.playerHealth}`);
         }
         vm.checkForWinner();
     }
@@ -147,31 +157,16 @@ controller: ["GameService", function (GameService){
         GameService.goToHome();
     };  
     
-
-    // vm.getNewOpp = () => {
-    //     if(opponent === false){
-
-    //         let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687];
-
-    // //gets opponent info from api using randomNum
-    //  // hero that player is using for the game
-    //  let clickedHero = {};
-    // //  let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687]
-    // //  let randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
-     
-    // let randomNum = {};
-   
-
-    // GameService.getRandomNum = (response) =>{
-    //     randomNum = response;
-    //     console.log(randomNum);
-    // }
     vm.randomNum = GameService.getRandomNum();
-    console.log(vm.randomNum);
+
+    GameService.getOpponent(vm.randomNum).then((response)=> {
+        vm.opponent = response;
+    });
+    
+         
+
      
-    // GameService.getOpponent(vm.randomNum).then((response)=> {
-    //     vm.opponent = response;
-    // });
+   
 }]
 }
 

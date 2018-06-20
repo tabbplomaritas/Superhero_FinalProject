@@ -9,7 +9,7 @@ function GameService ($http, $location) {
   let totalWins = 0;
   let opponent = false;
   let userInfo = {};
-  let randomNum = {};
+  let randomNum;
 
 
   const sendUserInfo = (user) => {
@@ -83,6 +83,7 @@ function GameService ($http, $location) {
   // returns us winner of game in gameover_comp
   const sendWinner = (theWinner) =>{
     winner = theWinner;
+
     $location.path("/gameover");
   }
 
@@ -103,13 +104,10 @@ function GameService ($http, $location) {
   
   const createRandomNum = () =>{
     let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687]
-    let randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
-    console.log(randomNum);
-    return randomNum
+    randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
   }
 
-  const getRandomNum = (randomNum) => {
-    console.log("hi from getrandomnum service")
+  const getRandomNum = () => {
     return randomNum
   }
 
