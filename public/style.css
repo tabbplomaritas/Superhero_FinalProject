@@ -14,7 +14,6 @@ body {
   width: 100%;
   height: 100vh;
   background-color:#feda0e;
-  background-size: 58px 58px;
   font-family: 'Kalam', cursive;
 }
 
@@ -23,6 +22,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .circles-8 { 
+  background-size: 5.8rem 5.8rem;
+
   /*TODO: make sure this blend mode isn't too "extra"*/ 
   background-blend-mode: overlay;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8Y2lyY2xlIGN4PSc0LjUnIGN5PSc0LjUnIHI9JzQuNScgZmlsbD0nYmxhY2snLz4KPC9zdmc+"); 
@@ -33,7 +34,6 @@ nav {
   background-color: white;
   height: 14rem;
   width: 100%;
-  /* position: fixed; */
   top: -2rem;
   left: 0;
   right: 0;
@@ -54,10 +54,10 @@ nav {
 
 #logo {
   z-index: 34;
-  width: 43rem;
+  width: 28rem;
   position: absolute;
   right: 50%;
-  top: -11rem;
+  top: -7rem;
   transform: translate(50%);
 }
 
@@ -83,8 +83,6 @@ aside {
 
 .aside_inner {
   background: linear-gradient(to left, #f75002 50%,#ee7c47);
-  /* width: 95%;
-  height: 95%; */
   position: fixed;
   top: 1rem;
   bottom: 1rem;
@@ -94,42 +92,21 @@ aside {
   border: .2rem solid black;
 }
 
-.aside_inner img{
-  /* width: 200%;
-  position: absolute; */
-  right: 0;
-  top: 26%;
-}
-
-
 footer {
-  /* background: linear-gradient(to top, #32a3e0a2 25%,#85c4e67e); */
   height: 15rem;
   width: 105%;
   position: fixed;
   bottom: -1%;
-  left: s;
-  -ms-transform-origin: top left; /* IE 9 */
-  -webkit-transform-origin: top left; /* Safari 3-8 */
-  transform-origin: left top;
-  /* transform: rotate(3deg); */
-  /* background-color: white; */
-  /* border: .2rem solid black; */
   z-index: 3;
-  /* overflow: hidden; */
 }
 
 footer img {
-  opacity: 1;
   width: auto;
   height: 14rem;
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: rotate(0deg);
-  mix-blend-mode: normal;
 }
-
 
 
 /* ng-view styles */
@@ -143,10 +120,11 @@ footer img {
   position: absolute;
   top: 55%;
   right: 50%;
+  /* transform translate centers the div based on the center OF the div, rather than the edges */
   transform: translate(50%, -50%);
-  height: 50%;
+  height: auto;
   width: 90%;
-  padding: 1.3rem;
+  padding: 2rem 1rem;
   background-color: #f75002e0;
   font-size: 1.4rem;
   border-radius: .5rem;
@@ -158,24 +136,46 @@ footer img {
 .userInfoForm button, input {
   background-color: #feda0e;
   padding: 1rem;
+  margin: 1rem 0;
   font-family: 'bangers';
-  font-size: 3rem;
-  border-radius: .5rem;
+  font-size: 1.5rem;
+}
+
+.userInfoForm input {
+  border: .1rem solid black;
+  outline: none;
 }
 
 .userInfoForm h3 {
   color: #0a1c20;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+.userInfoForm_Grade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .userInfoForm p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: .2rem solid white;
   padding: .5rem;
   margin: .5rem;
-  border-radius: .5rem;
-  width: 20rem;
+  width: 15rem;
+  color: white;
+  margin-bottom: 1rem;
+}
 
+.userInfoForm p:nth-child(odd){ 
+  transform: rotate(-3deg);
+  background-color: #d01e00;
+}
+
+.userInfoForm p:nth-child(even){ 
+  transform: rotate(3deg);
+  background-color: #0a1c20;
 }
 
 .clickedHero_stats {
@@ -189,10 +189,12 @@ footer img {
     transform: translate(50%, -50%);
     z-index: 6;
     background-color: white;
+    width: 25rem;
     padding: 2rem 2rem 5rem 2rem;
     -webkit-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
     -moz-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
     box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+    border: .2rem solid black;
 }
 
 .clickedHero_name {
@@ -209,19 +211,21 @@ footer img {
 }
 
 .clickedHero_stats img {
-  width: 17rem;
+  width: 10rem;
+  border-radius: 50%;
   border: .2rem solid black;
 }
 
 .clickedHero_powerstats {
   width: 100%;
+  padding-bottom: 2rem;
   /* background-color: #41a6de; */
 }
 .clickedHero_powerstats_trait {
   display: flex;
   justify-content: space-between;
-  font-size: 1.5rem;
-  padding: .5rem;
+  font-size: 1.2rem;
+  padding: .4rem;
 }
 
 .clickedHero_powerstats_trait:nth-child(odd) {
@@ -236,6 +240,7 @@ footer img {
   cursor: pointer;
 }
 
+/* TODO: consolidate repetitive code on buttons */
 #backToHeroes {
   width: 11rem;
   height: 10rem;
@@ -249,8 +254,7 @@ footer img {
 
 #backToHeroes:hover,
 #readyToBattle:hover {
-  /* transform: rotate3d(45); */
-  transform: rotate3d(1, 1, 1, 45deg);
+  transform: rotate3d(1, 1, 1, 20deg);
 }
 
 #readyToBattle {
@@ -266,16 +270,11 @@ footer img {
 
 
 .main {
-  margin: 3rem 19rem 20rem 3rem;
-  padding: 6rem 1rem 1rem 1rem;
+  margin: 3rem;
+  padding: 1rem 1rem 1rem 1rem;
   background-color: rgba(255, 255, 255, 0.671);
   height: auto;
   min-height: 75%;
-  /* width: 100%; */
-  -ms-transform-origin: top left; /* IE 9 */
-  -webkit-transform-origin: top left; /* Safari 3-8 */
-  transform-origin: left top;
-  /* transform: rotate(-2deg); */
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -283,7 +282,7 @@ footer img {
 }
 
 .main h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: .5rem;
   color: #0a1c20;
   text-align: center;
@@ -301,8 +300,8 @@ footer img {
 .heroOption {
   margin: 1rem;
   margin-bottom: 2rem;
-  width: 25rem;
-  min-height: 30rem;;
+  width: 20rem;
+  min-height: 24rem;
   height: auto;
   background-color: white;
   padding: 1rem;
@@ -319,7 +318,7 @@ footer img {
   position: relative;
 }
 
-.test {
+/* .test {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -329,7 +328,7 @@ footer img {
   background-color: rgba(255, 255, 255, 0.411);
   z-index: 10;
   transition: .5s all;
-}
+} */
 
 .img_wrapper img{
   width: 100%;
@@ -394,6 +393,7 @@ footer img {
   background-color: #fedb0e;
 }
 
+/* TODO: make these buttons not suck */
 .button_battle {
   width: 5rem;
   background-color: #41a6de;

@@ -1,4 +1,7 @@
 
+/* TABLET VIEW */
+
+
 @media only screen and (min-width: 768px){
   footer img {
     width: 100%;
@@ -9,9 +12,53 @@
     display: block;
   }
 
-  .userInfoForm {
-    width: 60%;
+  #logo {
+    width: 31rem;
+    top: -6rem;
   }
+
+.main {
+  margin: 3rem 19rem 20rem 3rem;
+  padding: 6rem 1rem 1rem 1rem;
+}
+
+.userInfoForm {
+  width: 60%;
+  margin-right: 8rem;
+}
+
+.clickedHero_stats {
+  width: 35rem;
+}
+
+.clickedHero_stats img {
+  border-radius: 0;
+  width: 18rem;
+}
+.clickedHero_powerstats_trait {
+  font-size: 1.5rem;
+}
+
+
+
+
 
 }
 
+/* DESKTOP VIEWS */
+
+@media only screen and (min-width: 900px){
+
+
+  #logo {
+    width: 40rem;
+    top: -11rem;
+  }
+
+  .userInfoForm_Grade {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+}
