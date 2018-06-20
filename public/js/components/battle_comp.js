@@ -16,9 +16,11 @@
 const battle = {
 template: `
 <section class="main">
-        <p class="totalWins" ng-model="$ctrl.totalWins">
-         Total Victories:{{$ctrl.victories}}
-         <div class="healthBar_div">
+        <p class="totalWins" ng-model="$ctrl.totalWins"
+         Total Victories:{{$ctrl.victories}}</p>
+
+
+        <div class="healthBar_div">
             <div class="healthBar_outer">
                 <div class="healthBar_inner"></div>
             </div>
@@ -27,35 +29,39 @@ template: `
             </div>
         </div>
 
-    </p>
-    <section class="fighters">
+    
+        <section class="fighters">
+        <h2>Opponent</h2>
         <div class="fighter_info">
-            <h2>Player</h2>
-            <h3 ng-model="$ctrl.playerHealth">{{$ctrl.playerHealth}}</h3>
-            <p ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
-            <img ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
+            <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
+            <div class="speechBubble">
+                <p id="opp_speech">Opponenet test test</p>
+                <img src="/assets/design/speechBubble_wide.png">
+            </div>
+            
         </div>
 
+        <h2>Player</h2>
         <div class="fighter_info">
-            <h2>Opponent</h2>
-            <h3 ng-model="$ctrl.opponentHealth">{{$ctrl.opponentHealth}}</h3>
-            <p ng-model="$ctrl.opponent.name"> {{ $ctrl.opponent.name }} </p>
-            <img ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
-        </div>
+            <img class="fighter_info_img" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
+            
+            <div class="speechBubble">
+                <p id="player_speech">player test test</p>
+                <img src="/assets/design/speechBubble_wide.png">
+            </div>
 
+        </div>
     </section>
 
     <div class="question">
         <h1>{{$ctrl.questions[$ctrl.qIndex].question}}</h1>
 
-        
         <div ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options">
-        <p ng-click="$ctrl.checkAnswer(option);">
-        {{option}}
-        </p>
+            <p ng-click="$ctrl.checkAnswer(option);"> {{option}} </p>
         </div>
     </div>
-        <button class="button_battle" ng-click="$ctrl.startBattle();">Start Battle</button>
+
+    <button class="button_battle" ng-click="$ctrl.startBattle();">Start Battle</button>
       
 </section>
 `,
