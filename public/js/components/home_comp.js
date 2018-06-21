@@ -74,12 +74,12 @@ const home = {
             }
             , 
             {
-            'name': "The Incredible Hulk",
+            'name': "Hulk",
             'url': 'https://www.superherodb.com/pictures2/portraits/10/100/83.jpg',
             'id': 332
             }, 
             {
-            'name': "Spider Man",
+            'name': "Spider-Man",
             'url': 'https://www.superherodb.com/pictures2/portraits/10/100/133.jpg',
             'id': 620
             }, 
