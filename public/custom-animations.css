@@ -1,35 +1,27 @@
 .anim-typewriter{
-  /* width: 7.3em; */
-  -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  white-space: nowrap;
+  overflow: hidden;
+ max-width: 40rem;
+  /* background-color: chartreuse; */
+  position: absolute;
+  left: 8rem;
+  animation: type 4s steps(60, end);
+}
+span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { 
+    
+    width: 0; } 
+  to {
+    
+    }
+} 
 
 
-  animation: type 4s steps(60, end); 
-}
-@keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    width: 100%;
-    border: none;
-  }
-}
-@-webkit-keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    width: 100%;
-    border: none;
-  }
+@keyframes blink{
+  to{opacity: .0;}
 }
 

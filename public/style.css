@@ -415,19 +415,21 @@ footer img {
 }
 
 .speechBubble_questions {
-  width: 95%;
-  text-align: center;
+  width: 90%;
+  text-align: left;
   position: absolute;
   top: 50%;
-  right: 50%;
+  /* right: 50%; */
   font-size: 1.5rem;
-  transform: translate(50%, -50%);
+  /* opacity: 0; */
+  /* transform: translate(50%, -50%); */
 
   /* Animation */
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* width: 30 */
   /* transform: translateY(-50); */
-  white-space: nowrap;
-  border-right: .15em solid #41a6de
+  /* white-space: nowrap;
+  border-right: .15em solid #41a6de */
 }
 
 .speechBubble_answers {

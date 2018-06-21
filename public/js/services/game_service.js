@@ -83,8 +83,12 @@ function GameService ($http, $location) {
   // returns us winner of game in gameover_comp
   const sendWinner = (theWinner) =>{
     winner = theWinner;
-
+    console.log("send winner doing a thing");
+    console.log(winner);
+    
     $location.path("/gameover");
+    console.log("after location");
+    
   }
 
   // returns us 
