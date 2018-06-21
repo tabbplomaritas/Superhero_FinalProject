@@ -10,18 +10,16 @@ const gameover = {
 
   template:`
   <section class="main">
-    
-      <h1>Winner!</h1>
-      <h2 ng-model="$ctrl.winner.name"> {{ $ctrl.winner.name }} </h2>
-      <img class="gameoverImg" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.winner.image.url}}">
+      <h1 class="gameoverWinnerH1">Winner!</h1>  
+      <h2 class="gameoverWinnerH2" ng-model="$ctrl.winner.name"> {{ $ctrl.winner.name }} </h2>
+      <div class="gameoverImgContainer">
+        <img class="gameoverImg" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.winner.image.url}}">
+      </div>
       <div class="gamover_btns"> 
-        <button class="button_home" ng-click="$ctrl.goToHome();">home</button>
+        <button class="button_home" ng-click="$ctrl.goToHome();">New Game</button>
         <button class="button_rematch animated pulse infinite" ng-click="$ctrl.goToBattle();">Rematch</button>
       </div>
-   
-
-
-
+    
   </section>
   `,
 

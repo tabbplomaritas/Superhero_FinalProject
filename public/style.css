@@ -588,6 +588,21 @@ width: 25%;
 .gameoverImg {
   width: 25rem;
   height: 25rem;
+  /* position: relative;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%); */
+}
+
+.gameoverImgContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.gameoverWinnerH1{
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
 }
 
 .gamover_btns {
@@ -599,7 +614,7 @@ width: 25%;
 }
 
 .gamover_btns button {
-  z-index: 1000000000;
+  /* z-index: 1000000000; */
   width: 14rem;
   height: 7rem;
   font-size: 3rem;
@@ -612,6 +627,38 @@ width: 25%;
 .button_home {
   margin-bottom: .5rem;
   background-color: #fedb0e;
+}
+
+.gameover_name h2 {
+  margin: 0 auto;
+  padding: .5rem;
+  text-align: center;
+  font-family: 'bangers';
+  font-size: 2.5rem;
+  position: absolute;
+  top: 17rem;
+  left: 1rem;
+  background-color: rgb(247, 243, 243);
+  transform: rotate(-15deg);
+  border: .2rem solid black;
+  z-index: 2;
+}
+.button_rematch {
+  background-color: #46a7dc
+}
+
+.gameoverWinnerH2 {
+  margin: 0 auto;
+    padding: .5rem;
+    text-align: center;
+    font-family: 'bangers';
+    font-size: 2.5rem;
+    position: absolute;
+    top: 25rem;
+    left: 3rem;
+    background-color: rgb(247, 243, 243);
+    transform: rotate(-30deg);
+    border: 1px solid #fedb0e;
 }
 
 #f6343c
