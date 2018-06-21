@@ -268,8 +268,8 @@ footer img {
   border: none;
   position: absolute;
   right: -3rem;
-  bottom: -2.5rem;
-  transform: rotate(16deg);
+  bottom: -3rem;
+  transform: rotate(-15deg);
   transition: .5s all;
  
 }
