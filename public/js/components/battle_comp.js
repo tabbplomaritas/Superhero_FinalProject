@@ -29,7 +29,7 @@ template: `
           <h2>Opponent</h2>
               <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
               <div class="speechBubble">
-                  <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}</p>
+                  <p class="speechBubble_questions anim-typewriter">{{$ctrl.questions[$ctrl.qIndex].question}}</p>
                  
                   <img src="/assets/design/speechBubble_wide.png">
               </div>

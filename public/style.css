@@ -422,6 +422,12 @@ footer img {
   right: 50%;
   font-size: 1.5rem;
   transform: translate(50%, -50%);
+
+  /* Animation */
+  overflow: hidden;
+  /* transform: translateY(-50); */
+  white-space: nowrap;
+  border-right: .15em solid #41a6de
 }
 
 .speechBubble_answers {
