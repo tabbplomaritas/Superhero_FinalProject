@@ -26,7 +26,7 @@ template: `
         <section class="fighters">
 
           <div class="fighter_info">
-          <h2>Opponent</h2>
+          <h2>{{$ctrl.opponent.name}}</h2>
               <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
               <div class="speechBubble">
                   <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}<span>|</span></p>
@@ -40,7 +40,7 @@ template: `
 
          
           <div class="fighter_info">
-          <h2>Player</h2>
+          <h2>{{$ctrl.clickedHero.name}}</h2>
               <img class="fighter_info_img" id="playerImg" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
               
               <div class="speechBubble">
@@ -56,13 +56,6 @@ template: `
               </div>
           </div>
     </section>
-
-    <div class="question">
-        <h1>{{$ctrl.questions[$ctrl.qIndex].question}}</h1>
-        <div ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options">
-            <p ng-click="$ctrl.checkAnswer(option);"> {{option}} </p>
-        </div>
-    </div>
       
 </section>
 `,
