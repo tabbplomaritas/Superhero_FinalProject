@@ -41,6 +41,7 @@
 
 .speechBubble_questions {
   font-size: 1.7rem;
+  padding: .5rem 0rem .5rem 1.5rem;
   /* width: 75%; */
 }
 
@@ -98,10 +99,11 @@
   }
 
   .fighter_info_img {
+    margin-top: 2rem;
     position: static;
     z-index: 1;
     border: .2rem solid black;
-    width: 40%;
+    width: 30%;
     border-radius: 0%;
     order: 3;
   }
@@ -129,12 +131,6 @@
 
     footer img {
       bottom: -6rem;
-    }
- 
-    footer img {
-      width: 100%;
-      height: auto;
-      
     }
 
     }
