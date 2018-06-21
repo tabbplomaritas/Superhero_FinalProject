@@ -66,8 +66,7 @@
     height: 12%;
     font-size: 3.5rem;
     width: 38rem;
-     
-  }
+     }
 
   #logo {
     width: 40rem;
@@ -132,6 +131,12 @@
       bottom: -6rem;
     }
  
-  
+    footer img {
+      width: 100%;
+      height: auto;
+      
+    }
+
+    }
 
 }
