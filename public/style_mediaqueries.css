@@ -66,8 +66,7 @@
     height: 12%;
     font-size: 3.5rem;
     width: 38rem;
-     
-  }
+     }
 
 
 
@@ -138,6 +137,12 @@
     width: 33%;
     }
  
-  
+    footer img {
+      width: 100%;
+      height: auto;
+      
+    }
+
+    }
 
 }
