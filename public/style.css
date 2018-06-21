@@ -322,6 +322,13 @@ footer img {
   border: .2rem solid black;
   z-index: 1;
   position: relative;
+  transition: 0.5s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.img_wrapper:hover {
+  opacity: .65;
 }
 
 /* .test {
@@ -375,7 +382,7 @@ footer img {
   justify-content: space-between;
   width: 100%;
   height: auto;
-  cursor: pointer;
+ 
 }
 
 .fighter_info {
@@ -524,20 +531,20 @@ footer img {
 
 /* TODO: make these buttons not suck */
 .button_battle {
-    z-index: 1000000000;
-    width: 22rem;
-    height: 8rem;
-    background-color: #fedb0e;
-    font-size: 3rem;
-    font-family: 'Bangers', cursive;
-    color: black;
-    padding: 1rem;
-    border: .2rem solid #0a1c20;
-    position: fixed;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    cursor: pointer;
+  z-index: 1000000000;
+  width: 22rem;
+  height: 8rem;
+  background-color: #fedb0e;
+  font-size: 3rem;
+  font-family: 'Bangers', cursive;
+  color: black;
+  padding: 1rem;
+  border: .2rem solid #0a1c20;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  cursor: pointer;
 }
 
 .button_battle:nth-of-type(2){
