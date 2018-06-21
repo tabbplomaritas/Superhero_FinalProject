@@ -510,16 +510,19 @@ footer img {
 
 /* TODO: make these buttons not suck */
 .button_battle {
-  z-index: 1000000000;
-  width: 5rem;
-  background-color: #41a6de;
-  color: white;
-  padding: 1rem;
-  border: .2rem solid #0a1c20;
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
+    z-index: 1000000000;
+    width: 22rem;
+    height: 8rem;
+    background-color: #fedb0e;
+    font-size: 3rem;
+    font-family: 'Bangers', cursive;
+    color: black;
+    padding: 1rem;
+    border: .2rem solid #0a1c20;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
 }
 
 .button_battle:nth-of-type(2){
