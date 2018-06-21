@@ -70,6 +70,8 @@ function GameService ($http, $location) {
   }
 
   const viewBattle = () => {
+    console.log("view battle service working");
+    
     $location.path("/battle");
   }
 

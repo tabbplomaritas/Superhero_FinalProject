@@ -143,16 +143,8 @@ const home = {
         }
         
         vm.viewBattle = () => {
-            angular.element(main).addClass("animated fadeOut");
-
-            setTimeout(() => {
-                
-                angular.element(main).removeClass("animated fadeOut");
-                GameService.viewBattle();
-            }, 1000);
-
-
             vm.changeNavColor();
+            GameService.viewBattle();
         };
         
 
