@@ -3,7 +3,7 @@
 const startGame ={
 
     template:`
-     <form class="userInfoForm" ng-submit="$ctrl.sendUserInfo($ctrl.user)">
+     <form class="userInfoForm">
     
          <h3>Enter Your Name and Age to defeat Villains of the Galaxy </h3>
         <input type="text" placeholder="Name" ng-model="$ctrl.user.name">
@@ -12,7 +12,7 @@ const startGame ={
             <p class="grade animated" ng-click="$ctrl.setGrade(7, $event);">7TH GRADE!</p>
             <p class="grade animated" ng-click="$ctrl.setGrade(8, $event);">8TH GRADE!</p>
          </div>
-        <button> Begin the Adventure </button>
+          <img class="beginAdv" ng-click="$ctrl.sendUserInfo($ctrl.user)" src="../../assets/design/readyToBattle-01.png"</button>
       </form>
     `,
 

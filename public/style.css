@@ -259,6 +259,7 @@ footer img {
 #backToHeroes:hover,
 #readyToBattle:hover {
   transform: rotate3d(1, 1, 1, 20deg);
+  cursor: pointer;
 }
 
 #readyToBattle {
@@ -374,6 +375,7 @@ footer img {
   justify-content: space-between;
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 .fighter_info {
@@ -472,6 +474,18 @@ footer img {
   background-color: #fedb0e;
 }
 
+.beginAdv{
+  width: 11rem;
+  height: 10rem;
+  border: none;
+  position: absolute;
+  right: -3rem;
+  bottom: -3.5rem;
+  transform: rotate(-10deg);
+  transition: .5s all;
+  cursor: pointer;
+ 
+}
 
 
 .healthBar_div {
@@ -523,6 +537,7 @@ footer img {
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+    cursor: pointer;
 }
 
 .button_battle:nth-of-type(2){
