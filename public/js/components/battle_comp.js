@@ -35,7 +35,7 @@ template: `
               </div>
           </div>
 
-          <button class="button_battle" ng-show="$ctrl.showMe" ng-click="$ctrl.startBattle();">Click to begin battle!</button>
+          <button class="button_battle animated pulse infinite" ng-show="$ctrl.showMe" ng-click="$ctrl.startBattle();">Click to begin battle!</button>
 
 
          
