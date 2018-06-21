@@ -11,16 +11,14 @@ const battle = {
 template: `
 <section class="main">
       
-
-
         <div class="healthBar_div">
             <div class="healthBar_outer">
-                <div class="healthBar_inner"></div>
+                <div id="playerHealthBar" class="healthBar_inner"></div>
             </div>
             <p class="totalWins" ng-model="$ctrl.totalWins">
          Total Victories: {{$ctrl.victories}}</p>
             <div class="healthBar_outer">
-                <div class="healthBar_inner"></div>
+                <div id="oppHealthBar" class="healthBar_inner"></div>
             </div>
         </div>
 
@@ -87,6 +85,9 @@ controller: ["GameService", function (GameService){
     vm.totalWins = 0;
     vm.i = 0;
     vm.showMe = true;
+
+    vm.playerHealthBarWidth = 100;
+    vm.oppHealthBarWidth = 100;
     
     //retrieves user info from service
     vm.user = GameService.getUserInfo();
@@ -122,18 +123,33 @@ controller: ["GameService", function (GameService){
         console.log(vm.selectedAnswer);
         console.log(vm.correctAnswer);
         
-        
+        const oppHealthBar = document.getElementById("oppHealthBar");
+        const playerHealthBar = document.getElementById("playerHealthBar");
         
   
         //check if selected answer equals correct ansswer
         if (vm.selectedAnswer == vm.correctAnswer){
             //if it does, reduce opp health
             vm.opponentHealth --;
-            console.log(`opponent health is now: ${vm.opponentHealth}`);
+            //reduce the width of the bar variable by 20
+            vm.oppHealthBarWidth -=20;
+            //use that variable to adjust the width of the inner health bar
+            angular.element(oppHealthBar).css("width", `${vm.oppHealthBarWidth}%`);
+            //if the health reaches 1, change the bar to red
+            if(vm.opponentHealth === 1){
+                angular.element(oppHealthBar).css("background-color", "red");
+            }
+        
         } else {
             //if it is not correct, reduce player health
             vm.playerHealth --;
-           console.log(`player health is now: ${vm.playerHealth}`);
+            vm.playerHealthBarWidth -=20;
+            
+            angular.element(playerHealthBar).css("width", `${vm.playerHealthBarWidth}%`);
+       
+            if(vm.playerHealth === 1){
+                angular.element(playerHealthBar).css("background-color", "red");
+            }
         }
         vm.checkForWinner();
     }
