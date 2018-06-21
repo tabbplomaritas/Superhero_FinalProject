@@ -87,7 +87,13 @@ const home = {
             'name': "Storm",
             'url': 'https://www.superherodb.com/pictures2/portraits/10/100/135.jpg', 
             'id': 638
+            },
+            {
+            'name': "Black Panther",
+            'url': 'https://www.superherodb.com/pictures2/portraits/10/100/247.jpg',
+            'id': 106
             }
+           
             ]
         // make a function that connects each 6 pre-set heroes to respective character info --> character comp
         vm.hero = {};
