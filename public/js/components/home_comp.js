@@ -74,12 +74,12 @@ const home = {
             }
             , 
             {
-            'name': "The Incredible Hulk",
+            'name': "Hulk",
             'url': 'https://www.superherodb.com/pictures2/portraits/10/100/83.jpg',
             'id': 332
             }, 
             {
-            'name': "Spider Man",
+            'name': "Spider-Man",
             'url': 'https://www.superherodb.com/pictures2/portraits/10/100/133.jpg',
             'id': 620
             }, 
@@ -152,7 +152,72 @@ const home = {
             }, 1000);
 
 
-          
+            vm.changeNavColor();
+        };
+        
+
+      
+
+        vm.changeNavColor = () => {
+            let color1 = "";
+            let color2 = "";
+            let color3 = "";
+            let navInner = document.querySelectorAll(".nav_inner");
+            let asideInner = document.querySelectorAll(".aside_inner");
+            let body = document.querySelector("body");
+            
+            console.log(vm.clickedHero.name);
+            switch(vm.clickedHero.name) {
+
+                case "Captain America":
+                    color1 = "1DAFE6",
+                    color2 = "96d2e7",
+                    color3 = "e68f8d"
+                break;
+
+                case "Wonder Woman":
+                    color1 = "F3CA5A",
+                    color2 = "f1d893",
+                    color3 = "BC3A30"
+                break;
+
+                case "Batman":
+                    color1 = "12211A",
+                    color2 = "89908E",
+                    color3 = "FEEB81"
+                break;
+
+                case "Hulk":
+                    color1 = "A8E75A",
+                    color2 = "6f9c37",
+                    color3 = "6B3A89"
+                break;
+
+                case "Spider-Man":
+                    color1 = "BC3A30",
+                    color2 = "b87671",
+                    color3 = "0E1213"
+                break;
+
+                case "Storm":
+                    color1 = "8565D5",
+                    color2 = "ae9ed4";
+                    color3 = "DDD4E4"
+                break;
+
+                case "Black Panther":
+                    color1 = "050608",
+                    color2 = "433D71",
+                    color3 = "E8BF71"
+                break;
+
+            }
+            console.log(navInner);
+        
+            angular.element(navInner).css(`background`, `linear-gradient(to bottom, #${color1}, #${color2})`);
+            angular.element(asideInner).css(`background`, `linear-gradient(to left, #${color1} 50%, #${color2})`);
+            angular.element(body).css(`background-color`, `#${color3}`);
+            
         }
     }]
 }
