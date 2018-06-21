@@ -578,6 +578,35 @@ text-align: center;
 width: 25%;
 }
 
+.gameoverImg {
+  width: 25rem;
+  height: 25rem;
+}
+
+.gamover_btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2rem;
+}
+
+.gamover_btns button {
+  z-index: 1000000000;
+  width: 14rem;
+  height: 7rem;
+  font-size: 3rem;
+  font-family: 'Bangers', cursive;
+  color: black;
+  padding: 1rem;
+  border: .2rem solid #0a1c20;
+}
+
+.button_home {
+  margin-bottom: .5rem;
+  background-color: #fedb0e;
+}
+
 #f6343c
 #d01e00
 #fedb0e
