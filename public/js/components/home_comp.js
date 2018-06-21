@@ -13,7 +13,7 @@ const home = {
          </div>
         </section>
         
-        <section ng-show="$ctrl.showMe" class="clickedHero_stats">
+        <section class="clickedHero_stats">
             <p class="clickedHero_name" ng-model="$ctrl.clickedHero.name">{{ $ctrl.clickedHero.name }}</p>
 
             <img ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
@@ -100,8 +100,20 @@ const home = {
         vm.clickedHero = {};
         //initiate the ng-show on the character stats pop up to false
         vm.showMe = false;
+        const popUp = document.querySelector(".clickedHero_stats");
+            console.log(popUp);
+        const main = document.querySelector(".main");
+        
+
         vm.viewHero = (hero) => {
+      //animates the clickedHero_stats pop up
       
+      setTimeout(function(){
+
+        angular.element(popUp).css("display", "flex");
+    angular.element(popUp).addClass("animated rotateIn");
+      }, 200);
+                  
                    
             //sends the clicked hero data to service so entire application can utilize
             GameService.sendHero(hero);
@@ -112,19 +124,35 @@ const home = {
             //api call to view hero at that id
             GameService.getPlayer(vm.clickedHero.id).then((response)=> {
                 //change ng-show me to true to display the pop up
-                vm.showMe= true;
+              
+        // vm.showMe= true;
                 vm.clickedHero = response;
             })
         };
 
         vm.chooseDifHero = () => {
             //hide the character stats popup
-            vm.showMe = false;
-            vm.clickedHero = {};
+            angular.element(popUp).addClass("animated rotateOut");
+            // angular.element(popUp).css("display", "none");
+    
+            setTimeout(() => {
+                angular.element(popUp).removeClass("animated rotateOut");
+                angular.element(popUp).css("display", "none");
+                vm.clickedHero = {};
+            }, 1000);
         }
         
         vm.viewBattle = () => {
-            GameService.viewBattle();
+            angular.element(main).addClass("animated fadeOut");
+
+            setTimeout(() => {
+                
+                angular.element(main).removeClass("animated fadeOut");
+                GameService.viewBattle();
+            }, 1000);
+
+
+          
         }
     }]
 }

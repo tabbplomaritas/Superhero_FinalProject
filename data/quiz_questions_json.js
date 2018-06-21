@@ -12,15 +12,15 @@ const questions=
       "options": [5,4,8,3],
       "answer":3
   },
-  {   "question":"An anonymous foundation donates $2,000 per year to a university.            How much will the foundation donate in total to the university over 4 years?",
-      "options": [80000,5000,8000,6000],
-      "answer":8000
-  },
+  // {   "question":"An anonymous foundation donates $2,000 per year to a university.            How much will the foundation donate in total to the university over 4 years?",
+  //     "options": [80000,5000,8000,6000],
+  //     "answer":8000
+  // },
 
-  {  "question":"A souvenir factory puts 400 souvenir key chains in each crate. How many key chains total are there if there are 20 crates?",
-      "options": [8000,400000,22000,61000],
-      "answer":8000
-  },
+  // {  "question":"A souvenir factory puts 400 souvenir key chains in each crate. How many key chains total are there if there are 20 crates?",
+  //     "options": [8000,400000,22000,61000],
+  //     "answer":8000
+  // },
 
   {  "question":"156 divided by 39 = ___ ?",
       "options": [16,4,32,17],
@@ -32,7 +32,7 @@ const questions=
       "answer":"2000 miles"
   },
             
-  {   "question":"Physical maps show ______________ of an area?",
+  {   "question":"Physical maps show __ of an area?",
       "options": 
         ["landforms, like deserts, mountains and plains",
         "climate",
@@ -41,7 +41,7 @@ const questions=
       "answer":"landforms, like deserts, mountains and plains"
   },
             
-  {  "question":"The ______________ is the largest mountain system in North America?",
+  {  "question":"The ___ is the largest mountain system in North America?",
       "options": ["Rocky Mountains",
       "Appalachian Mountains",
       "Nova Scotia Mountains",
@@ -49,7 +49,7 @@ const questions=
       "answer":"Rocky Mountains"
   },
 
-  {  "question":" A ___________ is a person who creates maps based on different features, landscapes, and data.",
+  {  "question":" A ____ is a person who creates maps based on different features, landscapes, and data.",
       "options": ["economist",
       "cartographer",
       "biologist",
@@ -57,7 +57,7 @@ const questions=
       "answer":"cartographer"
   },
 
-  {  "question":" The longest river in World is the __________ ",
+  {  "question":" The longest river in World is the ______ ",
       "options": ["Yangtze River",
       "Amazon River",
       "Mississippi River",
@@ -65,7 +65,7 @@ const questions=
       "answer":"Nile River"
   },
 
-  { "question":" _______________ was an escaped slave who became a journalist, leading abolitionist, and writer of their own biography.",
+  { "question":" _____ was an escaped slave who became a journalist, leading abolitionist, and writer of their own biography.",
     "options": ["William Lloyd Garrison",
      "Frederick Douglass",
      "Harriet Tubman",
