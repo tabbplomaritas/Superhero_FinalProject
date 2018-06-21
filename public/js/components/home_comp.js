@@ -95,8 +95,7 @@ const home = {
         //initiate the ng-show on the character stats pop up to false
         vm.showMe = false;
         vm.viewHero = (hero) => {
-            //change ng-show me to true to display the pop up
-            vm.showMe= true;
+      
                    
             //sends the clicked hero data to service so entire application can utilize
             GameService.sendHero(hero);
@@ -106,6 +105,8 @@ const home = {
             
             //api call to view hero at that id
             GameService.getPlayer(vm.clickedHero.id).then((response)=> {
+                //change ng-show me to true to display the pop up
+                vm.showMe= true;
                 vm.clickedHero = response;
             })
         };
