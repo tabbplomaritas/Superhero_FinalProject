@@ -15,6 +15,7 @@ body {
   height: 100vh;
   background-color:#feda0e;
   font-family: 'Kalam', cursive;
+  
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -41,6 +42,7 @@ nav {
   transform: rotate(-2deg);
   border: .2rem solid black;
   z-index: 5;
+  
 }
 
 .nav_inner {
@@ -268,6 +270,7 @@ footer img {
   bottom: -2.5rem;
   transform: rotate(16deg);
   transition: .5s all;
+ 
 }
 
 
