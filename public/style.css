@@ -287,6 +287,20 @@ footer img {
   color: #0a1c20;
 }
 
+.main_gameover {
+  margin: 1.5rem;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: rgba(255, 255, 255, 0.671);
+  height: auto;
+  min-height: 75%;
+  z-index: -1;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #0a1c20;
+}
+
 .main h2 {
   font-size: 3rem;
   letter-spacing: .5rem;
@@ -430,7 +444,7 @@ footer img {
 
 .speechBubble_questions {
   width: 90%;
-  text-align: left;
+  text-align: center;
   position: absolute;
   top: 50%;
   /* right: 50%; */
@@ -588,23 +602,49 @@ footer img {
 }
 
 .totalWins {
-font-size: 1.4rem;
-text-align: center;
-width: 25%;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 25%;
 }
+
 
 .gameoverImg {
   width: 25rem;
   height: 25rem;
-  /* position: relative;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%); */
+  border: 2px solid black;
+  box-shadow: 0 .1rem .1rem grey;
 }
 
 .gameoverImgContainer{
+  margin-top: 3.3rem;
+  padding-bottom: 3.3rem;
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  
+  width: 50rem;
+  height: 30rem;
+  position: relative;
+}
+
+.gameoverImgContainer p {
+  margin: 0 auto;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  font-family: 'Special Elite', cursive;
+  text-shadow: 0px 1px 1px #4d4d4d;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 6rem;
+  left: 27rem;
+  transform: rotate(-15deg);
+  border: .5rem solid red;
+  border-radius: .5rem;
+  opacity: .2rem;
+  color: red;
+  z-index: 2;
 }
 
 .gameoverWinner{
@@ -650,8 +690,8 @@ width: 25%;
   font-family: 'bangers';
   font-size: 2.5rem;
   position: absolute;
-  top: 17rem;
-  left: 1rem;
+  top: 21rem;
+  left: 28rem;
   background-color: rgb(247, 243, 243);
   transform: rotate(-15deg);
   border: .2rem solid black;
@@ -660,16 +700,17 @@ width: 25%;
 
 .gameoverWinnerH2 {
   margin: 0 auto;
-    padding: .5rem;
-    text-align: center;
-    font-family: 'bangers';
-    font-size: 2.5rem;
-    position: absolute;
-    top: 25rem;
-    left: 3rem;
-    background-color: rgb(247, 243, 243);
-    transform: rotate(-30deg);
-    border: 1px solid #fedb0e;
+  padding: .5rem;
+  text-align: center;
+  font-family: 'bangers';
+  font-size: 2.5rem;
+  position: absolute;
+  top: 2rem;
+  left: 10rem;
+  background-color: rgb(247, 243, 243);
+  transform: rotate(-30deg);
+  border: 1px solid black;
+  z-index: 1000000;
 }
 
 #f6343c
