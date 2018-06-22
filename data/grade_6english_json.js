@@ -16,7 +16,51 @@ const questions=
         "question":"She was brave _ a lion. What's the missing word",
         "options": ["as","becuase","before","so"],
         "answer":"as"
-    }
+    },
+     {
+      "question":"The car belonging to the manager,Choose the correct answer for the following phrase",
+       "options":["The managers car","The manager's car","The managers'car","The managers's car"],
+       "answer":"The manager's car"
+
+    },
+    {
+      "question":"Their business's success was far greater than what even they themselves had dared to imagine",
+       "options":["Reflexive","Intensive"],
+      "answer":"Intensive"
+    },
+    {
+      "question":"Their business's success was far greater than what even they themselves had dared to imagine",
+      "options":["Reflexive","Intensive"],
+     "answer":"Intensive"
+   },
+   {
+    "question":"The root therm means heat. What does the word thermostat mean?",
+    "options":["a device that controls the lighting a room",
+              "a device that controls the music a room",
+              "a device that controls the heating a room"],                                        
+    "answer":"a device that controls the heating a room"
+   },
+   {
+    "question":" What are homonyms?", 
+    "options":["Words that imitate sounds or ideas",
+              "Words that are spelled the same but in their given context have different meanings",
+              "Words that describe, identify or further define a noun or a pronoun"],                                        
+    "answer":"Words that are spelled the same but in their given context have different meanings"
+   },
+   {
+    "question":"What is a metaphor?",
+    "options":["A word that replaces one or more nouns",
+              "A word that follows a conjunction",
+              "A word that shows possession",
+            "A word that is implied as being the “same” thing"],                                        
+    "answer":"A word that is implied as being the “same” thing"
+
+   },
+
+
+    
+
+
   ]
 ]
 
