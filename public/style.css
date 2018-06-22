@@ -113,6 +113,8 @@ footer img {
 
 /* ng-view styles */
 
+/* start component styles */
+
 .userInfoForm {
   display: flex;
   flex-direction: column;
@@ -161,6 +163,12 @@ footer img {
   align-content: center;
 }
 
+.userInfoForm_selections {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
 .userInfoForm p {
   font-size: 1.5rem;
   border: .2rem solid white;
@@ -169,15 +177,24 @@ footer img {
   width: 15rem;
   color: white;
   margin-bottom: 1rem;
+  transition: .3s all;
 }
 
 .userInfoForm p:nth-child(odd){ 
-  transform: rotate(-3deg);
+  /* transform: rotate(-3deg); */
   background-color: #d01e00;
 }
 
+.userInfoForm p:nth-child(odd):hover{
+    transform: rotate(-10deg);
+}
+
+.userInfoForm p:nth-child(even):hover{
+  transform: rotate(10deg);
+}
+
 .userInfoForm p:nth-child(even){ 
-  transform: rotate(3deg);
+  /* transform: rotate(3deg); */
   background-color: #0a1c20;
 }
 
