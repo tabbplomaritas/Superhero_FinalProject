@@ -10,7 +10,7 @@ const gameover = {
 
   template:`
   <section class="main">
-      <h1 class="gameoverWinnerH1">Winner!</h1>  
+      <p class="gameoverWinner">Winner!</p>  
       <h2 class="gameoverWinnerH2" ng-model="$ctrl.winner.name"> {{ $ctrl.winner.name }} </h2>
       <div class="gameoverImgContainer">
         <img class="gameoverImg" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.winner.image.url}}">
