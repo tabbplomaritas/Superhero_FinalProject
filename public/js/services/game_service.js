@@ -5,12 +5,34 @@ function GameService ($http, $location) {
   let data = {};
   let clickedHero = {};
   let questionBank = [];
+  // let newQuestionBank = [];
   let winner = {};
   let totalWins = 0;
   let opponent = false;
   let userInfo = {};
   let randomNum;
 
+  const removeCorrectQuestion = (questionI) => {
+    console.log(questionBank);
+    
+    questionBank.splice(questionI, 1);
+    console.log(questionBank);
+    
+  }
+
+  const returnOpponent = () => {
+    return opponent;
+  }
+
+  const upDifficulty = () => {
+    console.log(userInfo);
+
+      if(userInfo.grade < 8){
+      userInfo.grade++;
+
+      console.log(userInfo);
+      }
+  }
 
   const sendUserInfo = (user) => {
     userInfo = user;
@@ -47,18 +69,21 @@ function GameService ($http, $location) {
     })
   };
 
-  const getQuestions = (i) => {
+  const setGradeSubject = (gradeI, subjectI) => {
      return $http({
       method: "GET",
       url: "/questions/",
     }).then((response) => {
-      questionBank =response.data[i];
+      questionBank =response.data[gradeI][subjectI];
+      newQuestionBank =response.data[gradeI][subjectI];
+      console.log(questionBank);
+      
     }).catch((error) => {
       console.log(error);
     })
   };
 
-  const sendQuestions = () =>{
+  const getQuestions = () =>{
     return questionBank;
   }
   const sendHero = (hero) => {
@@ -112,25 +137,27 @@ function GameService ($http, $location) {
     return randomNum
   }
 
-
   return {
     getPlayer,
     sendHero,
     retrieveHero,
     viewBattle, 
     goToHome,
+    setGradeSubject,
     getQuestions,
-    sendQuestions,
     sendWinner,
     getWinner,
     sendTotalWins,
     getTotalWins, 
     getOpponent,
+    returnOpponent,
     goToBattle,
     sendUserInfo,
     getUserInfo,
     createRandomNum,
-    getRandomNum
+    getRandomNum,
+    upDifficulty,
+    removeCorrectQuestion
   };
 }
 

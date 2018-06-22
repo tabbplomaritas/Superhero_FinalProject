@@ -31,6 +31,21 @@ const gameover = {
     const vm = this;
     // gets winner from battle comp
     vm.winner = GameService.getWinner();
+    vm.clickedHero = GameService.retrieveHero();
+    //TODO: change these to be consistant naming conventions -also change in other comps to reflect
+   vm.opponent = GameService.returnOpponent();
+  
+
+    if(vm.winner.name == vm.clickedHero.name){
+      GameService.upDifficulty();
+      
+    } 
+    else if (vm.winner.name == vm.opponent.name) {
+      console.log("opponent wins, play again with questions you got wrong");
+      
+    }
+
+
      vm.goToHome = () => {
         GameService.goToHome();
     };
