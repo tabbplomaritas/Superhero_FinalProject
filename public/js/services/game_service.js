@@ -104,7 +104,7 @@ function GameService ($http, $location) {
   }
   
   const createRandomNum = () =>{
-    let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 576, 687]
+    let opponentSelect = [141, 207, 208, 225, 231, 247, 276, 287, 386, 398, 405, 441, 514, 558, 687]
     randomNum = opponentSelect[Math.floor(Math.random() * opponentSelect.length)];
   }
 
