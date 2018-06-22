@@ -31,7 +31,7 @@ template: `
         <section class="name_bubbleWrap"> 
             <h2>{{$ctrl.opponent.name}}</h2>
             <div class="speechBubble">
-                <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}</p>
+                <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.questionI].question}}</p>
                 <img src="/assets/design/speechBubble_wide.png">
             </div>
           </div>
@@ -50,7 +50,7 @@ template: `
             <h2>{{$ctrl.clickedHero.name}}</h2>
                 <div class="speechBubble">
                     <div class="speechBubble_answers">
-                    <div class="answer_options" ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options">
+                    <div class="answer_options" ng-repeat="option in $ctrl.questions[$ctrl.questionI].options">
                         <p ng-click="$ctrl.checkAnswer(option);">{{option}} </p>
                     </div>
                     </div>
@@ -70,13 +70,14 @@ controller: ["GameService", function (GameService){
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 5;
-    vm.opponentHealth = 5;
-    vm.qIndex = 0;
+    vm.playerHealth = 2;
+    vm.opponentHealth = 2;
+    vm.gradeI;
+    vm.subjectI;
+    vm.questionI = 0;
     vm.selectedAnswer;
     vm.questions=[];
     vm.totalWins = 0;
-    vm.i = 0;
     vm.showMe = true;
     vm.opponent;
 
@@ -91,37 +92,55 @@ controller: ["GameService", function (GameService){
     vm.user = GameService.getUserInfo();
   
     //based on users age range, sets the index for the array of questions
-    vm.setArrayIndex = () => {
-        console.log(vm.user);
+    vm.setGradeIndex = () => {
+        
         if(vm.user.grade == 6){
-            vm.i = 0;
+            vm.gradeI = 0;
         } else if (vm.user.grade == 7){
-            vm.i = 1;
+            vm.gradeI = 1;
         } else if (vm.user.grade == 8){
-            vm.i = 2;
+            vm.gradeI = 2;
         };
     }
 
+    vm.setSubjectIndex = () => {
+      
+        if(vm.user.subject === "English"){
+            vm.subjectI = 0;
+        } else if (vm.user.subject === "Math"){
+            vm.subjectI = 1;
+        } else if (vm.user.subject === "Science"){
+            vm.subjectI = 2;
+        } else if (vm.user.subject === "History"){
+            vm.subjectI = 3;
+        };
+        console.log(vm.subjectI);
+    }
+
     //calls the method above
-    vm.setArrayIndex();
-    const questionP = document.querySelector(".speechBubble_questions");
+    vm.setGradeIndex();
+    vm.setSubjectIndex();
+
+    GameService.setGradeSubject(vm.gradeI, vm.subjectI);
+    // const questionP = document.querySelector(".speechBubble_questions");
     vm.startBattle = () => {
     
-        
-    GameService.getQuestions(vm.i).then(()=>{
-       
-        console.log(questionP);
-        //add the animated class to the speech bubble Q's </p>
-        // angular.element(questionP).addClass("anim-typewriter");
+        vm.questions=GameService.getQuestions();
+        console.log(vm.questions);
         vm.showMe= false;
-        vm.questions=GameService.sendQuestions();
-        })
+    // GameService.getQuestions(vm.gradeI, vm.subjectI).then(()=>{
+    //    console.log("getquestions method running");
+    //     vm.showMe= false;
+    //     vm.questions = GameService.sendQuestions();
+    //     })
     };
+
+
 
 
     vm.checkAnswer = (option) => {
         vm.selectedAnswer = option;
-        vm.correctAnswer = vm.questions[vm.qIndex].answer;
+        vm.correctAnswer = vm.questions[vm.questionI].answer;
     
         //remove question animation
         // angular.element(questionP).removeClass("anim-typewriter");
@@ -142,10 +161,18 @@ controller: ["GameService", function (GameService){
                 vm.oppHealthBarWidth -=20;
                 //use that variable to adjust the width of the inner health bar
                 angular.element(oppHealthBar).css("width", `${vm.oppHealthBarWidth}%`);
+
                 //if the health reaches 1, change the bar to red
                 if(vm.opponentHealth === 1){
                     angular.element(oppHealthBar).css("background-color", "red");
                 }
+
+                //remove from array
+                console.log(`vm.questions[vm.gradeI][vm.subjectI]`);
+                
+                GameService.removeCorrectQuestion(vm.questionI);
+                console.log(vm.questions);
+                
         
             } else {
                 //if it is not correct, reduce player health
@@ -162,9 +189,8 @@ controller: ["GameService", function (GameService){
 
     vm.checkForWinner = () => {
         if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
-           
-            console.log(questionP);
-            vm.qIndex++;
+        
+            vm.questionI++;
             // angular.element(questionP).css("display", "block");
             // angular.element(questionP).addClass("anim-typewriter");
         } else if (vm.playerHealth === 0){
