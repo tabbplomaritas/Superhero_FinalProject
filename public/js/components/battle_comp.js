@@ -26,13 +26,14 @@ template: `
         <section class="fighters">
 
           <div class="fighter_info">
-          <h2>{{$ctrl.opponent.name}}</h2>
+         
               <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
-              <div class="speechBubble">
-                  <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}<span>|</span></p>
-                 
-                  <img src="/assets/design/speechBubble_wide.png">
-              </div>
+        <section class="name_bubbleWrap"> 
+            <h2>{{$ctrl.opponent.name}}</h2>
+            <div class="speechBubble">
+                <p class="speechBubble_questions">{{$ctrl.questions[$ctrl.qIndex].question}}</p>
+                <img src="/assets/design/speechBubble_wide.png">
+            </div>
           </div>
 
           <div class="begin_battle_button_wrap">
@@ -42,21 +43,20 @@ template: `
 
          
           <div class="fighter_info">
-          <h2>{{$ctrl.clickedHero.name}}</h2>
+          
+         
               <img class="fighter_info_img" id="playerImg" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
-              
-              <div class="speechBubble">
-                  <div class="speechBubble_answers">
-                      <div class="answer_options" ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options">
-                        <p ng-click="$ctrl.checkAnswer(option);">
-                            {{option}} 
-                        </p>
-                         
-                      </div>
-                  </div>
-                  <img id="playerSpeech_flipped" src="/assets/design/speechBubble_wide.png">
-              </div>
-          </div>
+        <section class="name_bubbleWrap"> 
+            <h2>{{$ctrl.clickedHero.name}}</h2>
+                <div class="speechBubble">
+                    <div class="speechBubble_answers">
+                    <div class="answer_options" ng-repeat="option in $ctrl.questions[$ctrl.qIndex].options">
+                        <p ng-click="$ctrl.checkAnswer(option);">{{option}} </p>
+                    </div>
+                    </div>
+                    <img id="playerSpeech_flipped" src="/assets/design/speechBubble_wide.png">
+                </div>
+        </section>
     </section>
       
 </section>
@@ -70,8 +70,8 @@ controller: ["GameService", function (GameService){
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 2;
-    vm.opponentHealth = 2;
+    vm.playerHealth = 5;
+    vm.opponentHealth = 5;
     vm.qIndex = 0;
     vm.selectedAnswer;
     vm.questions=[];
@@ -112,7 +112,7 @@ controller: ["GameService", function (GameService){
        
         console.log(questionP);
         //add the animated class to the speech bubble Q's </p>
-        angular.element(questionP).addClass("anim-typewriter");
+        // angular.element(questionP).addClass("anim-typewriter");
         vm.showMe= false;
         vm.questions=GameService.sendQuestions();
         })
@@ -124,8 +124,8 @@ controller: ["GameService", function (GameService){
         vm.correctAnswer = vm.questions[vm.qIndex].answer;
     
         //remove question animation
-        angular.element(questionP).removeClass("anim-typewriter");
-        angular.element(questionP).css("display", "none");
+        // angular.element(questionP).removeClass("anim-typewriter");
+        // angular.element(questionP).css("display", "none");
     
         //checks the answer itself
         vm.isAnswerRight(vm.selectedAnswer, vm.correctAnswer);
@@ -165,8 +165,8 @@ controller: ["GameService", function (GameService){
            
             console.log(questionP);
             vm.qIndex++;
-            angular.element(questionP).css("display", "block");
-            angular.element(questionP).addClass("anim-typewriter");
+            // angular.element(questionP).css("display", "block");
+            // angular.element(questionP).addClass("anim-typewriter");
         } else if (vm.playerHealth === 0){
             console.log("playerHealth 0");
             console.log(vm.opponent);
