@@ -125,7 +125,7 @@ controller: ["GameService", function (GameService){
     // const questionP = document.querySelector(".speechBubble_questions");
     vm.startBattle = () => {
     
-        vm.questions=GameService.getQuestions();
+        vm.questions=angular.copy(GameService.getQuestions());
         console.log(vm.questions);
         vm.showMe= false;
     // GameService.getQuestions(vm.gradeI, vm.subjectI).then(()=>{
