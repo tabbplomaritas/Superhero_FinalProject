@@ -50,7 +50,9 @@ const gameover = {
      vm.goToHome = () => {
         GameService.goToHome();
     };
+    
     vm.goToBattle = () => {
+      GameService.rematchTrue();
       GameService.goToBattle();
     };  
 

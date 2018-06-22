@@ -80,6 +80,7 @@ controller: ["GameService", function (GameService){
     vm.totalWins = 0;
     vm.showMe = true;
     vm.opponent;
+  
 
     vm.playerHealthBarWidth = 100;
     vm.oppHealthBarWidth = 100;
@@ -90,7 +91,10 @@ controller: ["GameService", function (GameService){
     
     //retrieves user info from service
     vm.user = GameService.getUserInfo();
-  
+    vm.isRematch = GameService.isRematch();
+
+
+
     //based on users age range, sets the index for the array of questions
     vm.setGradeIndex = () => {
         
@@ -121,18 +125,22 @@ controller: ["GameService", function (GameService){
     vm.setGradeIndex();
     vm.setSubjectIndex();
 
-    GameService.setGradeSubject(vm.gradeI, vm.subjectI);
+    if(vm.isRematch == false){
+        console.log(vm.isRematch);
+        
+        GameService.setGradeSubject(vm.gradeI, vm.subjectI);
+    } else {
+        console.log("this is a rematch, use old questions.");
+        
+    }
+
     // const questionP = document.querySelector(".speechBubble_questions");
     vm.startBattle = () => {
     
-        vm.questions=angular.copy(GameService.getQuestions());
+        vm.questions = angular.copy(GameService.getQuestions());
         console.log(vm.questions);
         vm.showMe= false;
-    // GameService.getQuestions(vm.gradeI, vm.subjectI).then(()=>{
-    //    console.log("getquestions method running");
-    //     vm.showMe= false;
-    //     vm.questions = GameService.sendQuestions();
-    //     })
+ 
     };
 
 

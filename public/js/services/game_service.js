@@ -5,12 +5,20 @@ function GameService ($http, $location) {
   let data = {};
   let clickedHero = {};
   let questionBank = [];
-  // let newQuestionBank = [];
   let winner = {};
   let totalWins = 0;
   let opponent = false;
   let userInfo = {};
   let randomNum;
+  let checkIsRematch = false;
+
+  const isRematch = () => {
+    return checkIsRematch;
+  }
+
+  const rematchTrue = () => {
+    checkIsRematch = true;
+  }
 
   const removeCorrectQuestion = (questionI) => {
     console.log(questionBank);
@@ -75,7 +83,6 @@ function GameService ($http, $location) {
       url: "/questions/",
     }).then((response) => {
       questionBank =response.data[gradeI][subjectI];
-      newQuestionBank =response.data[gradeI][subjectI];
       console.log(questionBank);
       
     }).catch((error) => {
@@ -157,7 +164,9 @@ function GameService ($http, $location) {
     createRandomNum,
     getRandomNum,
     upDifficulty,
-    removeCorrectQuestion
+    removeCorrectQuestion,
+    isRematch, 
+    rematchTrue
   };
 }
 
