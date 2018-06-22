@@ -100,11 +100,11 @@
   }
 
   .fighter_info_img {
-    margin-top: 2rem;
+    margin-top: -2rem;
     position: static;
     z-index: 1;
     border: .2rem solid black;
-    width: 30%;
+    width: 40%;
     border-radius: 0%;
     order: 3;
   }
