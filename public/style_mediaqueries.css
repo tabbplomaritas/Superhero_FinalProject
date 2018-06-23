@@ -17,45 +17,48 @@
     top: -6rem;
   }
 
-.main {
-  margin: 3rem 19rem 20rem 3rem;
-  padding: 6rem 1rem 1rem 1rem;
-}
+  .main {
+    margin: 3rem 19rem 20rem 3rem;
+    padding: 6rem 1rem 1rem 1rem;
+  }
 
-.userInfoForm {
-  width: 60%;
-  margin-right: 8rem;
-}
+  .userInfoForm {
+    width: 60%;
+    margin-right: 8rem;
+  }
 
-.clickedHero_stats {
-  width: 35rem;
-}
+  .clickedHero_stats {
+    width: 35rem;
+  }
 
-.clickedHero_stats img {
-  border-radius: 0;
-  width: 18rem;
-}
-.clickedHero_powerstats_trait {
-  font-size: 1.5rem;
-}
+  .clickedHero_stats img {
+    border-radius: 0;
+    width: 18rem;
+  }
+  .clickedHero_powerstats_trait {
+    font-size: 1.5rem;
+  }
 
-.speechBubble_questions {
-  font-size: 1.7rem;
-  padding: .5rem 0rem .5rem 2.5rem;
+  .speechBubble_questions {
+    font-size: 1.7rem;
+    padding: .5rem 0rem .5rem 2.5rem;
+  }
 
-}
+  .speechBubble_answers {
+    font-size: 1.7rem;
+  }
 
-.speechBubble_answers {
-  font-size: 1.7rem;
-}
-.button_battle {
-  height: 12rem;
-  font-size: 3.5rem;
-  width: 25rem;
-}
-.totalWins {
-  font-size: 2rem;
-  width: 33%;
+  .button_battle {
+    height: 12rem;
+    font-size: 3.5rem;
+    width: 25rem;
+  }
+
+  .totalWins {
+    font-size: 2rem;
+    width: 33%;
+    }
+    
   }
 
 /* DESKTOP VIEWS */
@@ -71,12 +74,25 @@
     top: -11rem;
   }
 
-  .userInfoForm_Grade {
+  .userInfoForm_selections {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .userInforForm_Subject_opts, .userInforForm_Grade_opts {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
   }
+/* 
+  .userInfoForm_Grade, .userInfoForm_Subject {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  } */
 
   .fighters {
     flex-direction: row;

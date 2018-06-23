@@ -25,3 +25,24 @@ span{
   to{opacity: .0;}
 }
 
+@keyframes customRotate {
+  from {
+    -webkit-transform: rotate(-600deg);
+    transform: translate(50%) rotate(-600deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(50%) rotate(0);
+    opacity: 1;
+  }
+}
+
+.customRotate {
+  /* -webkit-animation-name: rotateIn; */
+  animation-name: customRotate;
+  animation-delay: 0;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}

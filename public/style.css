@@ -60,7 +60,9 @@ nav {
   position: absolute;
   right: 50%;
   top: -7rem;
-  transform: translate(50%);
+  /* transform: translate(50%); */
+  -webkit-transform-origin: center;
+  transform-origin: center;
 }
 
 #spiderman{
@@ -133,27 +135,28 @@ footer img {
   font-size: 1.4rem;
   border-radius: .5rem;
   -webkit-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
-    -moz-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
-    box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+  -moz-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+  box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+  overflow: visible;
+
 }
 
-.userInfoForm button, input {
+.userInfoForm input {
   background-color: #feda0e;
   padding: 1rem;
   margin: 1rem 0;
   font-family: 'bangers';
   font-size: 1.5rem;
   cursor: pointer;
-}
-
-.userInfoForm input {
   border: .1rem solid black;
   outline: none;
+  font-family: kalam;
 }
 
 .userInfoForm h3 {
   color: #0a1c20;
   font-size: 2rem;
+  letter-spacing: .15rem;
 }
 
 .userInfoForm_Grade {
@@ -163,15 +166,29 @@ footer img {
   align-content: center;
 }
 
+.userInfoForm_Subject {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .userInfoForm_selections {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
 
+.userInfoForm_selections h3 {
+  width: 80%;
+  letter-spacing: .2rem;
+  font-size: 2.2rem;
+}
+
+
 .userInfoForm p {
-  font-size: 1.5rem;
-  border: .2rem solid white;
+  font-size: 2rem;
+  border: .2rem solid black;
   padding: .5rem;
   margin: .5rem;
   width: 15rem;
@@ -180,23 +197,14 @@ footer img {
   transition: .3s all;
 }
 
-.userInfoForm p:nth-child(odd){ 
-  /* transform: rotate(-3deg); */
+.userInfoForm_Grade p {
+  background-color: #46a7dc;
+}
+
+.userInfoForm_Subject p {
   background-color: #d01e00;
 }
 
-.userInfoForm p:nth-child(odd):hover{
-    transform: rotate(-10deg);
-}
-
-.userInfoForm p:nth-child(even):hover{
-  transform: rotate(10deg);
-}
-
-.userInfoForm p:nth-child(even){ 
-  /* transform: rotate(3deg); */
-  background-color: #0a1c20;
-}
 
 .clickedHero_stats {
     flex-direction: column;
