@@ -5,7 +5,7 @@ const startGame ={
     template:`
      <form class="userInfoForm">
     
-         <h3>Enter Your Name and Age to defeat Villains of the Galaxy </h3>
+         <h3>Enter Your Name, Subject & Grade to defeat Villains of the Galaxy </h3>
         <input type="text" placeholder="Name" ng-model="$ctrl.user.name">
         
         <section class="userInfoForm_selections">
