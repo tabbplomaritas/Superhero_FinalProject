@@ -131,7 +131,7 @@ const questions=
   [
    [
     {
-     "question":"I have dry scaly skin breathe with lungs and lay shelled eggs,Who am I?",
+     "question":"I have dry scaly skin,breathe with lungs and lay shelled eggs,What am I?",
       "options":["A.Primates","B.Reptiles","C.Amphibians","D.Cephalopods"],
      "answer":"B.Reptiles"
     },
@@ -196,7 +196,63 @@ const questions=
       "question":"Who was the fourth President of the United States?",
        "options":["A.John Adams","B.Thomas Jefferson","C.Alexander Hamilton","D.James Madison"],
       "answer":"D.James Madison"
+     },
+     {
+      "question":" Which of these is part of the judicial branch??",
+       "options":["A.the Department of Defense","B.Congress","C.the President","D.Supreme Court"],
+      "answer":"D.Supreme Court"
+     },
+     {
+      "question":"The First Amendment says the government cannot take away a person _____ or _____?",
+       "options":["A.voting rights, rights to own weapons",
+                  "B.freedom of speech, freedom of religion",
+                  "C.home and private property"],
+      "answer":"B.freedom of speech, freedom of religion"
+     },
+     {
+      "question":" Which of these was NOT a member of the original Thirteen Colonies?",
+       "options":["A.Maine","B.Pennsylvania,",
+                  "C.Delaware","D.Georgia"],
+      "answer":"A.Maine"
+     },
+     {
+      "question":" How many men signed the Declaration of Independence in 1776?",
+       "options":["A.44","B.33,",
+                  "C.56","D.55"],
+      "answer":"C.56"
+     },
+     {
+      "question":"Who said the famous quote\"Give me liberty, or give me death!\""?
+      "options":["A.Patrick Henry","B.Samuel Adams",
+                 "C.Thomas Paine","D.George Washington"],
+     "answer":"A.Patrick Henry" 
+     },
+     {
+      "question":" Where was the first shot of the American Revolutionary War fired?"?
+      "options":["A.New York","B.Saratoga",
+                 "C.Maine","D.Lexington"],
+     "answer":"D.Lexington" 
+     },
+     {
+      "question":"In what battle did George Washingtoncending the Revolutionary War?",
+        "options":["A.Lexington and Concord,1776","B.the Siege of Yorktown,1781",
+                 "C.Battle at Bunker Hill,1775","D.Battle at Chesapeake,1781"],
+     "answer":"B.the Siege of Yorktown,1781"
+     },
+     {
+      "question":"What city was the first Capital of the United States?",
+      "options":["A.New York,NY","B.Philadelphia, PA",
+                 "C.Trenton,NJ","D.Washington DC"],
+     "answer":"A.New York,NY"
+     },
+     {
+      "question":"How many stars were on the original American flag?",
+      "options":["A.5","B.13",
+                 "C.4","D.12"],
+     "answer":"B.13"
      }
+     
+    
    
      ]
    ]
@@ -209,21 +265,120 @@ const questions=
   [
     {
       "question":"What kind of statement is this? — 'The audience's thunderous applause left me completely speechless!'",
-      "options":["declarative","iterrogative","exclamatory","question"],
-      "answer":"exclamatory"
+      "options":["A.declarative","B.iterrogative","C.exclamatory","D.question"],
+      "answer":"C.exclamatory"
     },
     {
       "question":"Mrs. Shen gave Marshall the solo because he sang it the ______ of everyone who auditioned.",
-      "options":["worse","best","well","better"],
-      "answer":"best"
+      "options":["A.worse","B.best","C.well","D.better"],
+      "answer":"B.best"
     },
     {
       "question":"Alphabetically, which word comes first?: upstairs, upon, upward, upper",
-      "options":["upper","upstairs","upon","upward"],
-      "answer":"upon"
+      "options":["A.upper","B.upstairs","C.upon","D.upward"],
+      "answer":"C.upon"
+    },
+    {
+      "question":"Which group predates the other?",
+      "options":["A.dinosaurs","B.humans","C.Both","D.Neither"],
+      "answer":"A.dinosaurs"
+    },
+    {
+      "question":"When does a basketball team complete its pregame warm-up?",
+      "options":["A.right before the games begins",
+      "B.before the 2nd quarter",
+      "C.right before the games begins",
+      "D.before the fourth quarter"],
+      "answer":"C.right before the games begins"
+    },
+    {
+      "question":"The kayak gave __ and the other couples life jackets and matching helmets?",
+      "options":["A.us","B.we","C.them","D.they"],
+      "answer":"A.us"
+    },
+    {
+      "question":"The actress gave my best friend and __ her autograph?",
+      "options":["A.we","B.I","C.me","D.she"],
+      "answer":"C.me"
+    },
+    {
+      "question":"Which is a complete sentence?",
+      "options":["A.Butter melts in a skillet",
+      "B.Sugar and Salt dissove in water",
+      "C.The train was late.",
+      "D.Mrs.Spencer is giving away several of her old coats to the charity drive"],
+      "answer":"D.Mrs.Spencer is giving away several of her old coats to the charity drive"
+    },
+    {
+      "question":"Which word is an antonym of fictitious?",
+      "options":["A.Delightful",
+      "B.Beautiful",
+      "C.imaginary",
+      "D.Real"],
+      "answer":"D.Real"
+    },
+    {
+      "question":"Which word is a synonym of maternal?",
+      "options":["A.Mature",
+      "B.Motherly",
+      "C.Fatherly",
+      "D.Materialistic"],
+      "answer":"B.Motherly"
     }
+    
   ]
 ]
+
+  
+[
+  // 7th Grade Math
+  [
+    {
+      "question":"John eats 3/5 of a candy bar. What percent of the candy bar does he eat?",
+      "options":["A.80%","B.6%","C.35%","D. 60%"],
+      "answer":"D.60%"
+    },
+    {
+      "question":"What representes (-4)",
+      "options":["A.(+) (-) (+) (+) (+) (+)",
+      "B.(-) (-) (+) (+)",
+      "C.(+) (-) (+) (-) (-) (-) (-) (-)",
+      "D.(-) (+) (-) (-) (-)"],
+      "answer":"B.best"
+    },
+    {
+      "question":"Calculate: (-8) + (+2) - (-6) = ?",
+      "options":["A.(-12)","B.(0)","C.(+4)","D.(+16)"],
+      "answer":"B.(0)"
+    },
+    {
+      "question":"What is the greatest common factor of 12 and 16?",
+      "options":["A.6","B.3","C.2","D.4"],
+      "answer":"D.4"
+    },
+    {
+      "question":"Is -9 − 6 positive or negative?",
+      "options":["A.Positive",
+      "B.Negative"],
+      "answer":"B.Negative"
+    },
+    {
+      "question":"Is 9 + -8 positive or negative?",
+      "options":["A.Positive",
+      "B.Negative"],
+      "answer":"A.Positive"
+    },
+    {
+      "question":"Is -82 + -83 positive or negative?",
+      "options":["A.Positive",
+      "B.Negative"],
+      "answer":"B.Negative"
+    }
+    
+  ]
+]
+
+
 
 [
   // 8th Grade English

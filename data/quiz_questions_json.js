@@ -18,7 +18,7 @@ const questions=
       }
       ,
       {
-        "question":"An anonymous foundation donates $2,000 per year to a university.            How much will the foundation donate in total to the university over 4 years?",
+        "question":"An anonymous foundation donates $2,000 per year to a university. How much will the foundation donate in total to the university over 4 years?",
         "options": ["A. 80000", "B. 5000", "C. 8000", "D. 6000"],
         "answer": "C. 8000"
       },
