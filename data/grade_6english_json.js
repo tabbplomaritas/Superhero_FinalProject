@@ -265,31 +265,31 @@ const questions=
   [
     {
       "question":"What kind of statement is this? — 'The audience's thunderous applause left me completely speechless!'",
-      "options":["A.declarative","B.iterrogative","C.exclamatory","D.question"],
+      "options":["A.Declarative","B.iterrogative","C.exclamatory","D.question"],
       "answer":"C.exclamatory"
     },
     {
       "question":"Mrs. Shen gave Marshall the solo because he sang it the ______ of everyone who auditioned.",
-      "options":["A.worse","B.best","C.well","D.better"],
+      "options":["A.Worse","B.best","C.well","D.better"],
       "answer":"B.best"
     },
     {
       "question":"Alphabetically, which word comes first?: upstairs, upon, upward, upper",
-      "options":["A.upper","B.upstairs","C.upon","D.upward"],
+      "options":["A.Upper","B.upstairs","C.upon","D.upward"],
       "answer":"C.upon"
     },
     {
       "question":"Which group predates the other?",
-      "options":["A.dinosaurs","B.humans","C.Both","D.Neither"],
+      "options":["A.Dinosaurs","B.humans","C.Both","D.Neither"],
       "answer":"A.dinosaurs"
     },
     {
       "question":"When does a basketball team complete its pregame warm-up?",
-      "options":["A.right before the games begins",
-      "B.before the 2nd quarter",
-      "C.right before the games begins",
-      "D.before the fourth quarter"],
-      "answer":"C.right before the games begins"
+      "options":["A.Right before the games begins",
+      "B.Before the 2nd quarter",
+      "C.Right before the games begins",
+      "D.Before the fourth quarter"],
+      "answer":"C.Right before the games begins"
     },
     {
       "question":"The kayak gave __ and the other couples life jackets and matching helmets?",
@@ -344,7 +344,7 @@ const questions=
       "B.(-) (-) (+) (+)",
       "C.(+) (-) (+) (-) (-) (-) (-) (-)",
       "D.(-) (+) (-) (-) (-)"],
-      "answer":"B.best"
+      "answer":"C.(+) (-) (+) (-) (-) (-) (-) (-)"
     },
     {
       "question":"Calculate: (-8) + (+2) - (-6) = ?",
@@ -373,30 +373,193 @@ const questions=
       "options":["A.Positive",
       "B.Negative"],
       "answer":"B.Negative"
+    },
+    {
+      "question":"What times itself will give you 625?",
+      "options":["A.17","B.62","C.25","D.15"],
+      "answer":"C.25"
+    },
+    {
+      "question":"What is the cube root of -343?",
+      "options":["A.12","B.7","C.9","D.-7"],
+      "answer":"D.-7"
+    },
+    {
+      "question":"What is the cube root of 216??",
+      "options":["A.8","B.4","C.-6","D.6"],
+      "answer":"D.6"
     }
+    
+    
     
   ]
 ]
 
-
-
 [
-  // 8th Grade English
+  // 7th Grade Science
   [
     {
-      "question":"Choose either A,B,C or D for the correct answer. She  ... at me.",
-      "options":["smile","smiles","Is smiles","is smile"],
-      "answer":"smiles"
+      "question":"What is the temperature of a warm grilled cheese sandwich?,Select the better estimate",
+      "options":["A.20 degrees F",
+                 "B.55 degress C",
+                 "C.55 degress F",
+                 "D.90 degrees C"],
+      "answer":"B.55 degress C"
     },
     {
-      "question":"Choose either A,B,C or D for the correct answer. The person .. you met this morning was my uncle",
-      "options":["who","whom","that","which"],
-      "answer":"who"
+    "question":"What is the temperature of a cool glass of milk?,Select the better estimate",
+     "options":["A.3 degrees C",
+               "B.55 degress C",
+               "C.2 degress  F",
+               "D.45 degrees F"],
+"answer":"D.45 degrees F"
     },
     {
-      "question":"Which word is a synonym of deficient?",
-      "options":["lacking","dependent","judicious","affluent"],
-      "answer":"lacking"
+      "question":"What is the \"brain\"(command center) of a cell?",
+      "options":["A.Mitochondria","B.Nucleus","C.Cytoplasm","D.Ribosomes)"],
+      "answer":"B.Nucleus"
+    },
+    {
+      "question":" The ____ membrane allows materials to enter and leave the cell.?",
+      "options":["A.Plasma","B.Golgi Body","C.Cytoplasm","D.Ribosomes"],
+      "answer":"A.Plasma"
+    },
+    {
+      "question":"What are the three main parts of a cell?",
+      "options":["A.cell membrane,mitochondria and cytoplasm",
+      "B.Cell membrane,a nucleus,and cytoplasm",
+      "C.A nucleus","Vacuole","Golgi Body",
+       "D.Golgi Body","Endoplasmic Reticulum","Lysosomes"],
+      "answer":"A.cell membrane,mitochondria and cytoplasm"
+    },
+    {
+      "question":"What part of the cell is where energy is made?",
+      "options":["A.Cell membrane",
+      "B.Cytoplasm",
+      "C.Vacuole",
+       "D.Mitochondria"],
+      "answer":"D.Mitochondria"
+    },
+    {
+      "question":" What responsibity do Chloroplasts have ?",
+      "options":["A.Protect the cell",
+      "B.Keep the structure of the cell",
+      "C.The control center of the cell",
+      "D.Where proteins are put together"],
+      "answer":"D.Where proteins are put together"
+    },
+    {
+      "question":"What does the chemical symbol Y represent?",
+      "options":["A.Xylocaine","B.Ytterbium","C.Titanium","D.Yttrium"],
+      "answer":"D.Yttrium"
+    },
+    {
+      "question":"What does the chemical symbol Rh represent??",
+      "options":["A.Radium","B.Rhenium","C.Rayon","D.Rhodium"],
+      "answer":"D.-7"
+    },
+    {
+      "question":"What does the chemical symbol Ti represent?",
+      "options":["A.Thallium","B.Thorium","C.Titanium","D.Tellurium"],
+      "answer":"C.Titanium"
     }
+    
+    
+    
   ]
 ]
+
+  // 7th Grade History
+[
+  [
+     {
+      "question":"What country did the Americans and George Washington ally with to eventually defeat the British?",
+       "options":["A.Spain","B.Mexico","C.Canada","D.France"],
+      "answer":"D.France"
+     },
+     {
+      "question":"The 3/5's Compromise dealt predominantly with what type of people?",
+       "options":["A.Slaves","B.Southerners","C.Poor people","D.Northerners"],
+      "answer":"A.Slaves"
+     },
+     {
+      "question":"The First Amendment says the government cannot take away a person _____ or _____?",
+       "options":["A.voting rights, rights to own weapons",
+                  "B.freedom of speech, freedom of religion",
+                  "C.home and private property"],
+      "answer":"B.freedom of speech, freedom of religion"
+     },
+     {
+      "question":" At its height, what was the slave population in the U.S.?",
+       "options":["A.About 4 million","B.About 2 million",
+                  "C.About 3 million","D.About 500,000 million"],
+      "answer":"A.About 4 million"
+     },
+     {
+      "question":"In what year did American women win the right to vote?",
+       "options":["A.1930","B.1923",
+                  "C.1920","D.1922"],
+      "answer":"C.1920"
+     },
+     {
+      "question":"Who was the first woman to run for President?",
+      "options":["A.Sonia Johnson","B.Victoria Woodhull",
+                 "C.Linda Jenness","D.Belva Ann Lockwood"],
+     "answer":"B.Victoria Woodhull"
+     },
+     {
+        "question":"Which of these honors was Martin Luther King Jr. not awarded?"?
+        "options":["A.Nobel Peace Prize",
+                 "B.Congressional Gold Medal",
+                  "C.Presidential Medal of Freedom",
+                  "D.Freedom Award"],
+          "answer":"D.Freedom Award" 
+     },
+     {
+        "question":"Why did President Theodore Roosevelt establish the national forest and park systems in the early 20th century?",
+        "options":["A.To clear the timberlands for use as industrial areas",
+                    "B.To create more areas for the establishment of American Indian reservations",
+                    "C.To manage the use of resources and control industrial development in wilderness areas",
+                    "D.To stimulate development of a tourist industry to help bring revenue to the states"],
+         "answer":"C.To manage the use of resources and control industrial development in wilderness areas"
+     },
+     {
+      "question":"Which of the following was NOT acquired by the United States at the end of the Spanish-American War?",
+      "options":["A.Cuba","B.Puerto Rico",
+                 "C.The Phillipines","D.Guam"],
+     "answer":"A.Cuba"
+     },
+     {
+      "question":"When did the Vietnam War begin?",
+      "options":["A.1970","B.1955",
+                 "C.1950","D.1972"],
+     "answer":"B.1955"
+     }
+     
+    
+   
+     ]
+   ]
+ 
+ 
+
+// [
+//   // 8th Grade English
+//   [
+//     {
+//       "question":"Choose either A,B,C or D for the correct answer. She  ... at me.",
+//       "options":["smile","smiles","Is smiles","is smile"],
+//       "answer":"smiles"
+//     },
+//     {
+//       "question":"Choose either A,B,C or D for the correct answer. The person .. you met this morning was my uncle",
+//       "options":["who","whom","that","which"],
+//       "answer":"who"
+//     },
+//     {
+//       "question":"Which word is a synonym of deficient?",
+//       "options":["lacking","dependent","judicious","affluent"],
+//       "answer":"lacking"
+//     }
+//   ]
+// ]
