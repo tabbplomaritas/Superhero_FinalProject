@@ -205,6 +205,10 @@ footer img {
   background-color: #d01e00;
 }
 
+.userInfoForm_Subject p: hover {
+  transform: scale(1.3);
+}
+
 
 .clickedHero_stats {
     flex-direction: column;
