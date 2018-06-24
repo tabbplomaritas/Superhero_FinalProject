@@ -27,8 +27,8 @@ span{
 
 @keyframes customRotate {
   from {
-    -webkit-transform: rotate(-600deg);
-    transform: translate(50%) rotate(-600deg) scale(.5);
+    -webkit-transform: rotate(-1200deg);
+    transform: translate(50%) rotate(-1200deg) scale(.5);
     opacity: 0;
   }
 
