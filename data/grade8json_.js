@@ -103,5 +103,113 @@
     "options":["A. 10000","B. 7000","C. 6000","D. 5000"],
     "answer":"C. 6000"
   }
+],
+// 8th grade science
+[
+  {
+    "question":"What is the second outer most layer of the earth?",
+    "options":["A. crust","B. inner core","C. outer core", "D. mantle"],
+    "answer":"D. mantle"
+  },
+  {
+    "question":"What is the second step of the scientific method?",
+    "options":["A. Identify the question","B. Test the hypothesis","C. Draw a conclusion", "D. Communicate the findings"],
+    "answer":"B. Test the hypothesis"
+  },
+  {
+    "question":"What is responsible for breaking down sugar and releasing the energy for activities?",
+    "options":["A. Mitochondria","B. Nucleus","C. Golgi", "D. Lysosomes"],
+    "answer":"A. Mitochondria"
+  },
+  {
+    "question":"What do the chemical changes of melting glass and dust settling out of the air have in common?",
+    "options":["A. Both are physical changes","B. Both are chemical changes","C. Both are caused by heating", "D. Both are caused by cooling"],
+    "answer":"A. Both are physical changes"
+  },
+  {
+    "question":"The earth gets most of it's light from?",
+    "options":["A. Moon","B. Sun","C. Stars", "D. Other Planets"],
+    "answer":"B. Sun"
+  },
+  {
+    "question":"In which part of a plant cell does photosynthesis occur?",
+    "options":["A. Nucleus","B. Chloroplast","C. Cell Wall", "D. Cell Membrane"],
+    "answer":"B. Chloroplast"
+  },
+  {
+    "question":"Herbivores obtain most of their energy by...",
+    "options":["A. Consuming animals","B. Consuming plants","C. absorbing sunlight", "D. producing sugar"],
+    "answer":"B. Consuming plants"
+  },
+  {
+    "question":"Approximately how long does it take for the Moon to complete one orbit around the Earth?",
+    "options":["A. 1 month","B. 1 week","C. 1 year", "D. 1 day"],
+    "answer":"A. 1 month"
+  },
+  {
+    "question":"People often wear sunglasses in Polar regions because most of the sunlight that strikes a snow-covered surface is?",
+    "options":["A. refracted","B. reflected","C. transmitted", "D. absorbed"],
+    "answer":"B. reflected"
+  },
+  {
+    "question":"What eventually happens to a species when the environment changes and the organisms do not adapt?",
+    "options":["A. regulation","B. classification","C. development", "D. extinction"],
+    "answer":"D. extinction"
+  },
+],
+// 8th grade history
+[
+  {
+    "question":"Who was the second president of the United States?",
+    "options":["A. James Madison","B. James Monroe","C. John Adams", "D. John Quincy Adams"],
+    "answer":"C. John Adams"
+  },
+  {
+    "question":"How does the US Constitution maintain a republican government?",
+    "options":["A. By specifying the role of the Supreme Court","B. By allowing the public to elect representatives","C. By limiting the terms of the US president", "D. By giving the president veto power"],
+    "answer":"B. By allowing the public to elect representatives"
+  },
+  {
+    "question":"Which of these 19th century presidents was impeached?",
+    "options":["A. Andrew Jackson","B. Andrew Johnson","C. John Tyler", "D. Zachary Taylor"],
+    "answer":"B. Andrew Johnson"
+  },
+  {
+    "question":"What was the purpose of the Mayflower compact?",
+    "options":["A. To establish freedom of religion","B. Serve as a set of rules for self-governance","C. To proclaim allegiance to the king", "D. To establish a new king"],
+    "answer":"B. Serve as a set of rules for self-governance"
+  },
+  {
+    "question":"During the War of 1812 who was the United States fighting against?",
+    "options":["A. Great Britain", "B. Mexico", "C. France", "D. Italy"],
+    "answer":"A. Great Britain"
+  },
+  {
+    "question":"What did prohibition outlaw in the early 1900s?",
+    "options":["A. Alcohol","B. Slavery","C. Prohibiting women from voting", "D. Segregation"],
+    "answer":"A. Alcohol"
+  },
+  {
+    "question":"Who wrote the Declaration of Independence?",
+    "options":["A. Benjamin Franklin","B. John Quincy Adams","C. George Washington", "D. Thomas Jefferson"],
+    "answer":"D. Thomas Jefferson"
+  },
+  {
+    "question":"Who won World War II?",
+    "options":["A. Axis powers","B. America and England","C. America", "D. The Allied Powers"],
+    "answer":"D. The Allied Powers"
+  },
+  {
+    "question":"What was the name of the document that Abraham Lincoln wrote and later executed that freed the slaves in Confederate states?",
+    "options":["A. The Slavery Decree","B. The Eleventh Amendment","C. The Freedman Order", "D. The Emancipation Proclamation"],
+    "answer":"D. The Emancipation Proclamation"
+  },
+  {
+    "question":"What American woman aided wounded soldiers on the battlefield during the Civil War?",
+    "options":["A. Martha Simpson","B. Betsy Ross","C. Clara Barton", "D. Dolly Madison"],
+    "answer":"C. Clara Barton"
+  },
 ]
+
+
 
