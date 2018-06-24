@@ -988,34 +988,35 @@
   from {
     opacity: 0;
     -webkit-transform: translate3d(3000px, 0, 0);
-    transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0) rotate(-45deg);
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: translate3d(-25px, 0, 0);
-    transform: translate3d(-25px, 0, 0);
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0) rotate(45deg);
   }
 
   75% {
     -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
+    transform: translate3d(50px, 0, 0) rotate(-2deg);
   }
 
   90% {
     -webkit-transform: translate3d(-5px, 0, 0);
-    transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-10px, 0, 0) rotate(10deg);
   }
 
   to {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) rotate(0deg);
   }
 }
 
 .bounceInRight {
   -webkit-animation-name: bounceInRight;
   animation-name: bounceInRight;
+  animation-duration: 2.5s;
 }
 
 @-webkit-keyframes bounceInUp {

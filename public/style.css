@@ -70,6 +70,7 @@ nav {
   top: 0;
   right: -5rem;
   width: 35rem;
+  z-index: 5000;
 }
 
 aside {
@@ -695,12 +696,12 @@ footer img {
   border: .2rem solid #0a1c20;
 }
 
-.button_home {
+/* .button_home {
   margin-bottom: .5rem;
   background-color: #fedb0e;
   cursor: pointer;
   z-index: 10000000000;
-}
+} */
 
 .button_rematch {
   background-color: #46a7dc;
