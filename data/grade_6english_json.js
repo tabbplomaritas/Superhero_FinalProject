@@ -37,24 +37,26 @@ const questions=
    },
    {
     "question":"The root therm means heat. What does the word thermostat mean?",
-    "options":["A.a device that controls the lighting a room",
-              "B.a device that controls the music a room",
-              "C.a device that controls the heating a room"],                                        
-    "answer":"D.a device that controls the heating a room"
+    "options":["A.A device that controls the lighting a room",
+              "B.A device that controls the music a room",
+              "C.A device that controls the airflow in a room",
+              "D.A device that controls the heating a room"],                                        
+    "answer":"D.A device that controls the heating a room"
    },
    {
     "question":" What are homonyms?", 
     "options":["A.Words that imitate sounds or ideas",
               "B.Words that are spelled the same but in their given context have different meanings",
-              "C.Words that describe, identify or further define a noun or a pronoun"],                                        
+              "C.Words that describe, identify or further define a noun or a pronoun",
+              "D.Word that shows possession"],                                        
     "answer":"B.Words that are spelled the same but in their given context have different meanings"
    },
    {
     "question":"What is a metaphor?",
     "options":["A.word that replaces one or more nouns",
-              "B.word that follows a conjunction",
-              "C.word that shows possession",
-            "D.word that is implied as being the “same” thing"],                                        
+               "B.word that follows a conjunction",
+               "C.word that shows possession",
+               "D.word that is implied as being the “same” thing"],                                        
     "answer":"D.word that is implied as being the “same” thing"
     },
     {
@@ -77,23 +79,23 @@ const questions=
      "answer":"C.4"
     },
     {
-      "question":"5÷5 * 3?",
+      "question":"5÷5 * 3 = ?",
       "options":["A.3","B.15","C.1","D.4"],
       "answer":"A.3"
     },
     {
-    "question":"3 * 2 + 4?",
+    "question":"3 * 2 + 4 = ?",
     "options":["A.10","B.11","C.5","D.7"],
     "answer":"A.10"
      },
      {
-      "question":"4 + -3 = ",
+      "question":"4 + -3 = ?",
       "options":["A.2","B.1","C.-2","D.0"],
       "answer":"B.1"
 
      },
      {
-      "question":"92,982 – 91,900 = ",
+      "question":"92,982 – 91,900 = ?",
       "options":["A.1033","B.1082","C.1043","D.1039"],
       "answer":"B.1082"
 
@@ -114,7 +116,7 @@ const questions=
       "answer":"A.63:54"
     },
     {
-      "question":"Mark can make 42 birthday cakes in 7 days?,How many can he make in 3 days",
+      "question":"Mark can make 42 birthday cakes in 7 days?,How many can he make in 3 days?",
       "options":["A.63:54","B.21:19","C.43:36","D.77:65"],
       "answer":"A.63:54"
     },
@@ -136,7 +138,7 @@ const questions=
      "answer":"B.Reptiles"
     },
     {
-      "question":"What is the function of the blood cell?",
+      "question":"What is the function of a blood cell?",
       "options":["A.Carry messages to all over the body",
                  "B.To control the size of the openings",
                  "C.To carry oxygen around the body",
@@ -149,13 +151,13 @@ const questions=
     "answer":"D.2"
      },
      {
-      "question":"What abbreviation the Table of elements is K",
+      "question":"What abbreviation in the Table of elements is K?",
       "options":["A.Krypton","B.Holmium","C.Xenon","D.Potassium"],
       "answer":"D.Potassium"
 
      },
      {
-      "question":"What abbreviation in the Table of elements is Sn",
+      "question":"What abbreviation in the Table of elements is Sn?",
       "options":["A.Tennessine","B.Tin","C.Sulfur","D.Gold"],
       "answer":"B.Tin"
 
@@ -176,16 +178,17 @@ const questions=
       "answer":"C.1898"
     },
     {
-      "question":"What element makes up around 18% of the human body",
+      "question":"What element makes up around 18% of the human body?",
       "options":["A.Oxygen","B.Carbon","C.Hydrogen","D.Sodium"],
       "answer":"B.Carbon"
     },
     {
       "question":"What are the two types of the earth's crust?",
       "options":["A.Continental crust and Canopy crust",
-      "B.Underbody crust and Oceanic crust",
-      "C.Continental crust and Oceanic crust","D.Mantle crust and Underbody crust"],
-      "answer":"C.Continental crust and Oceanic crust"
+                 "B.Underbody crust and Oceanic crust",
+                 "C.Continental crust and Oceanic crust",
+                 "D.Mantle crust and Underbody crust"],
+                 "answer":"C.Continental crust and Oceanic crust"
     },
     ]
   ]
@@ -198,7 +201,7 @@ const questions=
       "answer":"D.James Madison"
      },
      {
-      "question":" Which of these is part of the judicial branch??",
+      "question":" Which of these is part of the judicial branch?",
        "options":["A.the Department of Defense","B.Congress","C.the President","D.Supreme Court"],
       "answer":"D.Supreme Court"
      },
@@ -235,14 +238,15 @@ const questions=
      },
      {
       "question":"In what battle did George Washingtoncending the Revolutionary War?",
-        "options":["A.Lexington and Concord,1776","B.the Siege of Yorktown,1781",
-                 "C.Battle at Bunker Hill,1775","D.Battle at Chesapeake,1781"],
+        "options":["A.Lexington and Concord,1776",
+                   "B.the Siege of Yorktown,1781",
+                   "C.Battle at Bunker Hill,1775",
+                   "D.Battle at Chesapeake,1781"],
      "answer":"B.the Siege of Yorktown,1781"
      },
      {
       "question":"What city was the first Capital of the United States?",
-      "options":["A.New York,NY","B.Philadelphia, PA",
-                 "C.Trenton,NJ","D.Washington DC"],
+      "options":["A.New York,NY","B.Philadelphia, PA","C.Trenton,NJ","D.Washington DC"],
      "answer":"A.New York,NY"
      },
      {
@@ -286,9 +290,9 @@ const questions=
     {
       "question":"When does a basketball team complete its pregame warm-up?",
       "options":["A.Right before the games begins",
-      "B.Before the 2nd quarter",
-      "C.Right before the games begins",
-      "D.Before the fourth quarter"],
+                 "B.Before the 2nd quarter",
+                 "C.Right before the games begins",
+                 "D.Before the fourth quarter"],
       "answer":"C.Right before the games begins"
     },
     {
@@ -304,9 +308,9 @@ const questions=
     {
       "question":"Which is a complete sentence?",
       "options":["A.Butter melts in a skillet",
-      "B.Sugar and Salt dissove in water",
-      "C.The train was late.",
-      "D.Mrs.Spencer is giving away several of her old coats to the charity drive"],
+                 "B.Sugar and Salt dissove in water",
+                 "C.The train was late.",
+                 "D.Mrs.Spencer is giving away several of her old coats to the charity drive"],
       "answer":"D.Mrs.Spencer is giving away several of her old coats to the charity drive"
     },
     {
@@ -426,26 +430,26 @@ const questions=
     },
     {
       "question":"What are the three main parts of a cell?",
-      "options":["A.cell membrane,mitochondria and cytoplasm",
-      "B.Cell membrane,a nucleus,and cytoplasm",
-      "C.A nucleus","Vacuole","Golgi Body",
-       "D.Golgi Body","Endoplasmic Reticulum","Lysosomes"],
-      "answer":"A.cell membrane,mitochondria and cytoplasm"
+      "options":["A.Cell membrane,mitochondria and cytoplasm",
+                 "B.Cell membrane,a nucleus,and cytoplasm",
+                 "C.A nucleus","Vacuole","Golgi Body",
+                 "D.Golgi Body","Endoplasmic Reticulum","Lysosomes"],
+      "answer":"B.Cell membrane,a Nucleus,and Cytoplasm"
     },
     {
       "question":"What part of the cell is where energy is made?",
       "options":["A.Cell membrane",
-      "B.Cytoplasm",
-      "C.Vacuole",
-       "D.Mitochondria"],
+                 "B.Cytoplasm",
+                 "C.Vacuole",
+                 "D.Mitochondria"],
       "answer":"D.Mitochondria"
     },
     {
       "question":" What responsibity do Chloroplasts have ?",
       "options":["A.Protect the cell",
-      "B.Keep the structure of the cell",
-      "C.The control center of the cell",
-      "D.Where proteins are put together"],
+                 "B.Keep the structure of the cell",
+                 "C.The control center of the cell",
+                "D.Where proteins are put together"],
       "answer":"D.Where proteins are put together"
     },
     {
@@ -486,7 +490,8 @@ const questions=
       "question":"The First Amendment says the government cannot take away a person _____ or _____?",
        "options":["A.voting rights, rights to own weapons",
                   "B.freedom of speech, freedom of religion",
-                  "C.home and private property"],
+                  "C.home and private property",
+                  "D.right to a lawyer and fair trial"],
       "answer":"B.freedom of speech, freedom of religion"
      },
      {
@@ -510,14 +515,14 @@ const questions=
      {
         "question":"Which of these honors was Martin Luther King Jr. not awarded?"?
         "options":["A.Nobel Peace Prize",
-                 "B.Congressional Gold Medal",
-                  "C.Presidential Medal of Freedom",
-                  "D.Freedom Award"],
+                   "B.Congressional Gold Medal",
+                   "C.Presidential Medal of Freedom",
+                   "D.Freedom Award"],
           "answer":"D.Freedom Award" 
      },
      {
         "question":"Why did President Theodore Roosevelt establish the national forest and park systems in the early 20th century?",
-        "options":["A.To clear the timberlands for use as industrial areas",
+        "options":[" A.To clear the timberlands for use as industrial areas",
                     "B.To create more areas for the establishment of American Indian reservations",
                     "C.To manage the use of resources and control industrial development in wilderness areas",
                     "D.To stimulate development of a tourist industry to help bring revenue to the states"],
