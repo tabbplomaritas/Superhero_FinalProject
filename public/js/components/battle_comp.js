@@ -92,6 +92,11 @@ controller: ["GameService", function (GameService){
     //retrieves user info from service
     vm.user = GameService.getUserInfo();
     vm.isRematch = GameService.isRematch();
+    
+    vm.scrollWindow = () => {
+        window.scrollTo(0, 212);
+    };
+    vm.scrollWindow();
 
 
 

@@ -46,12 +46,19 @@ const startGame ={
       
         vm.randomNum = GameService.getRandomNum();
         GameService.setOpponent(vm.randomNum);
+        //SOMEONE LOOK UP HOW TO GRAB WINDOW WIDTH
 
         //rope swing sound when aside image slides in
+    // vm.windowWidth = document.screen.width;
+    // console.log(vm.windowWidth);
+
+    vm.windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+    if(vm.windowWidth > 768){
         setTimeout(() => {
             swing.play();
         }, 2350);
-     
+    }
         
 
         vm.setGrade = (grade, $event) =>{

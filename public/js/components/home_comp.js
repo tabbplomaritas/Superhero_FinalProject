@@ -104,6 +104,11 @@ const home = {
             console.log(popUp);
         const main = document.querySelector(".main");
         
+        vm.scrollWindow = () => {
+            window.scrollTo(0, 212);
+        };
+        vm.scrollWindow();
+    
 
         vm.viewHero = (hero) => {
       //animates the clickedHero_stats pop up
