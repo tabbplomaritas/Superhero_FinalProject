@@ -19,7 +19,7 @@ const gameover = {
           <img class="gameoverImg" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.winner.image.url}}">
         </div>
         <div class="gamover_btns"> 
-          <button class="button_home" ng-click="$ctrl.goToHome();">New Game</button>
+          <button class="button_new_game" ng-click="$ctrl.goToHome();">New Game</button>
           <button class="button_rematch animated pulse infinite" ng-click="$ctrl.goToBattle();">Rematch</button>
         </div>
       </div>

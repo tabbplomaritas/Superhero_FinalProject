@@ -200,14 +200,20 @@ footer img {
 
 .userInfoForm_Grade p {
   background-color: #46a7dc;
+  cursor: pointer;
 }
 
 .userInfoForm_Subject p {
   background-color: #d01e00;
+  cursor: pointer;
 }
 
-.userInfoForm_Subject p: hover {
-  transform: scale(1.3);
+.userInfoForm_Subject p:hover {
+  transform: scale(1.1);
+}
+
+.userInfoForm_Grade p:hover {
+  transform: scale(1.1);
 }
 
 
@@ -696,12 +702,12 @@ footer img {
   border: .2rem solid #0a1c20;
 }
 
-/* .button_home {
+.button_new_game {
   margin-bottom: .5rem;
   background-color: #fedb0e;
   cursor: pointer;
   z-index: 10000000000;
-} */
+}
 
 .button_rematch {
   background-color: #46a7dc;
