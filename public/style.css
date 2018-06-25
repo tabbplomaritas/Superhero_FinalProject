@@ -540,7 +540,7 @@ footer img {
 }
 
 .healthBar_outer {
-  height: 1.5rem;
+  height: 2.5rem;
   width: 13rem;
   position: relative;
   background-color: grey;
@@ -566,6 +566,27 @@ footer img {
     inset 0 -.2rem .6rem rgba(0,0,0,0.4);
   overflow: hidden;
 }
+
+.health_bar_hero_name {
+  font-family: 'Bangers', cursive;
+  color: grey;
+  font-size: 2rem;
+  position: absolute;
+  top: 0rem;
+
+  /* right: 5.1rem; */
+}
+
+.health_bar_opp_name {
+  font-family: 'Bangers', cursive;
+  color: grey;
+  font-size: 2rem;
+  position: absolute;
+  top: 0rem;
+ 
+
+}
+
 
 /* TODO: make these buttons not suck */
 .button_battle {
