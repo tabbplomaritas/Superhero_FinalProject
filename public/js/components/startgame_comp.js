@@ -45,9 +45,6 @@ const startGame ={
   
 
         vm.setGrade = (grade, $event) =>{
-            console.log($event.target);
-            console.log(allGrades);
-            
             angular.element(allGrades).css("background-color", "#46a7dc");
 
             angular.element($event.target).css("background-color", "black");
@@ -57,9 +54,6 @@ const startGame ={
         }
          
         vm.setSubject = (subject, $event) =>{
-                console.log($event.target);
-                console.log(subject);
-                
                 angular.element(allSubjects).css("background-color", "#d01e00");
             
                 angular.element($event.target).css("background-color", "black");
