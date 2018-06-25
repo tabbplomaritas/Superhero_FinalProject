@@ -27,7 +27,7 @@ template: `
 
           <div class="fighter_info">
          
-              <img class="fighter_info_img" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
+              <img class="fighter_info_img animated zoomIn" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.opponent.image.url}}">
         <section class="name_bubbleWrap"> 
             <h2>{{$ctrl.opponent.name}}</h2>
             <div class="speechBubble">
@@ -45,7 +45,7 @@ template: `
           <div class="fighter_info">
           
          
-              <img class="fighter_info_img" id="playerImg" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
+              <img class="fighter_info_img animated zoomIn" id="playerImg" ng-model="$ctrl.clickedHero.image.url" src="{{$ctrl.clickedHero.image.url}}">
         <section class="name_bubbleWrap"> 
             <h2>{{$ctrl.clickedHero.name}}</h2>
                 <div class="speechBubble">
