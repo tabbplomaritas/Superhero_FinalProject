@@ -256,10 +256,8 @@ const questions=
      "answer":"B.13"
      }
      
-    
-   
-     ]
    ]
+]
  
  
 
