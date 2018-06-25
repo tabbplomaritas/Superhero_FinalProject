@@ -2,7 +2,6 @@
   white-space: nowrap;
   overflow: hidden;
  max-width: 40rem;
-  /* background-color: chartreuse; */
   position: absolute;
   left: 8rem;
   animation: type 4s steps(60, end);
@@ -42,20 +41,12 @@ span{
   /* -webkit-animation-name: rotateIn; */
   animation-name: customRotate;
   animation-delay: 0;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 @keyframes customSwingIn {
-/* 
-  from,
-  30%,
-  75%,,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  } */
 
   from {
     transform: rotate(-51deg) translate(0rem, -3rem);
@@ -94,7 +85,6 @@ span{
 }
 
 .customSwingIn {
-  /* -webkit-animation-name: rotateIn; */
   transform-origin: top;
   animation-name: customSwingIn;
   animation-delay: 1.5s;
