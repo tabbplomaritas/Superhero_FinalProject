@@ -37,8 +37,6 @@ function GameService ($http, $location) {
 
       if(userInfo.grade < 8){
       userInfo.grade++;
-
-      console.log(userInfo);
       }
   }
 
