@@ -3311,6 +3311,7 @@
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
+  animation-duration: .7s;
 }
 
 @-webkit-keyframes slideInRight {
@@ -3342,6 +3343,7 @@
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
+  animation-duration: .7s;
 }
 
 /* my own version of slideinright for when element has been transformed vertically on the window */

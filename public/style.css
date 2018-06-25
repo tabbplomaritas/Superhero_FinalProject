@@ -165,6 +165,7 @@ footer img {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  align-items: center;
 }
 
 .userInfoForm_Subject {
@@ -188,14 +189,15 @@ footer img {
 
 
 .userInfoForm p {
-  font-size: 2rem;
+  font-size: 1.6rem;
   border: .2rem solid black;
   padding: .5rem;
   margin: .5rem;
-  width: 15rem;
+  width: 12rem;
   color: white;
   margin-bottom: 1rem;
   transition: .3s all;
+  animation-duration: 1s;
 }
 
 .userInfoForm_Grade p {

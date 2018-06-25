@@ -28,7 +28,7 @@ function GameService ($http, $location) {
     
   }
 
-  const returnOpponent = () => {
+  const getOpponent = () => {
     return opponent;
   }
 
@@ -62,14 +62,14 @@ function GameService ($http, $location) {
     })
   };
 
-  const getOpponent = (id) => {
+  const setOpponent = (id) => {
     
     return $http({
       method: "GET",
       url: "/home/" + id,
     }).then((response) => {
       opponent = response.data;
-      return opponent;
+      // return opponent;
     }).catch((error) => {
       console.log(error);
     })
@@ -95,7 +95,7 @@ function GameService ($http, $location) {
     clickedHero = hero;
   }
 
-  const retrieveHero = () => {
+  const getHero = () => {
   return clickedHero;
   }
 
@@ -145,7 +145,7 @@ function GameService ($http, $location) {
   return {
     getPlayer,
     sendHero,
-    retrieveHero,
+    getHero,
     viewBattle, 
     goToHome,
     setGradeSubject,
@@ -154,8 +154,8 @@ function GameService ($http, $location) {
     getWinner,
     sendTotalWins,
     getTotalWins, 
+    setOpponent,
     getOpponent,
-    returnOpponent,
     goToBattle,
     sendUserInfo,
     getUserInfo,

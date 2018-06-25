@@ -119,7 +119,7 @@ const home = {
             GameService.sendHero(hero);
 
             //retrieves that stored data from GameService
-            vm.clickedHero = GameService.retrieveHero();
+            vm.clickedHero = GameService.getHero();
             
             //api call to view hero at that id
             GameService.getPlayer(vm.clickedHero.id).then((response)=> {

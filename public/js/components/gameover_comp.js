@@ -32,9 +32,9 @@ const gameover = {
     const vm = this;
     // gets winner from battle comp
     vm.winner = GameService.getWinner();
-    vm.clickedHero = GameService.retrieveHero();
+    vm.clickedHero = GameService.getHero();
     //TODO: change these to be consistant naming conventions -also change in other comps to reflect
-   vm.opponent = GameService.returnOpponent();
+   vm.opponent = GameService.getOpponent();
   
 
     if(vm.winner.name == vm.clickedHero.name){

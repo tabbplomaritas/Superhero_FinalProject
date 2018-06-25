@@ -143,9 +143,6 @@ controller: ["GameService", function (GameService){
  
     };
 
-
-
-
     vm.checkAnswer = (option) => {
         vm.selectedAnswer = option;
         vm.correctAnswer = vm.questions[vm.questionI].answer;
@@ -217,7 +214,7 @@ controller: ["GameService", function (GameService){
         }
     }
     //retrieving the user's character from Service
-    vm.clickedHero = GameService.retrieveHero();
+    vm.clickedHero = GameService.getHero();
 
     vm.victories = GameService.getTotalWins();
 
@@ -226,11 +223,7 @@ controller: ["GameService", function (GameService){
         GameService.goToHome();
     };  
     
-    vm.randomNum = GameService.getRandomNum();
-
-    GameService.getOpponent(vm.randomNum).then((response)=> {
-        vm.opponent = response;
-    });
+    vm.opponent = GameService.getOpponent();
     
          
 

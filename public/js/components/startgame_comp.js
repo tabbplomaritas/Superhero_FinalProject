@@ -42,7 +42,17 @@ const startGame ={
         const allSubjects = document.querySelectorAll(".subject");
         vm.user = {};
         GameService.createRandomNum(); 
-  
+        const swing = document.getElementById("swing");
+      
+        vm.randomNum = GameService.getRandomNum();
+        GameService.setOpponent(vm.randomNum);
+
+        //rope swing sound when aside image slides in
+        setTimeout(() => {
+            swing.play();
+        }, 2350);
+     
+        
 
         vm.setGrade = (grade, $event) =>{
             angular.element(allGrades).css("background-color", "#46a7dc");
