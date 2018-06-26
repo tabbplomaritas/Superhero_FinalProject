@@ -761,14 +761,14 @@ footer img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -6rem;
   z-index: 1000000;
 }
 
 .gamover_btns button {
   z-index: 1000000000;
-  width: 14rem;
-  height: 7rem;
+  width: auto;
+  height: auto;
+  max-width: 80%;
   font-size: 3rem;
   font-family: 'Bangers', cursive;
   color: black;
@@ -781,6 +781,11 @@ footer img {
   background-color: #fedb0e;
   cursor: pointer;
   z-index: 10000000000;
+}
+
+.gameoverButton_text {
+  font-family: 'kalam', cursive;
+  font-size: 1.3rem;
 }
 
 .button_rematch {
