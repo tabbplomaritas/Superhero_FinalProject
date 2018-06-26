@@ -61,10 +61,13 @@ const startGame ={
             const smallPop = document.getElementById("smallPop");
         
             vm.user = {};
-            vm.randomNum = GameService.getRandomNum();
+           
             vm.gameIntro = document.querySelector(".gameIntro");
             GameService.createRandomNum(); 
+            vm.randomNum = GameService.getRandomNum();
             GameService.setOpponent(vm.randomNum);
+    
+            
 
             vm.showAsideImage = () => {
                 let windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
