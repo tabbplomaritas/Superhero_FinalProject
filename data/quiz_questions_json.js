@@ -54,20 +54,20 @@ const questions=
     },
     {
       "question":"What is a metaphor?",
-      "options":["A. word that replaces one or more nouns",
-                "B. word that follows a conjunction",
-                "C. word that shows possession",
-                "D. word that is implied as being the “same” thing"],                                        
-      "answer": "D. word that is implied as being the “same” thing"
+      "options":["A. words that replaces one or more nouns",
+                "B. words that follows a conjunction",
+                "C. words that shows possession",
+                "D. words used that represent something else"],                                        
+      "answer": "D. words used that represent something else"
       },
       {
 
-        "question":" That meal should stick to his ribs for a while!",
-        "options":["A. make him feel hungry",
-        "B. last",
-        "C. cause him indigestion",
-        "D. remain in his stomach"],
-        "answer":"B. last"
+        "question":"'That meal should stick to his ribs for a while!' This means:",
+        "options":["A. to feel hungry",
+        "B. to last",
+        "C. to cause him indigestion",
+        "D. to remain in his stomach"],
+        "answer":"B. to last"
       }
     ],
 
@@ -80,12 +80,12 @@ const questions=
       "answer":"C. 4"
       },
       {
-        "question":"5÷5 * 3 = ?",
+        "question":"5 divided by 5 x 3 = ?",
         "options":["A. 3","B. 15","C. 1","D. 4"],
         "answer":"A. 3"
       },
       {
-      "question":"3 * 2 + 4 = ?",
+      "question":"3 x 2 + 4 = ?",
       "options":["A. 10","B. 11","C. 5","D. 7"],
       "answer":"A. 10"
       },
@@ -102,29 +102,29 @@ const questions=
 
       },
       {
-        "question":"Is -10 × 1 positive or negative?",
+        "question":"The answer to -10 × 1 is: ",
         "options":["A. positive","B. negative"],
         "answer":"B. negative"
       },
       {
-        "question":"Are the ratios 10:14 and 5:7 equivalent?",
+        "question":"Are the ratios '10:14' and '5:7' equivalent?",
         "options":["A. Yes","B. No"],
         "answer":"A. Yes"
       },
       {
-        "question":"Select the ratio equivalent to  7:6?",
+        "question":"Select the ratio equivalent to 7:6:",
         "options":["A. 63:54","B. 21:19","C. 43:36","D. 77:65"],
         "answer":"A. 63:54"
       },
       {
-        "question":"Mark can make 42 birthday cakes in 7 days?,How many can he make in 3 days?",
-        "options":["A. 20","B. 21","C. 22","D. 18"],
+        "question":"Mark can make 42 birthday cakes in 7 days. How many can he make in 3 days?",
+        "options":["A. 20 cakes","B. 21 cakes","C. 22 cakes","D. 18 cakes"],
         "answer":"D. 18"
       },
       {
-        "question":"An estimated 3 out of every 25 men are left-handed,What percent of men are left-handed?",
-        "options":["A. 18","B. 50","C. 12","D. 6"],
-        "answer":"C. 12"
+        "question":"An estimated 3 out of every 25 people are left-handed. What percentage is this?",
+        "options":["A. 18 percent","B. 50 percent","C. 12 percent","D. 6 percent"],
+        "answer":"C. 12 percent"
       }
     ],
 
@@ -133,57 +133,57 @@ const questions=
 
     [
       {
-      "question":"I have dry scaly skin,breathe with lungs and lay shelled eggs,What am I?",
-        "options":["A. Primates","B. Reptiles","C. Amphibians","D. Cephalopods"],
-      "answer":"B. Reptiles"
+        "question":"I have dry scaly skin, breathe with lungs, and lay shelled eggs. What am I?",
+        "options":["A. A primate","B. A reptile","C. An amphibian","D. A cephalopod"],
+        "answer":"B. A reptile"
       },
       {
-        "question":"What is the function of a blood cell?",
-        "options":["A. Carry messages to all over the body",
-                  "B. To control the size of the openings",
-                  "C. To carry oxygen around the body",
-                  "D. Control the flow of blood"],
-        "answer":"C. To carry oxygen around the body"
+        "question":"A blood cell:",
+        "options":["A. Carries messages throughout the body",
+                  "B. Controls the size of the cell openings",
+                  "C. Carries oxygen throughout the body",
+                  "D. Controls the flow of blood"],
+        "answer":"C. Carries oxygen throughout the body"
       },
+      //   {
+      //   "question":"What is the density of an iron block that has a volume of 61 cubic cm and a mass of 122 grams?", 
+      //   "options":["A. 14","B. 4","C. 44","D. 2"],
+      //   "answer":"D. 2"
+      // },
       {
-      "question":"A iron block has a volume of 61 cubic centimeters and a mass of 122 grams.What is its density?",
-      "options":["A. 14","B. 4","C. 44","D. 2"],
-      "answer":"D. 2"
-      },
-      {
-        "question":"What abbreviation in the Table of elements is K?",
+        "question":"What does 'K' stand for in the Table of Elements?",
         "options":["A. Krypton","B. Holmium","C. Xenon","D. Potassium"],
         "answer":"D. Potassium"
 
       },
       {
-        "question":"What abbreviation in the Table of elements is Sn?",
+        "question":"What does SN stand for in the Table of Elements?",
         "options":["A. Tennessine","B. Tin","C. Sulfur","D. Gold"],
         "answer":"B. Tin"
 
       },
       {
-        "question":"What element has a density of 1.7?",
+        "question":"Which of these elements has a density of 1.7?",
         "options":["A. Fluorine","B. Calcium","C. Carbon","D.Chlorine"],
         "answer":"A. Fluorine"
       },
       {
-        "question":"What element has the atomic number of 15?",
+        "question":"Which of these elements has the atomic number of 15?",
         "options":["A. Phosphorus","B. Sodium","C. Holmium","D. Argon"],
         "answer":"A. Phosphorus"
       },
       {
-        "question":"What year was Neon discoved as an element?",
+        "question":"In what year was Neon discovered as an element?",
         "options":["A. 1877","B. 1887","C. 1898","D. 1889"],
         "answer":"C. 1898"
       },
       {
-        "question":"What element makes up around 18% of the human body?",
+        "question":"Which of these elements makes up 18% of the human body?",
         "options":["A. Oxygen","B. Carbon","C. Hydrogen","D. Sodium"],
         "answer":"B. Carbon"
       },
       {
-        "question":"What are the two types of the earth's crust?",
+        "question":"Earth is comprised of which two types of crust:",
         "options":["A. Continental crust and Canopy crust",
                   "B. Underbody crust and Oceanic crust",
                   "C. Continental crust and Oceanic crust",
@@ -196,61 +196,59 @@ const questions=
   
     [
       {
-      "question":"Who was the fourth President of the United States?",
+        "question":"Who was the fourth President of the United States?",
         "options":["A. John Adams","B. Thomas Jefferson","C. Alexander Hamilton","D. James Madison"],
-      "answer":"D. James Madison"
+        "answer":"D. James Madison"
       },
       {
-      "question":" Which of these is part of the judicial branch?",
+        "question":" Which of these offices is part of the Judicial Branch?",
         "options":["A. the Department of Defense","B. Congress","C. the President","D. Supreme Court"],
-      "answer":"D. Supreme Court"
+        "answer":"D. Supreme Court"
       },
       {
-      "question":"The First Amendment says the government cannot take away a person _____ or _____?",
-        "options":["A. voting rights, rights to own weapons",
-                  "B. freedom of speech, freedom of religion",
-                  "C. home and private property"],
-      "answer":"B. freedom of speech, freedom of religion"
+        "question":"The First Amendment protects citizens': ",
+        "options":["A. voting rights, right to own weapons",
+                    "B. freedom of speech, freedom of religion",
+                    "C. freedom to own private property"],
+        "answer":"B. freedom of speech, freedom of religion"
       },
       {
-      "question":" Which of these was NOT a member of the original Thirteen Colonies?",
+        "question":" Which of these states was NOT a member of the original 13 colonies?",
         "options":["A. Maine","B. Pennsylvania",
-                  "C. Delaware","D. Georgia"],
-      "answer":"A. Maine"
+                    "C. Delaware","D. Georgia"],
+        "answer":"A. Maine"
       },
       {
-      "question":" How many men signed the Declaration of Independence in 1776?",
-        "options":["A. 44","B. 33",
-                  "C. 56","D. 55"],
-      "answer":"C. 56"
+        "question": "Susan B. Anthony is famous for:",
+        "options": ["A. Acting as the first First Lady of the U.S.", "B. Leading the women's suffrage movement", "C. Inventing the polling station.", "D. Being the first woman to vote"],
+        "answer": "B. Leading the women's suffrage movement"
       },
       {
-      "question":"Who said the famous quote (Give me liberty or give me death!)",
-      "options":["A. Patrick Henry","B. Samuel Adams",
-                  "C. Thomas Paine","D. George Washington"],
-      "answer":"A. Patrick Henry" 
+        "question":"Who is famous for the quote— 'Give me liberty or give me death!'",
+        "options":["A. Patrick Henry","B. Samuel Adams",
+                    "C. Thomas Paine","D. George Washington"],
+        "answer":"A. Patrick Henry" 
       },
       {
-      "question":" Where was the first shot of the American Revolutionary War fired?",
-      "options":["A. New York","B. Saratoga",
-                  "C. Maine","D. Lexington"],
-      "answer":"D. Lexington" 
+        "question":"The Civil Rights Movement refers to: ",
+        "options": ["A. The fight for rights for women", "B. The fight for 2nd Amendment rights", "C. The activism to secure full human rights for African Americans from 1946-1968"],
+        "answer":"C. The activism to secure full human rights for African Americans from 1946-1968"
+      },
+      // {
+      //   "question":"In what battle did George Washingtoncending the Revolutionary War?",
+      //   "options":["A. Lexington and Concord,1776",
+      //                 "B. the Siege of Yorktown,1781",
+      //                 "C. Battle at Bunker Hill,1775",
+      //                 "D. Battle at Chesapeake,1781"],
+      //   "answer":"B. the Siege of Yorktown,1781"
+      // },
+      {
+        "question":"Which city was the first Capitol of the United States?",
+        "options":["A. New York, NY","B. Philadelphia, PA","C. Trenton,NJ","D. Washington DC"],
+        "answer":"A. New York, NY"
       },
       {
-      "question":"In what battle did George Washingtoncending the Revolutionary War?",
-        "options":["A. Lexington and Concord,1776",
-                    "B. the Siege of Yorktown,1781",
-                    "C. Battle at Bunker Hill,1775",
-                    "D. Battle at Chesapeake,1781"],
-      "answer":"B. the Siege of Yorktown,1781"
-      },
-      {
-      "question":"What city was the first Capital of the United States?",
-      "options":["A. New York,NY","B. Philadelphia, PA","C. Trenton,NJ","D. Washington DC"],
-      "answer":"A. New York,NY"
-      },
-      {
-      "question":"How many stars were on the original American flag?",
+      "question":"How many stars were on the original United States flag?",
       "options":["A. 5","B. 13",
                   "C. 4","D. 12"],
       "answer":"B. 13"
@@ -267,20 +265,20 @@ const questions=
         "options":["A. Declarative","B. Iterrogative","C. Exclamatory","D. Question"],
         "answer":"C. Exclamatory"
       },
-      {
-        "question":"Mrs. Shen gave Marshall the solo because he sang it the ______ of everyone who auditioned.",
-        "options":["A. worse","B. best","C. well","D. better"],
-         "answer":"B. best"
-      },
+      // {
+      //   "question":"Mrs. Shen gave Marshall the solo because he sang it the ___ of everyone who auditioned.",
+      //   "options":["A. worse","B. best","C. well","D. better"],
+      //   "answer":"B. best"
+      // },
       { 
-        "question":"Alphabetically, which word comes first?: upstairs, upon, upward, upper",
+        "question":"Alphabetically, which word comes first: upstairs, upon, upward, upper",
         "options":["A.Upper","B. Upstairs","C. Upon","D. upward"],
-         "answer":"C. Upon"
+        "answer":"C. Upon"
       },
       {
-        "question":"Which group predates the other?",
+        "question":"Which group pre-dates the other?",
         "options":["A. Dinosaurs","B. Humans","C. Both","D. Neither"],
-         "answer":"A. Dinosaurs"
+        "answer":"A. Dinosaurs"
       },
       { 
         "question":"When does a basketball team complete its pregame warm-up?",
@@ -290,26 +288,26 @@ const questions=
                    "D. Before the fourth quarter"],
         "answer":"C. Right before the game begins"
       },
-      {
-        "question":"The kayak trainer gave __ and the other couples life jackets and matching helmets?",
-        "options":["A. us","B. we","C. them","D. they"], 
-         "answer":"A. us"
-      },
+      // {
+      //   "question":"The kayak trainer gave __ and the other couples life jackets and matching helmets?",
+      //   "options":["A. us","B. we","C. them","D. they"], 
+      //   "answer":"A. us"
+      // },
       { 
         "question":"The actress gave my best friend and __ her autograph?",
         "options":["A. we","B. I","C. me","D. she"],
         "answer":"B. I"
       },
+      // {
+      //   "question":"Which of these is a complete sentence?",
+      //   "options":["A. Butter melts in a skillet",
+      //             "B. Sugar and salt dissove in water",
+      //             "C. The train was late.",
+      //             "D. Mrs. Spencer is giving away several of her old coats to the charity drive"],
+      //   "answer":"D. Mrs.Spencer is giving away several of her old coats to the charity drive"
+      // },
       {
-        "question":"Which is a complete sentence?",
-        "options":["A. Butter melts in a skillet",
-                  "B. Sugar and Salt dissove in water",
-                  "C. The train was late.",
-                  "D. Mrs.Spencer is giving away several of her old coats to the charity drive"],
-        "answer":"D. Mrs.Spencer is giving away several of her old coats to the charity drive"
-      },
-      {
-        "question":"Which word is an antonym of fictitious?",
+        "question":"Which word is an antonym of 'fictitious?'",
         "options":["A. Delightful",
         "B. Beautiful",
         "C. Imaginary",
@@ -317,7 +315,7 @@ const questions=
         "answer":"D. Real"
       },
       {
-        "question":"Which word is a synonym of maternal?",
+        "question":"Which word is a synonym of 'maternal?'",
         "options":["A. Mature",
         "B. Motherly",
         "C. Fatherly",
@@ -330,22 +328,22 @@ const questions=
   
   [
     {
-      "question":"John eats 3/5 of a candy bar. What percent of the candy bar does he eat?",
+      "question":"John eats 3/5th of a candy bar. What percentage of the candy bar is this?",
       "options":["A. 80%","B. 6%","C. 35%","D. 60%"],
       "answer":"D. 60%"
     },
-    {
-      "question":"What representes (-4)",
-      "options":["A. (+) (-) (+) (+) (+) (+)",
-      "B. (-) (-) (+) (+)",
-      "C. (+) (-) (+) (-) (-) (-) (-) (-)",
-      "D. (-) (+) (-) (-) (-)"],
-      "answer":"C. (+) (-) (+) (-) (-) (-) (-) (-)"
-    },
+    // {
+    //   "question":"What representes (-4)",
+    //   "options":["A. (+) (-) (+) (+) (+) (+)",
+    //   "B. (-) (-) (+) (+)",
+    //   "C. (+) (-) (+) (-) (-) (-) (-) (-)",
+    //   "D. (-) (+) (-) (-) (-)"],
+    //   "answer":"C. (+) (-) (+) (-) (-) (-) (-) (-)"
+    // },
     {
       "question":"Calculate: (-8) + (+2) - (-6) = ?",
-      "options":["A. (-12)","B. (0)","C. (+4)","D. (+16)"],
-      "answer":"B. (0)"
+      "options":["A. -12","B. 0","C. 4","D. 16"],
+      "answer":"B. 0"
     },
     {
       "question":"What is the greatest common factor of 12 and 16?",
@@ -353,25 +351,25 @@ const questions=
       "answer":"D. 4"
     },
     {
-      "question":"Is -9 − 6 positive or negative?",
+      "question":"Is -9 minus 6 positive or negative?",
       "options":["A. Positive",
       "B. Negative"],
       "answer":"B. Negative"
     },
     {
-      "question":"Is 9 + -8 positive or negative?",
+      "question":"Is 9 plus -8 positive or negative?",
       "options":["A. Positive",
       "B. Negative"],
       "answer":"A. Positive"
     },
     {
-      "question":"Is -82 + -83 positive or negative?",
+      "question":"Is -82 plus -83 positive or negative?",
       "options":["A. Positive",
       "B. Negative"],
       "answer":"B. Negative"
     },
     {
-      "question":"What times itself will give you 625?",
+      "question":"What number multiplied by itself will give you 625?",
       "options":["A. 17","B. 62","C. 25","D. 15"],
       "answer":"C. 25"
     },
@@ -381,7 +379,7 @@ const questions=
       "answer":"D. -7"
     },
     {
-      "question":"What is the cube root of 216??",
+      "question":"What is the cube root of 216?",
       "options":["A. 8","B. 4","C. -6","D. 6"],
       "answer":"D. 6"
     }
@@ -391,7 +389,7 @@ const questions=
   // 7th Grade Science
   [
     {
-      "question":"What is the temperature of a warm grilled cheese sandwich?,Select the better estimate",
+      "question":"Estimate the approximate temperature of a warm grilled cheese sandwich:",
       "options":["A. 20 degrees F",
                  "B. 55 degress C",
                  "C. 55 degress F",
@@ -399,7 +397,7 @@ const questions=
       "answer": "B. 55 degress C"
     },
     {
-    "question":"What is the temperature of a cool glass of milk?,Select the better estimate",
+    "question":"Estimate the approximate temperature of a cool glass of milk:",
     "options":["A. 3 degrees C",
                "B. 55 degress C",
                "C. 2 degress  F",
@@ -407,25 +405,25 @@ const questions=
     "answer":"D. 45 degrees F"
     },
     {
-      "question":"What is the \"brain\"(command center) of a cell?",
+      "question":"What is the 'brain' (command center) of a cell?",
       "options":["A. Mitochondria","B. Nucleus","C. Cytoplasm","D. Ribosomes)"],
       "answer":"B. Nucleus"
     },
     {
-      "question":" The ____ membrane allows materials to enter and leave the cell?",
+      "question":" The ____ membrane allows materials to enter and leave the cell.",
       "options":["A. Plasma","B. Golgi Body","C. Cytoplasm","D. Ribosomes"],
       "answer":"A. Plasma"
     },
     {
       "question":"What are the three main parts of a cell?",
-      "options":[ "A. Cell membrane,mitochondria and cytoplasm",
-                  "B. Cell membrane,a Nucleus,and Cytoplasm",
-                  "C. A nucleus ,Vacuole , Golgi Body",
-                  "D.  Golgi Body","Endoplasmic Reticulum","Lysosomes"],
-      "answer":"B. Cell membrane,a Nucleus,and Cytoplasm"
+      "options":[ "A. Cell membrane, mitochondria, cytoplasm",
+                  "B. Cell membrane, nucleus, cytoplasm",
+                  "C. Nucleus, vacuole, golgi body",
+                  "D. Golgi Body, endoplasmic reticulum, lysosomes"],
+      "answer":"B. Cell membrane, nucleus, cytoplasm"
     },
     {
-      "question":"What part of the cell is where energy is made?",
+      "question":"Where is the energy of a cell created?",
       "options":["A. Cell membrane",
                  "B. Cytoplasm",
                  "C. Vacuole",
@@ -433,25 +431,25 @@ const questions=
       "answer":"D. Mitochondria"
     },
     {
-      "question":" What responsibity do Chloroplasts have ?",
+      "question":"What is the responsibility of Chloroplasts?",
       "options":[ "A. Protect the cell",
                   "B. Keep the structure of the cell",
-                  "C. The control center of the cell",
-                  "D. Where sunlight is used to make energy"],
-      "answer": "D. Where sunlight is used to make energy"
+                  "C. Control workings of the cell",
+                  "D. Make energy from sunlight"],
+      "answer": "D. Make energy from sunlight"
     },
     {
-      "question":"What does the chemical symbol Y represent?",
+      "question":"What does the chemical symbol 'Y' represent?",
       "options":["A. Xylocaine","B. Ytterbium","C. Titanium","D. Yttrium"],
       "answer":"D. Yttrium"
     },
     {
-      "question":"What does the chemical symbol Rh represent??",
+      "question":"What does the chemical symbol 'Rh' represent?",
       "options":["A. Radium","B. Rhenium","C. Rayon","D. Rhodium"],
       "answer":"D. Rhodium" 
     },
     {
-      "question":"What does the chemical symbol Ti represent?",
+      "question":"What does the chemical symbol 'Ti' represent?",
       "options":["A. Thallium","B. Thorium","C. Titanium","D. Tellurium"],
       "answer":"C. Titanium"
     }
@@ -461,68 +459,62 @@ const questions=
 
   [
     {
-    "question":"What country did the Americans and George Washington ally with to eventually defeat the British?",
+      "question":"Which country was an ally to the United States during the Revolutionary War?",
       "options":["A. Spain","B. Mexico","C. Canada","D. France"],
-    "answer":"D. France"
+      "answer":"D. France"
     },
     {
-    "question":"The 3/5's Compromise dealt predominantly with what type of people?",
-      "options":["A. Slaves","B. Southerners","C. Poor people","D. Northerners"],
-    "answer":"A. Slaves"
+      "question":"The 3/5th's Compromise dealt predominantly with whom?",
+      "options":["A. Slaves","B. Southerners","C. Impoverished people","D. Northerners"],
+      "answer":"A. Slaves"
     },
     {
-    "question":"The First Amendment says the government cannot take away a person _____ or _____?",
+      "question":"The First Amendment protects citizens' ____ and ____.",
       "options":["A. voting rights, rights to own weapons",
-                "B. freedom of speech, freedom of religion",
-                "C. home and private property",
-                "D. right to a lawyer and fair trial"],
-    "answer":"B. freedom of speech, freedom of religion"
+                  "B. freedom of speech, freedom of religion",
+                  "C. home and private property",
+                  "D. right to a lawyer and fair trial"],
+      "answer":"B. freedom of speech, freedom of religion"
     },
     {
-    "question":" At its height, what was the slave population in the U.S.?",
-      "options":["A. About 4 million","B. About 2 million",
-                "C. About 3 million","D. About 500,000 million"],
-    "answer":"A.About 4 million"
-    },
-    {
-    "question":"In what year did American women win the right to vote?",
+      "question":"In what year did American women win the right to vote?",
       "options":["A. 1930","B. 1923",
-                "C. 1920","D. 1922"],
-    "answer":"C. 1920"
+                  "C. 1920","D. 1922"],
+      "answer":"C. 1920"
     },
     {
-    "question":"Who was the first woman to run for President?",
-    "options":["A. Sonia Johnson","B. Victoria Woodhull",
-                "C. Linda Jenness","D. Belva Ann Lockwood"],
-    "answer":"B. Victoria Woodhull"
+      "question":"Who was the first woman to run for President?",
+      "options":["A. Sonia Johnson","B. Victoria Woodhull",
+                  "C. Hillary Clinton","D. Belva Ann Lockwood"],
+      "answer":"B. Victoria Woodhull"
     },
     {
-      "question":"Which of these honors was Martin Luther King Jr. not awarded?",
+      "question":"Which of these honors was Martin Luther King Jr. NOT awarded?",
       "options":[ "A. Nobel Peace Prize",
                   "B. Congressional Gold Medal",
                   "C. Presidential Medal of Freedom",
                   "D. Freedom Award"],
         "answer": "D. Freedom Award" 
     },
+    // {
+    //   "question":"Why did President Theodore Roosevelt establish the National Forest and Park Systems in the Early 20th century?",
+    //   "options":[" A. To clear the timberlands for use as industrial areas",
+    //               "B. To create more areas for the establishment of American Indian reservations",
+    //               "C. To manage the use of resources and control industrial development in wilderness areas",
+    //               "D. To stimulate development of a tourist industry to help bring revenue to the states"],
+    //     "answer":"C. To manage the use of resources and control industrial development in wilderness areas"
+    // },
     {
-      "question":"Why did President Theodore Roosevelt establish the national forest and park systems in the early 20th century?",
-      "options":[" A. To clear the timberlands for use as industrial areas",
-                  "B. To create more areas for the establishment of American Indian reservations",
-                  "C. To manage the use of resources and control industrial development in wilderness areas",
-                  "D. To stimulate development of a tourist industry to help bring revenue to the states"],
-        "answer":"C. To manage the use of resources and control industrial development in wilderness areas"
+      "question":"Which of the following was NOT acquired by the U.S. at the end of the Spanish-American War?",
+      "options":["A. Cuba","B. Puerto Rico",
+                  "C. The Phillipines","D. Guam"],
+      "answer":"A. Cuba"
     },
     {
-    "question":"Which of the following was NOT acquired by the United States at the end of the Spanish-American War?",
-    "options":["A. Cuba","B. Puerto Rico",
-                "C. The Phillipines","D. Guam"],
-    "answer":"A. Cuba"
-    },
-    {
-    "question":"When did the Vietnam War begin?",
-    "options":["A. 1970","B. 1955",
-                "C. 1950","D. 1972"],
-    "answer":"B. 1955"
+      "question":"In what year did the Vietnam War begin?",
+      "options":["A. 1970","B. 1955",
+                  "C. 1950","D. 1972"],
+      "answer":"B. 1955"
     }
     ]
   ],
@@ -532,52 +524,52 @@ const questions=
    // 8th grade english
     [
       {
-        "question":"The antonym of dirty is ",
+        "question":"The antonym of dirty is: ",
         "options":["A. Beautiful","B. Bad","C. Clean","D. Ugly"],
         "answer":"C. Clean"
       },
       {
-        "question":"What does the word minutiae mean?",
+        "question":"What does the word 'minutiae' mean?",
         "options":["A. artistic or aesthetic details","B. controversial or disputable details","C. unimportant or trifling details","D. negotiable details"],
         "answer":"C. unimportant or trifling details"
       },
       {
-        "question":"What does the word chronological mean?",
+        "question":"What does the word 'chronological' mean?",
         "options":["A. arranged in the order events occured","B. arranged in a way that can be double-checked","C. arranged in the format required by law","D. arranged in no discernible pattern"],
         "answer":"A. arranged in the order events occured"
       },
-      {
-        "question":"What type of sentence is this? 'Since it takes approximately one thousand years for a used printer cartridge to decompose, recycling these plastic ink dispensers helps the environment.'",
-        "options":["A. simple","B. compound","C. complex","D. compound complex"],
-        "answer":"C. complex"
-      },
+      // {
+      //   "question":"What type of sentence is this? 'Since it takes approximately 1000 years for a used printer cartridge to decompose, recycling these plastic ink dispensers helps the environment.'",
+      //   "options":["A. simple","B. compound","C. complex","D. compound complex"],
+      //   "answer":"C. complex"
+      // },
       {
         "question":"What type of sentence is this? 'An avid reader, Ben attends weekly book club meetings, and he finishes several novels every month.'",
         "options":["A. simple","B. compound","C. complex","D. compound complex"],
         "answer":"B. compound"
       },
       {
-        "question":"Choose either A,B,C or D for the correct answer. She  ... at me.",
+        "question":"Complete the sentence: 'She _____ at me.'",
         "options":["A. smile","B. smiles","C. Is smiles","D. is smile"],
         "answer":"B. smiles"
       },
       {
-        "question":"Choose either A,B,C or D for the correct answer. The person .. you met this morning was my uncle",
+        "question":"Complete the sentence: 'The person _____ you met this morning was my uncle.'",
         "options":["A. who","B. whom","C. that","D. which"],
-        "answer":"A. who"
+        "answer":"B. whom"
       },
       {
-        "question":"Which word is a synonym of deficient?",
+        "question":"Which word is a synonym of 'deficient'?",
         "options":["A. lacking","B. dependent","C. judicious","D. affluent"],
         "answer":"A. lacking"
       },
       {
-        "question":"The choir from Danville performed brilliantly during the final round of the regional competition. 'Perform is a(n)'",
+        "question":"The choir from Danville performed brilliantly during the final round of the match. 'Perform'is a(n):",
         "options":["A. adjective","B. adverb","C. clause","D. phrase"],
         "answer":"B. adverb"
       },
       {
-        "question":"Put the words in alphabetical order. 'stake, sack, fowl, formal'",
+        "question":"Put these words in alphabetical order: 'stake, sack, fowl, formal'",
         "options":["A. stake, sack, fowl, formal","B. fowl, formal, stake, sack","C. formal, fowl, sack, stack","D. formal, stake, sack, fowl"],
         "answer":"C. formal, fowl, sack, stack"
       },
@@ -586,15 +578,15 @@ const questions=
     // 8th grade math
     [
       {
-        "question":"What numbers are factors of 10",
+        "question":"Which numbers are factors of 10",
         "options":["A. 1 and 4","B. 1 and 2","C. 3 and 9","D. 2 and 6"],
         "answer":"B. 1 and 2"
       },
-      {
-        "question":"After earning 700 points on a game show, Malia got to compete in the bonus round. During the bonus round, she lost 100 points on the gardening questions. What was her final score?",
-        "options":["A. 800","B. -600","C. 600","D. -800"],
-        "answer":"C. 600"
-      },
+      // {
+      //   "question":"After earning 700 points on a game show, Malia got to compete in the bonus round. During the bonus round, she lost 100 points on the gardening questions. What was her final score?",
+      //   "options":["A. 800","B. -600","C. 600","D. -800"],
+      //   "answer":"C. 600"
+      // },
       {
         "question":"What is the percent of change from 24 to 36?",
         "options":["A. 50% decrease","B. 50% increase","C. 38% decrease","D. 38% increase"],
@@ -606,7 +598,7 @@ const questions=
         "answer":"B. right"
       },
       {
-        "question":"What is 2/4 in lowest terms?",
+        "question":"What is 2/4 in its lowest terms?",
         "options":["A. 1/2","B. 1/3","C. 4/5","D. 3/6"],
         "answer":"A. 1/2"
       },
@@ -626,14 +618,14 @@ const questions=
         "answer":"C. 6 feet"
       },
       {
-        "question":"What is the percent of change from 200,000 to 20,000?",
+        "question":"What is the percentage change from 200,000 to 20,000?",
         "options":["A. 90% decrease","B. 112% increase","C. 112% decrease","D. 90% increase"],
         "answer":"A. 90% decrease"
       },
       {
-        "question":"According to his bank statement, Seth spent $2,000 on a piano. If Seth's bank account started out with a balance of $8,000, which integer represents the final balance?",
-        "options":["A. 10000","B. 7000","C. 6000","D. 5000"],
-        "answer":"C. 6000"
+        "question":"According to his bank statement, Seth spent $2,000 on a piano. If Seth's bank account started out with a balance of $8,000, what is the the final balance?",
+        "options":["A. $10,000","B. $7,000","C. $6,000","D. $5,000"],
+        "answer":"C. $6,000"
       }
     ],
 
@@ -650,19 +642,19 @@ const questions=
         "answer":"B. Test the hypothesis"
       },
       {
-        "question":"What is responsible for breaking down sugar and releasing the energy for activities?",
+        "question":"What is responsible for breaking down sugar in a cell?",
         "options":["A. Mitochondria","B. Nucleus","C. Golgi", "D. Lysosomes"],
         "answer":"A. Mitochondria"
       },
       {
-        "question":"What do the chemical changes of melting glass and dust settling out of the air have in common?",
+        "question":"What do the chemical changes of melting glass and settling dust have in common?",
         "options":["A. Both are physical changes","B. Both are chemical changes","C. Both are caused by heating", "D. Both are caused by cooling"],
         "answer":"A. Both are physical changes"
       },
       {
-        "question":"The earth gets most of it's light from?",
-        "options":["A. Moon","B. Sun","C. Stars", "D. Other Planets"],
-        "answer":"B. Sun"
+        "question":"The earth gets most of its light from ?",
+        "options":["A. the moon","B. the sun","C. stars", "D. other planets"],
+        "answer":"B. the sun"
       },
       {
         "question":"In which part of a plant cell does photosynthesis occur?",
@@ -680,14 +672,14 @@ const questions=
         "answer":"A. 1 month"
       },
       {
-        "question":"People often wear sunglasses in Polar regions because most of the sunlight that strikes a snow-covered surface is?",
+        "question":"It is wise to wear sunglasses in Polar regions because of the bright, _____ light.",
         "options":["A. refracted","B. reflected","C. transmitted", "D. absorbed"],
         "answer":"B. reflected"
       },
       {
-        "question":"What eventually happens to a species when the environment changes and the organisms do not adapt?",
-        "options":["A. regulation","B. classification","C. development", "D. extinction"],
-        "answer":"D. extinction"
+        "question":"When the environment changes and organisms do not adapt, a species could become _____.",
+        "options":["A. regulated","B. classified","C. developed", "D. extinct"],
+        "answer":"D. extinct"
       },
     ],
 
@@ -699,27 +691,27 @@ const questions=
         "answer":"C. John Adams"
       },
       {
-        "question":"How does the US Constitution maintain a republican government?",
+        "question":"How does the U.S. Constitution maintain a democratic government?",
         "options":["A. By specifying the role of the Supreme Court","B. By allowing the public to elect representatives","C. By limiting the terms of the US president", "D. By giving the president veto power"],
         "answer":"B. By allowing the public to elect representatives"
       },
       {
-        "question":"Which of these 19th century presidents was impeached?",
+        "question":"Which of these 19th-century presidents was impeached?",
         "options":["A. Andrew Jackson","B. Andrew Johnson","C. John Tyler", "D. Zachary Taylor"],
         "answer":"B. Andrew Johnson"
       },
       {
-        "question":"What was the purpose of the Mayflower compact?",
+        "question":"What was the purpose of the Mayflower Compact?",
         "options":["A. To establish freedom of religion","B. Serve as a set of rules for self-governance","C. To proclaim allegiance to the king", "D. To establish a new king"],
         "answer":"B. Serve as a set of rules for self-governance"
       },
       {
-        "question":"During the War of 1812 who was the United States fighting against?",
+        "question":"Who was the U.S. fighting against in the War of 1812?",
         "options":["A. Great Britain", "B. Mexico", "C. France", "D. Italy"],
         "answer":"A. Great Britain"
       },
       {
-        "question":"What did prohibition outlaw in the early 1900s?",
+        "question":"What product did prohibition outlaw in the early 1900s?",
         "options":["A. Alcohol","B. Slavery","C. Prohibiting women from voting", "D. Segregation"],
         "answer":"A. Alcohol"
       },
@@ -734,12 +726,12 @@ const questions=
         "answer":"D. The Allied Powers"
       },
       {
-        "question":"What was the name of the document that Abraham Lincoln wrote and later executed that freed the slaves in Confederate states?",
+        "question":"What was the name of the document written by Abraham Lincoln that helped free slaves in the Confederate states?",
         "options":["A. The Slavery Decree","B. The Eleventh Amendment","C. The Freedman Order", "D. The Emancipation Proclamation"],
         "answer":"D. The Emancipation Proclamation"
       },
       {
-        "question":"What American woman aided wounded soldiers on the battlefield during the Civil War?",
+        "question":"What American aided wounded soldiers on the battlefield during the Civil War?",
         "options":["A. Martha Simpson","B. Betsy Ross","C. Clara Barton", "D. Dolly Madison"],
         "answer":"C. Clara Barton"
       },
