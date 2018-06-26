@@ -127,7 +127,11 @@ footer img {
   width: 36rem;
   background-color: rgba(255, 255, 255, 0.8);
   border: .2rem solid black;
+  -webkit-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+  -moz-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
+  box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
   padding: 1rem;
+  
 }
 
 .gameIntro_inner {
@@ -140,11 +144,35 @@ footer img {
   width: 100%;
   background: linear-gradient(to bottom, #46a8dca8, #0a1c20d2);
   border: .2rem solid black;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
 }
 
 .gameIntro_inner h2 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
   color: #d01e00;
+}
+
+.gameIntro_inner p {
+  margin: 1rem 0.8rem;
+}
+
+.gameIntro_button {
+  z-index: 1000000000;
+  width: 12rem;
+  height: 5rem;
+  font-size: 3rem;
+  font-family: 'Bangers', cursive;
+  color: black;
+  padding: 0.8rem;
+  border: .2rem solid #0a1c20;
+  background-color: #fedb0e;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.gameIntro_button:hover {
+  transform: scale(1.1);
 }
 
 .userInfoForm {
