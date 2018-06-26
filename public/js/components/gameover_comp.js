@@ -20,6 +20,7 @@ const gameover = {
         </div>
         <div class="gamover_btns"> 
           <button class="button_new_game" ng-click="$ctrl.goToHome();">New Game</button>
+          <p id="rematchPhrase">Face {{$ctrl.opponent.name}} once more, {{$ctrl.rematchPhrase}}</p>
           <button class="button_rematch animated pulse infinite" ng-click="$ctrl.goToBattle();">Rematch</button>
         </div>
       </div>
@@ -35,15 +36,19 @@ const gameover = {
     vm.clickedHero = GameService.getHero();
     //TODO: change these to be consistant naming conventions -also change in other comps to reflect
    vm.opponent = GameService.getOpponent();
+   vm.user = GameService.getUserInfo();
+    vm.rematchPhrase = "";
+    console.log(vm.user);
   
 
     if(vm.winner.name == vm.clickedHero.name){
       GameService.upDifficulty();
+      vm.rematchPhrase = `this time with harder ${vm.user.subject} questions!`;
       
     } 
     else if (vm.winner.name == vm.opponent.name) {
-      console.log("opponent wins, play again with questions you got wrong");
-      
+      vm.rematchPhrase = `this time with the ${vm.user.subject} questions you got wrong!`;
+
     }
 
 

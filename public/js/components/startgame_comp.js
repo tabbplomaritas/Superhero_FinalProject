@@ -42,7 +42,7 @@ const startGame ={
             <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatibus laudantium, cum cumque laboriosam quasi qui. Labore harum magnam impedit sunt obcaecati? Veritatis nulla magnam aperiam temporibus, atque nihil laborum!
             </p>
-            <button class="gameIntro_button">GOT IT!</button>
+            <button ng-click="$ctrl.hideGameInfo();" class="gameIntro_button">GOT IT!</button>
         </div>
       </section>
     `,
@@ -54,9 +54,14 @@ const startGame ={
         vm.user = {};
         GameService.createRandomNum(); 
         const swing = document.getElementById("swing");
-      
         vm.randomNum = GameService.getRandomNum();
         GameService.setOpponent(vm.randomNum);
+
+
+
+        vm.gameIntro = document.querySelector(".gameIntro");
+        console.log(vm.gameIntro);
+        
 
         setTimeout(() => {
             swing.play();
@@ -71,7 +76,17 @@ const startGame ={
         //     }, 2350);
         // }
    
-   
+        vm.hideGameInfo = () => {
+            console.log("hide game!");
+            console.log(vm.gameIntro);
+            
+            angular.element(vm.gameIntro).addClass("animated zoomOut");
+
+            setTimeout(() => {
+                angular.element(vm.gameIntro).css("display", "none");
+            }, 1000);
+            
+        }
 
         vm.setGrade = (grade, $event) =>{
             angular.element(allGrades).css("background-color", "#46a7dc");
