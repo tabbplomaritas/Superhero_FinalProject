@@ -12,13 +12,19 @@ template: `
 <section class="main">
       
         <div class="healthBar_div">
+            
             <div class="healthBar_outer">
-                <div id="playerHealthBar" class="healthBar_inner"></div>
+                <div id="playerHealthBar" class="healthBar_inner">
+                    <span class="health_bar_hero_name"> {{ $ctrl.clickedHero.name }} health </span>
+                </div>
             </div>
             <p class="totalWins" ng-model="$ctrl.totalWins">
          Total Victories: {{$ctrl.victories}}</p>
+           
             <div class="healthBar_outer">
-                <div id="oppHealthBar" class="healthBar_inner"></div>
+                <div id="oppHealthBar" class="healthBar_inner">
+                    <span class="health_bar_opp_name"> {{ $ctrl.opponent.name }} health</span> 
+                </div> 
             </div>
         </div>
 
@@ -92,6 +98,11 @@ controller: ["GameService", function (GameService){
     //retrieves user info from service
     vm.user = GameService.getUserInfo();
     vm.isRematch = GameService.isRematch();
+    
+    vm.scrollWindow = () => {
+        window.scrollTo(0, 212);
+    };
+    vm.scrollWindow();
 
 
 
