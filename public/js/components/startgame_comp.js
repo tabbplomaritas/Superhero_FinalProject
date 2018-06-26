@@ -74,12 +74,14 @@ const startGame ={
 
    //TODO: move the swing animation and sound effect to a mouseover/mousemovement event listener
 
-        // let windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-        // if(windowWidth > 768){
-        //     setTimeout(() => {
-        //         swing.play();
-        //     }, 2350);
-        // }
+//    addClass for animation wrapped in mouseover event listever
+//    +
+//         let windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+//         if(windowWidth > 768){
+//             setTimeout(() => {
+//                 swing.play();
+//             }, 2350);
+//         }
    
         vm.hideGameIntro = () => {
             angular.element(vm.gameIntro).addClass("animated zoomOut");
