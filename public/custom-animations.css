@@ -26,12 +26,14 @@ span{
 
 @keyframes customRotate {
   from {
+    opacity: 0;
     -webkit-transform: rotate(-1200deg);
     transform: translate(50%) rotate(-1200deg) scale(.5);
     opacity: 0;
   }
 
   to {
+   opacity: 1;
     transform: translate(50%) rotate(0) scale(1);
     opacity: 1;
   }
@@ -87,7 +89,7 @@ span{
 .customSwingIn {
   transform-origin: top;
   animation-name: customSwingIn;
-  animation-delay: 1.5s;
+  animation-delay: 0s;
   animation-duration: 1.6s;
   animation-iteration-count: 1;
   animation-fill-mode: both;

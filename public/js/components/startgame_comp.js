@@ -53,89 +53,58 @@ const startGame ={
     `,
 
     controller: ["GameService", function(GameService){
-        const vm = this;
-        const allGrades = document.querySelectorAll(".grade");
-        const allSubjects = document.querySelectorAll(".subject");
-        const swing = document.getElementById("swing");
-       
-        vm.user = {};
-        GameService.createRandomNum(); 
-        vm.randomNum = GameService.getRandomNum();
-        GameService.setOpponent(vm.randomNum);
-
-
-        // const body = document.getElementsByTagName("body");
-        document.addEventListener("click", myFunction);
-        function myFunction() {
+            const vm = this;
+            const allGrades = document.querySelectorAll(".grade");
+            const allSubjects = document.querySelectorAll(".subject");
+            const swing = document.getElementById("swing");
+            const squeeze = document.getElementById("squeeze");
         
-            console.log("hi");
-            angular.element(aside_image).addClass("customSwingIn");
+            vm.user = {};
+            vm.randomNum = GameService.getRandomNum();
+            vm.gameIntro = document.querySelector(".gameIntro");
+            GameService.createRandomNum(); 
+            GameService.setOpponent(vm.randomNum);
 
-
-        }
-
-        
-
-    
-        vm.gameIntro = document.querySelector(".gameIntro");
-        console.log(vm.gameIntro);
-        
-
-        setTimeout(() => {
-            swing.play();
-        }, 2350);
-
-        vm.hideGameIntro = () => {
-            angular.element(vm.gameIntro).addClass("animated zoomOut");
-
-            setTimeout(() => {
-                angular.element(vm.gameIntro).css("display", "none");
-            }, 1000);
-            
-        }
-
-   //TODO: move the swing animation and sound effect to a mouseover/mousemovement event listener
-
-//    addClass for animation wrapped in mouseover event listever
-//    +
-//         let windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-//         if(windowWidth > 768){
-//             setTimeout(() => {
-//                 swing.play();
-//             }, 2350);
-//         }
-   
-        // vm.hideGameIntro = () => {
-        //     angular.element(vm.gameIntro).addClass("animated zoomOut");
-
-        //     setTimeout(() => {
-        //         angular.element(vm.gameIntro).css("display", "none");
-        //     }, 1000);
-            
-        // }
-
-        vm.setGrade = (grade, $event) =>{
-            angular.element(allGrades).css("background-color", "#46a7dc");
-
-            angular.element($event.target).css("background-color", "black");
-           
-            angular.element($event.target).addClass("rubberBand");
-            vm.user.grade = grade;
-        }
-         
-        vm.setSubject = (subject, $event) =>{
-                angular.element(allSubjects).css("background-color", "#d01e00");
-            
-                angular.element($event.target).css("background-color", "black");
-                angular.element($event.target).addClass("rubberBand");
-                vm.user.subject = subject;
-                console.log(vm.user);
+            vm.showAsideImage = () => {
+                let windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
                 
-        }
+                if(windowWidth > 768){
+                angular.element(aside_image).addClass("customSwingIn");
+                swing.play(); 
+                }
+            }
 
-         vm.sendUserInfo = (user) => {
-            GameService.sendUserInfo(user);
-         }
+            vm.hideGameIntro = () => {
+                angular.element(vm.gameIntro).addClass("animated zoomOut");
+
+                setTimeout(() => {
+                    angular.element(vm.gameIntro).css("display", "none");
+                    vm.showAsideImage();
+                }, 1000);
+            }
+
+            vm.setGrade = (grade, $event) =>{
+                squeeze.play();
+                angular.element(allGrades).css("background-color", "#46a7dc");
+
+                angular.element($event.target).css("background-color", "black");
+            
+                angular.element($event.target).addClass("rubberBand");
+                vm.user.grade = grade;
+            }
+            
+            vm.setSubject = (subject, $event) =>{
+                squeeze.play();
+                    angular.element(allSubjects).css("background-color", "#d01e00");
+                
+                    angular.element($event.target).css("background-color", "black");
+                    angular.element($event.target).addClass("rubberBand");
+                    vm.user.subject = subject;
+            }
+
+            vm.sendUserInfo = (user) => {
+                GameService.sendUserInfo(user);
+            }
 
 
          }]
