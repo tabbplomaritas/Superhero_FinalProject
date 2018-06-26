@@ -118,6 +118,35 @@ footer img {
 
 /* start component styles */
 
+.gameIntro {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  height: 36rem;
+  width: 36rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: .2rem solid black;
+  padding: 1rem;
+}
+
+.gameIntro_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #46a8dca8, #0a1c20d2);
+  border: .2rem solid black;
+  font-size: 1.7rem;
+}
+
+.gameIntro_inner h2 {
+  color: #d01e00;
+}
+
 .userInfoForm {
   display: flex;
   flex-direction: column;

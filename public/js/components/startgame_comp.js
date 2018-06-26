@@ -32,8 +32,19 @@ const startGame ={
         </section>
 
         <img class="beginAdv" ng-click="$ctrl.sendUserInfo($ctrl.user)" src="../../assets/design/readyToBattle-01.png">
-    
       </form>
+
+
+      <section class="gameIntro">
+        <div class="gameIntro_inner">
+            <h2>Study for school, save the world!</h2>
+
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatibus laudantium, cum cumque laboriosam quasi qui. Labore harum magnam impedit sunt obcaecati? Veritatis nulla magnam aperiam temporibus, atque nihil laborum!
+            </p>
+            <button class="gameIntro_button">GOT IT!</button>
+        </div>
+      </section>
     `,
 
     controller: ["GameService", function(GameService){
@@ -52,7 +63,7 @@ const startGame ={
         }, 2350);
 
    //TODO: move the swing animation and sound effect to a mouseover/mousemovement event listener
-   
+
         // let windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         // if(windowWidth > 768){
         //     setTimeout(() => {
