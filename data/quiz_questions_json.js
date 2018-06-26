@@ -5,53 +5,53 @@ const questions=
     //english
     [
       {
-        "question":"I am happy to report that Grace’s baby is very______ and ______!",
+        "question": "Complete this sentence: 'I am happy to report that Grace’s baby is very___and ___!'",
         "options":["A. happy and healthy","B. sickly and scrawny","C. tiny and small","D. hungry and annoying"],
         "answer":"A. happy and healthy"
       },
       {
-        "question":"The riverbed was _______ and ______, making it hard to balance well",
+        "question":"Complete this sentence: 'The riverbed was ___ and ___, making it hard to balance.'",
         "options": ["A. fishy and froggy","B. shallow and deep","C. moist and wet","D. rocky and slippery"],
         "answer":"D. rocky and slippery"
       },
       {
-          "question":"She was brave _ a lion.",
-          "options": ["A. as","B. because","C. before","D. so"],
-          "answer":"A. as"
+        "question":"Complete this sentence: 'She was brave __ a lion.'",
+        "options": ["A. as","B. because","C. before","D. so"],
+        "answer":"A. as"
       },
-      {
-        "question":"The car belonging to the manager,Choose the correct answer for the following phrase",
-        "options":["A. The managers car","B. The manager's car","C. The managers'car","D. The managerss's car"],
-        "answer":"B. The manager's car"
+      // {
+      //   "question":"The car belonging to the manager,Choose the correct answer for the following phrase",
+      //   "options":["A. The managers car","B. The manager's car","C. The managers'car","D. The managerss's car"],
+      //   "answer":"B. The manager's car"
 
-      },
-      {
-        "question":"James took the book; he gave it to the teacher, Choose the pronoun.",
-        "options":["A. book","B. he","C. James","D. teacher"],
-        "answer":"B. he"
+      // },
+    {
+      "question":"What is the pronoun in this sentence? 'James took the book; he gave it to the teacher.'",
+      "options":["A. book","B. he","C. James","D. teacher"],
+      "answer":"B. he"
 
-      },
-      {
-        "question":"Their business's success was far greater than what even they themselves had dared to imagine",
-        "options":["A.  Reflexive","B. Intensive"],
-      "answer":"B. Intensive"
     },
     // {
-    //   "question":"The root therm means heat. What does the word thermostat mean?",
-    //   "options":["A.  A device that controls the lighting a room",
-    //             "B.  A device that controls the music a room",
-    //             "C.  A device that controls the airflow in a room",
-    //             "D.  A device that controls the heating  in a room"],                                        
-    //   "answer":"D.  A device that controls the heating  in a room"
+    //   "question":"Their business's success was far greater than what even they themselves had dared to imagine",
+    //   "options":["A.  Reflexive","B. Intensive"],
+    //   "answer":"B. Intensive"
     // },
-    // {
-    //   "question":" What are homonyms?", 
-    //   "options":["A. Words that imitate sounds or ideas",
-    //             "B. Words that are spelled the same but in their given context have different meanings",
-    //             "C. Words that describe, identify or further define a noun or a pronoun",
-    //             "D. Word that shows possession"],                                        
-    //   "answer":   "B. Words that are spelled the same but in their given context have different meanings"
-    // },
+    {
+      "question":"The root 'therm' means heat. What does the word thermostat mean?",
+      "options":["A.  A device that controls the lighting a room",
+                "B.  A device that controls the music a room",
+                "C.  A device that controls the airflow in a room",
+                "D.  A device that controls the heating in a room"],                                        
+      "answer":"D.  A device that controls the heating in a room."
+    },
+    {
+      "question":" What is a homonym?", 
+      "options":["A. A word that imitate sounds or ideas",
+                "B. Words that are spelled the same but have different definitions",
+                "C. Words that describe, identify or further define a noun or a pronoun",
+                "D. Word that shows possession"],                                        
+      "answer":   "B. Words that are spelled the same but have different definitions."
+    },
     {
       "question":"What is a metaphor?",
       "options":["A. word that replaces one or more nouns",
