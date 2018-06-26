@@ -635,7 +635,8 @@ footer img {
   color: #0a1c20;
   letter-spacing: .1rem;
   font-size: 1.6rem;
-  text-align: center
+  text-align: center;
+  line-height: 1.5rem;
 }
 
 .nameAndBar {
