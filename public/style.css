@@ -666,8 +666,8 @@ footer img {
 .begin_battle_button_wrap {
   z-index: 1000000000;
   position: fixed;
-  top: 50%;
-  right: 50%;
+  top: 47%;
+  right: 28%;
   width: 40rem;
   transform: translate(50%, -50%);
 }
