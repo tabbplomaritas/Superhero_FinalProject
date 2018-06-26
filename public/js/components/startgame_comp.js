@@ -56,14 +56,27 @@ const startGame ={
         const vm = this;
         const allGrades = document.querySelectorAll(".grade");
         const allSubjects = document.querySelectorAll(".subject");
+        const swing = document.getElementById("swing");
+       
         vm.user = {};
         GameService.createRandomNum(); 
-        const swing = document.getElementById("swing");
         vm.randomNum = GameService.getRandomNum();
         GameService.setOpponent(vm.randomNum);
 
 
+        // const body = document.getElementsByTagName("body");
+        document.addEventListener("click", myFunction);
+        function myFunction() {
+        
+            console.log("hi");
+            angular.element(aside_image).addClass("customSwingIn");
 
+
+        }
+
+        
+
+    
         vm.gameIntro = document.querySelector(".gameIntro");
         console.log(vm.gameIntro);
         
@@ -71,6 +84,15 @@ const startGame ={
         setTimeout(() => {
             swing.play();
         }, 2350);
+
+        vm.hideGameIntro = () => {
+            angular.element(vm.gameIntro).addClass("animated zoomOut");
+
+            setTimeout(() => {
+                angular.element(vm.gameIntro).css("display", "none");
+            }, 1000);
+            
+        }
 
    //TODO: move the swing animation and sound effect to a mouseover/mousemovement event listener
 
@@ -81,14 +103,14 @@ const startGame ={
         //     }, 2350);
         // }
    
-        vm.hideGameIntro = () => {
-            angular.element(vm.gameIntro).addClass("animated zoomOut");
+        // vm.hideGameIntro = () => {
+        //     angular.element(vm.gameIntro).addClass("animated zoomOut");
 
-            setTimeout(() => {
-                angular.element(vm.gameIntro).css("display", "none");
-            }, 1000);
+        //     setTimeout(() => {
+        //         angular.element(vm.gameIntro).css("display", "none");
+        //     }, 1000);
             
-        }
+        // }
 
         vm.setGrade = (grade, $event) =>{
             angular.element(allGrades).css("background-color", "#46a7dc");
