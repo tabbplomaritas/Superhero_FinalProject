@@ -44,9 +44,9 @@ template: `
             </div>
           </div>
 
-          <div class="begin_battle_button_wrap">
+      
             <button class="button_battle animated pulse infinite" ng-show="$ctrl.showMe" ng-click="$ctrl.startBattle();">Click to begin battle!</button>
-          </div>
+        
 
 
          
@@ -78,8 +78,8 @@ controller: ["GameService", function (GameService){
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 10;
-    vm.opponentHealth = 10;
+    vm.playerHealth = 5;
+    vm.opponentHealth = 5;
     vm.gradeI;
     vm.subjectI;
     vm.questionI = 0;

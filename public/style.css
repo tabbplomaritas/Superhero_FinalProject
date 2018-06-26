@@ -120,7 +120,7 @@ footer img {
 
 .gameIntro {
   position: fixed;
-  top: 50%;
+  top: 55%;
   right: 50%;
   transform: translate(50%, -50%);
   height: 36rem;
@@ -536,7 +536,7 @@ footer img {
 }
 
 .speechBubble_questions {
-  width: 90%;
+  width: 80%;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -552,7 +552,7 @@ footer img {
   text-align: center;
   position: absolute;
   top: 50%;
-  right: 50%;
+  right: 38%;
   line-height: 1rem;
   font-size: 1.5rem;
   transform: translate(50%, -50%);
@@ -635,7 +635,8 @@ footer img {
   color: #0a1c20;
   letter-spacing: .1rem;
   font-size: 1.6rem;
-  text-align: center
+  text-align: center;
+  line-height: 1.5rem;
 }
 
 .nameAndBar {
@@ -650,27 +651,28 @@ footer img {
 
 /* TODO: make these buttons not suck */
 .button_battle {
-  position: absolute;
+  position: fixed;
+  top: 47%;
+  right: 50%;
+  transform: translate(50%, -50%);
   z-index: 1000000000;
+
+  /* size values */
   width: 22rem;
   height: 8rem;
+
+  /* colors */
   background-color: #fedb0e;
+  color: black;
+
   font-size: 3rem;
   font-family: 'Bangers', cursive;
-  color: black;
+  
   padding: 1rem;
   border: .2rem solid #0a1c20;
   cursor: pointer;
 }
 
-.begin_battle_button_wrap {
-  z-index: 1000000000;
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  width: 40rem;
-  transform: translate(50%, -50%);
-}
 
 .button_battle:nth-of-type(2){
   background-color: #ee7c47;
@@ -761,14 +763,14 @@ footer img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -6rem;
   z-index: 1000000;
 }
 
 .gamover_btns button {
   z-index: 1000000000;
-  width: 14rem;
-  height: 7rem;
+  width: auto;
+  height: auto;
+  max-width: 80%;
   font-size: 3rem;
   font-family: 'Bangers', cursive;
   color: black;
@@ -781,6 +783,11 @@ footer img {
   background-color: #fedb0e;
   cursor: pointer;
   z-index: 10000000000;
+}
+
+.gameoverButton_text {
+  font-family: 'kalam', cursive;
+  font-size: 1.3rem;
 }
 
 .button_rematch {
