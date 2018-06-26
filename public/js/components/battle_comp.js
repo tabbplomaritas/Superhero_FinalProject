@@ -44,9 +44,9 @@ template: `
             </div>
           </div>
 
-          <div class="begin_battle_button_wrap">
+      
             <button class="button_battle animated pulse infinite" ng-show="$ctrl.showMe" ng-click="$ctrl.startBattle();">Click to begin battle!</button>
-          </div>
+        
 
 
          

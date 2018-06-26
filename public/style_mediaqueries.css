@@ -49,18 +49,12 @@
     font-size: 1.7rem;
     width: 75%;
   }
-  .begin_battle_button_wrap {
-    z-index: 1000000000;
-    position: fixed;
-    top: 34%;
-    right: 50%;
-    width: 40rem;
-    transform: translate(50%, -50%);
-  }
+ 
   .button_battle {
     height: 12rem;
     font-size: 3.5rem;
     width: 25rem;
+    right: 56%;
   }
 
   .totalWins {
@@ -72,18 +66,10 @@
 
 /* DESKTOP VIEWS */
 
-@media only screen and (min-width: 900px){
-
-
-  .begin_battle_button_wrap {
-    z-index: 1000000000;
-    position: fixed;
-    top: 33%;
-    right: 54%;
-    width: 40rem;
-    transform: translate(50%, -50%);
-  }
+@media only screen and (min-width: 900px){  
   .button_battle {
+    top: 31%;
+    right: 56%;
     font-size: 4.5rem;
     width: 38rem;
   }
@@ -136,6 +122,7 @@
 
   .fighter_info_img {
     margin-top: -2rem;
+    max-height: 22.5rem;
     position: static;
     z-index: 1;
     border: .2rem solid black;
