@@ -10,23 +10,25 @@
 const battle = {
 template: `
 <section class="main">
-      
-        <div class="healthBar_div">
-            
-            <div class="healthBar_outer">
-                <div id="playerHealthBar" class="healthBar_inner">
-                    <span class="health_bar_hero_name"> {{ $ctrl.clickedHero.name }} health </span>
+   
+        <section class="healthBar_div">
+            <div class="nameAndBar">
+                <div class="health_bar_name"> {{ $ctrl.clickedHero.name }} Health </div>
+                <div class="healthBar_outer">
+                    <div id="playerHealthBar" class="healthBar_inner"></div>
                 </div>
             </div>
-            <p class="totalWins" ng-model="$ctrl.totalWins">
-         Total Victories: {{$ctrl.victories}}</p>
-           
-            <div class="healthBar_outer">
-                <div id="oppHealthBar" class="healthBar_inner">
-                    <span class="health_bar_opp_name"> {{ $ctrl.opponent.name }} health</span> 
-                </div> 
+
+                <p class="totalWins" ng-model="$ctrl.totalWins">
+            Total Victories: {{$ctrl.victories}}</p>
+
+            <div class="nameAndBar">
+                <div class="health_bar_name"> {{ $ctrl.opponent.name }} Health</div> 
+                <div class="healthBar_outer">
+                    <div id="oppHealthBar" class="healthBar_inner"></div> 
+                </div>
             </div>
-        </div>
+        </section>
 
     
         <section class="fighters">
@@ -98,7 +100,7 @@ controller: ["GameService", function (GameService){
     //retrieves user info from service
     vm.user = GameService.getUserInfo();
     vm.isRematch = GameService.isRematch();
-    
+
     vm.scrollWindow = () => {
         window.scrollTo(0, 212);
     };

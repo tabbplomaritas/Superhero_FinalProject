@@ -137,6 +137,10 @@
     order: 1;
   }
  
+  .health_bar_name {
+    font-size: 2rem;
+  }
+
   .healthBar_outer {
     height: 2.5rem;
     width: 30rem;
