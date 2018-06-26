@@ -78,8 +78,8 @@ controller: ["GameService", function (GameService){
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 2;
-    vm.opponentHealth = 2;
+    vm.playerHealth = 10;
+    vm.opponentHealth = 10;
     vm.gradeI;
     vm.subjectI;
     vm.questionI = 0;

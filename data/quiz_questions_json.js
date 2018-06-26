@@ -36,22 +36,22 @@ const questions=
         "options":["A.  Reflexive","B. Intensive"],
       "answer":"B. Intensive"
     },
-    {
-      "question":"The root therm means heat. What does the word thermostat mean?",
-      "options":["A.  A device that controls the lighting a room",
-                "B.  A device that controls the music a room",
-                "C.  A device that controls the airflow in a room",
-                "D.  A device that controls the heating  in a room"],                                        
-      "answer":"D.  A device that controls the heating  in a room"
-    },
-    {
-      "question":" What are homonyms?", 
-      "options":["A. Words that imitate sounds or ideas",
-                "B. Words that are spelled the same but in their given context have different meanings",
-                "C. Words that describe, identify or further define a noun or a pronoun",
-                "D. Word that shows possession"],                                        
-      "answer":   "B. Words that are spelled the same but in their given context have different meanings"
-    },
+    // {
+    //   "question":"The root therm means heat. What does the word thermostat mean?",
+    //   "options":["A.  A device that controls the lighting a room",
+    //             "B.  A device that controls the music a room",
+    //             "C.  A device that controls the airflow in a room",
+    //             "D.  A device that controls the heating  in a room"],                                        
+    //   "answer":"D.  A device that controls the heating  in a room"
+    // },
+    // {
+    //   "question":" What are homonyms?", 
+    //   "options":["A. Words that imitate sounds or ideas",
+    //             "B. Words that are spelled the same but in their given context have different meanings",
+    //             "C. Words that describe, identify or further define a noun or a pronoun",
+    //             "D. Word that shows possession"],                                        
+    //   "answer":   "B. Words that are spelled the same but in their given context have different meanings"
+    // },
     {
       "question":"What is a metaphor?",
       "options":["A. word that replaces one or more nouns",
