@@ -42,10 +42,12 @@
   .speechBubble_questions {
     font-size: 1.7rem;
     padding: .5rem 0rem .5rem 2.5rem;
+    width: 75%;
   }
 
   .speechBubble_answers {
     font-size: 1.7rem;
+    width: 75%;
   }
 
   .button_battle {

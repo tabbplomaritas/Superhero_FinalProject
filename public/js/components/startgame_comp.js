@@ -38,11 +38,16 @@ const startGame ={
       <section class="gameIntro">
         <div class="gameIntro_inner">
             <h2>Study for school, save the world!</h2>
-
             <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatibus laudantium, cum cumque laboriosam quasi qui. Labore harum magnam impedit sunt obcaecati? Veritatis nulla magnam aperiam temporibus, atque nihil laborum!
+            Battle a villainous opponent by answering trivia questions.
             </p>
-            <button ng-click="$ctrl.hideGameInfo();" class="gameIntro_button">GOT IT!</button>
+            <p>
+            Correctly answer the questions to defeat the villain and move on to the next round.
+            </p>
+            <p>
+            Keep an eye on your health bar...
+            </p>
+            <button class="gameIntro_button">OK?</button>
         </div>
       </section>
     `,
