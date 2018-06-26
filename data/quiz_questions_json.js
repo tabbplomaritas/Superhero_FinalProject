@@ -5,28 +5,28 @@ const questions=
     //english
     [
       {
-        "question":"I am happy to report that Grace’s baby is very ______ and ______!",
-        "options": ["A. happy and healthy","B. sickly and scrawny","C. tiny and small","D. hungry and annoying"],
+        "question":"I am happy to report that Grace’s baby is very______ and ______!",
+        "options":["A. happy and healthy","B. sickly and scrawny","C. tiny and small","D. hungry and annoying"],
         "answer":"A. happy and healthy"
       },
       {
         "question":"The riverbed was _______ and ______, making it hard to balance well",
-        "options": ["A. fishy and froggy","B. shallow and deep","C. moist and wet","D. rocky and slippery"],
+        "options": ["A. fishy and froggy","B. shallow and deep","C. moist and wet","D. rocky and slippery"],
         "answer":"D. rocky and slippery"
       },
       {
           "question":"She was brave _ a lion.",
-          "options": ["A. as","B. because","C. before","D. so"],
+          "options": ["A. as","B. because","C. before","D. so"],
           "answer":"A. as"
       },
       {
         "question":"The car belonging to the manager,Choose the correct answer for the following phrase",
-        "options":["A. The managers car","B. The manager's car","C. The managers'car","D. The managers's car"],
-        "answer":"D. The manager's car"
+        "options":["A. The managers car","B. The manager's car","C. The managers'car","D. The managerss's car"],
+        "answer":"B. The manager's car"
 
       },
       {
-        "question":"James took the book; he gave it to the teacher, Choose the pronoun",
+        "question":"James took the book; he gave it to the teacher, Choose the pronoun.",
         "options":["A. book","B. he","C. James","D. teacher"],
         "answer":"B. he"
 
@@ -41,8 +41,8 @@ const questions=
       "options":["A.  A device that controls the lighting a room",
                 "B.  A device that controls the music a room",
                 "C.  A device that controls the airflow in a room",
-                "D.  A device that controls the heating a room"],                                        
-      "answer":"D. A device that controls the heating a room"
+                "D.  A device that controls the heating  in a room"],                                        
+      "answer":"D.  A device that controls the heating  in a room"
     },
     {
       "question":" What are homonyms?", 
@@ -50,7 +50,7 @@ const questions=
                 "B. Words that are spelled the same but in their given context have different meanings",
                 "C. Words that describe, identify or further define a noun or a pronoun",
                 "D. Word that shows possession"],                                        
-      "answer":"B. Words that are spelled the same but in their given context have different meanings"
+      "answer":   "B. Words that are spelled the same but in their given context have different meanings"
     },
     {
       "question":"What is a metaphor?",
@@ -58,7 +58,7 @@ const questions=
                 "B. word that follows a conjunction",
                 "C. word that shows possession",
                 "D. word that is implied as being the “same” thing"],                                        
-      "answer":"D. word that is implied as being the “same” thing"
+      "answer": "D. word that is implied as being the “same” thing"
       },
       {
 
@@ -108,7 +108,7 @@ const questions=
       },
       {
         "question":"Are the ratios 10:14 and 5:7 equivalent?",
-        "options":["A.  Yes","B. No"],
+        "options":["A. Yes","B. No"],
         "answer":"A. Yes"
       },
       {
@@ -118,8 +118,8 @@ const questions=
       },
       {
         "question":"Mark can make 42 birthday cakes in 7 days?,How many can he make in 3 days?",
-        "options":["A. 63:54","B. 21:19","C.43:36","D. 77:65"],
-        "answer":"A.63:54"
+        "options":["A. 20","B. 21","C. 22","D. 18"],
+        "answer":"D. 18"
       },
       {
         "question":"An estimated 3 out of every 25 men are left-handed,What percent of men are left-handed?",
@@ -135,7 +135,7 @@ const questions=
       {
       "question":"I have dry scaly skin,breathe with lungs and lay shelled eggs,What am I?",
         "options":["A. Primates","B. Reptiles","C. Amphibians","D. Cephalopods"],
-      "answer":"B.Reptiles"
+      "answer":"B. Reptiles"
       },
       {
         "question":"What is the function of a blood cell?",
@@ -164,7 +164,7 @@ const questions=
       },
       {
         "question":"What element has a density of 1.7?",
-        "options":["A. Fluorine","B. Calcium","C. Carbon","D.  Chlorine"],
+        "options":["A. Fluorine","B. Calcium","C. Carbon","D.Chlorine"],
         "answer":"A. Fluorine"
       },
       {
@@ -214,24 +214,24 @@ const questions=
       },
       {
       "question":" Which of these was NOT a member of the original Thirteen Colonies?",
-        "options":["A. Maine","B. Pennsylvania,",
+        "options":["A. Maine","B. Pennsylvania",
                   "C. Delaware","D. Georgia"],
       "answer":"A. Maine"
       },
       {
       "question":" How many men signed the Declaration of Independence in 1776?",
-        "options":["A. 44","B. 33,",
+        "options":["A. 44","B. 33",
                   "C. 56","D. 55"],
       "answer":"C. 56"
       },
       {
-      "question":"Who said the famous quote\"Give me liberty, or give me death!\""?
+      "question":"Who said the famous quote (Give me liberty or give me death!)",
       "options":["A. Patrick Henry","B. Samuel Adams",
                   "C. Thomas Paine","D. George Washington"],
       "answer":"A. Patrick Henry" 
       },
       {
-      "question":" Where was the first shot of the American Revolutionary War fired?"?
+      "question":" Where was the first shot of the American Revolutionary War fired?",
       "options":["A. New York","B. Saratoga",
                   "C. Maine","D. Lexington"],
       "answer":"D. Lexington" 
@@ -269,36 +269,36 @@ const questions=
       },
       {
         "question":"Mrs. Shen gave Marshall the solo because he sang it the ______ of everyone who auditioned.",
-        "options":["A.worse","B. best","C. well","D. better"],
-        "answer ":"B.best"
+        "options":["A. worse","B. best","C. well","D. better"],
+         "answer":"B. best"
       },
       { 
         "question":"Alphabetically, which word comes first?: upstairs, upon, upward, upper",
-        "options":["A.Upper","B. upstairs","C. upon","D. upward"],
-        "answer ":"C.upon"
+        "options":["A.Upper","B. Upstairs","C. Upon","D. upward"],
+         "answer":"C. Upon"
       },
       {
         "question":"Which group predates the other?",
-        "options":["A.Dinosaurs","B. humans","C. Both","D. Neither"],
-        "answer ":"A.dinosaurs"
+        "options":["A. Dinosaurs","B. Humans","C. Both","D. Neither"],
+         "answer":"A. Dinosaurs"
       },
       { 
         "question":"When does a basketball team complete its pregame warm-up?",
-        "options":["A.Right before the games  begins",
-                  "B.Before the 2nd quarter ",
-                  "C.Right before the games  begins",
-                  "D.Before the fourth quarter "],
-        "answer":"C.Right before the games  begins"
+        "options":["A. During half-time",
+                   "B. Before the 2nd quarter",
+                   "C. Right before the game begins",
+                   "D. Before the fourth quarter"],
+        "answer":"C. Right before the game begins"
       },
       {
-        "question":"The kayak gave __ and the other couples life jackets and matching helmets?",
-        "options":["A.us","B. we","C. them","D. they"],
-        "answer ":"A.us"
+        "question":"The kayak trainer gave __ and the other couples life jackets and matching helmets?",
+        "options":["A. us","B. we","C. them","D. they"], 
+         "answer":"A. us"
       },
       { 
         "question":"The actress gave my best friend and __ her autograph?",
-        "options":["A.we","B. I","C. me","D. she"],
-        "answer":"C. me"
+        "options":["A. we","B. I","C. me","D. she"],
+        "answer":"B. I"
       },
       {
         "question":"Which is a complete sentence?",
@@ -322,7 +322,7 @@ const questions=
         "B. Motherly",
         "C. Fatherly",
         "D. Materialistic"],
-        "answer":"B.Motherly"
+        "answer": "B. Motherly"
       }  
   ],
 
@@ -332,7 +332,7 @@ const questions=
     {
       "question":"John eats 3/5 of a candy bar. What percent of the candy bar does he eat?",
       "options":["A. 80%","B. 6%","C. 35%","D. 60%"],
-      "answer":"D. 60%"
+      "answer":"D. 60%"
     },
     {
       "question":"What representes (-4)",
@@ -356,7 +356,7 @@ const questions=
       "question":"Is -9 − 6 positive or negative?",
       "options":["A. Positive",
       "B. Negative"],
-      "answer":"B.  Negative"
+      "answer":"B. Negative"
     },
     {
       "question":"Is 9 + -8 positive or negative?",
@@ -392,68 +392,68 @@ const questions=
   [
     {
       "question":"What is the temperature of a warm grilled cheese sandwich?,Select the better estimate",
-      "options":["A.20 degrees F",
-                 "B.55 degress C",
-                 "C.55 degress F",
-                 "D.90 degrees C"],
-      "answer":"B.55 degress C"
+      "options":["A. 20 degrees F",
+                 "B. 55 degress C",
+                 "C. 55 degress F",
+                 "D. 90 degrees C"],
+      "answer": "B. 55 degress C"
     },
     {
     "question":"What is the temperature of a cool glass of milk?,Select the better estimate",
-    "options":["A.3 degrees C",
-               "B.55 degress C",
-               "C.2 degress  F",
-               "D.45 degrees F"],
-    "answer":"D.45 degrees F"
+    "options":["A. 3 degrees C",
+               "B. 55 degress C",
+               "C. 2 degress  F",
+               "D. 45 degrees F"],
+    "answer":"D. 45 degrees F"
     },
     {
       "question":"What is the \"brain\"(command center) of a cell?",
-      "options":["A.Mitochondria","B.Nucleus","C.Cytoplasm","D.Ribosomes)"],
-      "answer":"B.Nucleus"
+      "options":["A. Mitochondria","B. Nucleus","C. Cytoplasm","D. Ribosomes)"],
+      "answer":"B. Nucleus"
     },
     {
-      "question":" The ____ membrane allows materials to enter and leave the cell.?",
-      "options":["A.Plasma","B.Golgi Body","C.Cytoplasm","D.Ribosomes"],
-      "answer":"A.Plasma"
+      "question":" The ____ membrane allows materials to enter and leave the cell?",
+      "options":["A. Plasma","B. Golgi Body","C. Cytoplasm","D. Ribosomes"],
+      "answer":"A. Plasma"
     },
     {
       "question":"What are the three main parts of a cell?",
-      "options":["A.Cell membrane,mitochondria and cytoplasm",
-                 "B.Cell membrane,a nucleus,and cytoplasm",
-                 "C.A nucleus","Vacuole","Golgi Body",
-                 "D.Golgi Body","Endoplasmic Reticulum","Lysosomes"],
-      "answer":"B.Cell membrane,a Nucleus,and Cytoplasm"
+      "options":[ "A. Cell membrane,mitochondria and cytoplasm",
+                  "B. Cell membrane,a Nucleus,and Cytoplasm",
+                  "C. A nucleus ,Vacuole , Golgi Body",
+                  "D.  Golgi Body","Endoplasmic Reticulum","Lysosomes"],
+      "answer":"B. Cell membrane,a Nucleus,and Cytoplasm"
     },
     {
       "question":"What part of the cell is where energy is made?",
-      "options":["A.Cell membrane",
-                 "B.Cytoplasm",
-                 "C.Vacuole",
-                 "D.Mitochondria"],
-      "answer":"D.Mitochondria"
+      "options":["A. Cell membrane",
+                 "B. Cytoplasm",
+                 "C. Vacuole",
+                 "D. Mitochondria"],
+      "answer":"D. Mitochondria"
     },
     {
       "question":" What responsibity do Chloroplasts have ?",
-      "options":["A.Protect the cell",
-                 "B.Keep the structure of the cell",
-                 "C.The control center of the cell",
-                "D.Where proteins are put together"],
-      "answer":"D.Where proteins are put together"
+      "options":[ "A. Protect the cell",
+                  "B. Keep the structure of the cell",
+                  "C. The control center of the cell",
+                  "D. Where sunlight is used to make energy"],
+      "answer": "D. Where sunlight is used to make energy"
     },
     {
       "question":"What does the chemical symbol Y represent?",
-      "options":["A.Xylocaine","B.Ytterbium","C.Titanium","D.Yttrium"],
-      "answer":"D.Yttrium"
+      "options":["A. Xylocaine","B. Ytterbium","C. Titanium","D. Yttrium"],
+      "answer":"D. Yttrium"
     },
     {
       "question":"What does the chemical symbol Rh represent??",
-      "options":["A.Radium","B.Rhenium","C.Rayon","D.Rhodium"],
-      "answer":"D.-7"
+      "options":["A. Radium","B. Rhenium","C. Rayon","D. Rhodium"],
+      "answer":"D. Rhodium" 
     },
     {
       "question":"What does the chemical symbol Ti represent?",
-      "options":["A.Thallium","B.Thorium","C.Titanium","D.Tellurium"],
-      "answer":"C.Titanium"
+      "options":["A. Thallium","B. Thorium","C. Titanium","D. Tellurium"],
+      "answer":"C. Titanium"
     }
   ],
 
@@ -497,20 +497,20 @@ const questions=
     "answer":"B. Victoria Woodhull"
     },
     {
-      "question":"Which of these honors was Martin Luther King Jr. not awarded?"?
-      "options":["A. Nobel Peace Prize",
+      "question":"Which of these honors was Martin Luther King Jr. not awarded?",
+      "options":[ "A. Nobel Peace Prize",
                   "B. Congressional Gold Medal",
                   "C. Presidential Medal of Freedom",
                   "D. Freedom Award"],
-        "answer":"D.   Freedom Award" 
+        "answer": "D. Freedom Award" 
     },
     {
       "question":"Why did President Theodore Roosevelt establish the national forest and park systems in the early 20th century?",
-      "options":[" A.  To clear the timberlands for use as industrial areas",
-                  "B.  To create more areas for the establishment of American Indian reservations",
-                  "C.  To manage the use of resources and control industrial development in wilderness areas",
-                  "D.  To stimulate development of a tourist industry to help bring revenue to the states"],
-        "answer":"C.  To manage the use of resources and control industrial development in wilderness areas"
+      "options":[" A. To clear the timberlands for use as industrial areas",
+                  "B. To create more areas for the establishment of American Indian reservations",
+                  "C. To manage the use of resources and control industrial development in wilderness areas",
+                  "D. To stimulate development of a tourist industry to help bring revenue to the states"],
+        "answer":"C. To manage the use of resources and control industrial development in wilderness areas"
     },
     {
     "question":"Which of the following was NOT acquired by the United States at the end of the Spanish-American War?",
