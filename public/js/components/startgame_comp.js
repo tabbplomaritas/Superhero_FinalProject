@@ -35,7 +35,7 @@ const startGame ={
       </form>
 
 
-      <section class="gameIntro">
+      <section class="gameIntro animated fadeIn">
         <div class="gameIntro_inner">
             <h2>Study for school, save the world!</h2>
             <p>
@@ -58,6 +58,7 @@ const startGame ={
             const allSubjects = document.querySelectorAll(".subject");
             const swing = document.getElementById("swing");
             const squeeze = document.getElementById("squeeze");
+            const smallPop = document.getElementById("smallPop");
         
             vm.user = {};
             vm.randomNum = GameService.getRandomNum();
@@ -74,7 +75,8 @@ const startGame ={
                 }
             }
 
-            vm.hideGameIntro = () => {
+            vm.hideGameIntro = () => { 
+                smallPop.play();
                 angular.element(vm.gameIntro).addClass("animated zoomOut");
 
                 setTimeout(() => {
@@ -103,6 +105,7 @@ const startGame ={
             }
 
             vm.sendUserInfo = (user) => {
+                smallPop.play();
                 GameService.sendUserInfo(user);
             }
 

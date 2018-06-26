@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const home = require("./routes/home-routes");
 
 app.use(bodyParser.json());
+
 app.use(express.static(__dirname+ "/public"));
 app.use("/", home);
 

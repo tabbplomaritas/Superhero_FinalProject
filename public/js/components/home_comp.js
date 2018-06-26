@@ -116,7 +116,7 @@ const home = {
       setTimeout(function(){
 
         angular.element(popUp).css("display", "flex");
-    angular.element(popUp).addClass("animated rotateIn");
+        angular.element(popUp).addClass("animated rotateIn");
       }, 200);
                   
                    
@@ -153,7 +153,6 @@ const home = {
         };
         
 
-      
 
         vm.changeNavColor = () => {
             let color1 = "";
