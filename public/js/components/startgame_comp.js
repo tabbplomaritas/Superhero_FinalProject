@@ -47,7 +47,7 @@ const startGame ={
             <p>
             Keep an eye on your health bar...
             </p>
-            <button class="gameIntro_button">OK?</button>
+            <button ng-click="$ctrl.hideGameIntro();" class="gameIntro_button">OK?</button>
         </div>
       </section>
     `,
@@ -81,10 +81,7 @@ const startGame ={
         //     }, 2350);
         // }
    
-        vm.hideGameInfo = () => {
-            console.log("hide game!");
-            console.log(vm.gameIntro);
-            
+        vm.hideGameIntro = () => {
             angular.element(vm.gameIntro).addClass("animated zoomOut");
 
             setTimeout(() => {

@@ -154,6 +154,8 @@ footer img {
 }
 
 .gameIntro_inner p {
+  text-align: left;
+  width: 90%;
   margin: 1rem 0.8rem;
 }
 
