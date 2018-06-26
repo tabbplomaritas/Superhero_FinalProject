@@ -4,7 +4,7 @@ const home = {
     template: `
     <section class="main">
         <h2>Choose your character!</h2>
-        <section class="heroOption_container">
+        <section class="heroOption_container animated fadeIn">
             <div ng-click="$ctrl.viewHero(hero);" ng-repeat="hero in $ctrl.heroes" class="heroOption">
             <p>{{ hero.name }}</p>
             <div class="img_wrapper">
@@ -103,7 +103,7 @@ const home = {
         const popUp = document.querySelector(".clickedHero_stats");
             console.log(popUp);
         const main = document.querySelector(".main");
-        
+
         vm.scrollWindow = () => {
             window.scrollTo(0, 212);
         };
