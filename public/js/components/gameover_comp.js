@@ -1,8 +1,4 @@
-//TODO:generates  the winner announcement 
-// TODO: GET winner from battle comp
-//TODO:create a button to to back to home screen
 
-//TODO:reset power levels
 "use strict";
 
 
@@ -32,10 +28,8 @@ const gameover = {
 
   controller: ["GameService", function (GameService) {
     const vm = this;
-    // gets winner from battle comp
     vm.winner = GameService.getWinner();
     vm.clickedHero = GameService.getHero();
-    //TODO: change these to be consistant naming conventions -also change in other comps to reflect
    vm.opponent = GameService.getOpponent();
    vm.user = GameService.getUserInfo();
     vm.rematchPhrase = "";
