@@ -556,7 +556,7 @@ footer img {
   width: 90%;
   text-align: left;
   position: absolute;
-  top: 45%;
+  top: 50%;
   right: 38%;
   line-height: 1rem;
   font-size: 1.5rem;
@@ -693,7 +693,7 @@ footer img {
   flex-direction: column;
   justify-content: space-between;
   margin: .5rem;
-  margin-left: -6rem;
+  margin-left: -1rem;
   padding: .5rem;
   transition: .3s all;
   text-align: left;
