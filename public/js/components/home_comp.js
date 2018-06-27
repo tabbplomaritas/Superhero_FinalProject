@@ -49,7 +49,6 @@ const home = {
 
             <div class="clickedHero_buttons">
                 <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
-                
                 <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
             </div>
         </section> 
@@ -166,6 +165,9 @@ const home = {
             let asideImage_character = "";
             console.log(asideImage);
             
+            angular.element(asideImage).css("width", "26rem");
+            angular.element(asideImage).css("top", "33rem");
+            angular.element(asideImage).css("right", "5rem");
             
             console.log(vm.clickedHero.name);
             switch(vm.clickedHero.name) {
@@ -175,14 +177,13 @@ const home = {
                     color2 = "96d2e7",
                     color3 = "e68f8d",
                     asideImage_character = "../assets/images/shield.png"
-
                 break;
 
                 case "Wonder Woman":
                     color1 = "F3CA5A",
                     color2 = "f1d893",
                     color3 = "BC3A30",
-                    asideImage_character = "../assets/images/batmanRobin.png"
+                    asideImage_character = "../assets/images/ww.png"
                 break;
 
                 case "Batman":
@@ -190,7 +191,6 @@ const home = {
                     color2 = "89908E",
                     color3 = "FEEB81",
                     asideImage_character = "../assets/images/batsignal.png"
-                    
                 break;
 
                 case "Hulk":
@@ -204,21 +204,24 @@ const home = {
                     color1 = "BC3A30",
                     color2 = "b87671",
                     color3 = "0E1213",
-                    asideImage_character = "../assets/images/batmanRobin.png"
+                    asideImage_character = "../assets/images/spiderlogo.png"
                 break;
 
                 case "Storm":
                     color1 = "8565D5",
                     color2 = "ae9ed4";
                     color3 = "DDD4E4",
-                    asideImage_character = "../assets/images/bolt.jpg"
+                    asideImage_character = "../assets/images/storm.png"
+                    angular.element(asideImage).css("width", "40rem");
+                    angular.element(asideImage).css("top", "19rem");
+                    angular.element(asideImage).css("left", "-19rem");
                 break;
 
                 case "Black Panther":
                     color1 = "050608",
                     color2 = "433D71",
                     color3 = "E8BF71",
-                    asideImage_character = "../assets/images/batmanRobin.png"
+                    asideImage_character = "../assets/images/panther.png"
                 break;
 
             }
@@ -229,9 +232,6 @@ const home = {
             angular.element(body).css(`background-color`, `#${color3}`);
             angular.element(asideImage).addClass("customSwingIn");
             angular.element(asideImage).attr("src", `${asideImage_character}`);
-            //copy these two lines below into any specific character for width and placement changes
-            angular.element(asideImage).css("width", "25rem");
-                    angular.element(asideImage).css("top", "18rem");
             
         }
     }]
