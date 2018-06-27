@@ -128,9 +128,8 @@
 
 @-webkit-keyframes pulse {
   from {
-    display: 
     -webkit-transform: scale3d(1, 1, 1) translate(50%, -50%);
-    transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1) translate(50%, -50%);
   }
 
   50% {

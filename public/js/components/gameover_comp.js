@@ -21,7 +21,7 @@ const gameover = {
         <div class="gamover_btns"> 
           <button class="button_new_game" ng-click="$ctrl.goToHome();">New Game <p class="gameoverButton_text">Journey back home and set out for a fresh battle!</p></button>
           
-          <button class="button_rematch animated pulse infinite" ng-click="$ctrl.goToBattle();">Rematch 
+          <button class="button_rematch customPulse" ng-click="$ctrl.goToBattle();">Rematch 
           <p class="gameoverButton_text">Face {{$ctrl.opponent.name}} once more, {{$ctrl.rematchPhrase}}</p></button>
         </div>
       </div>
