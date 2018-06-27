@@ -95,9 +95,10 @@ const home = {
             }
            
             ]
-        
+        // make a function that connects each 6 pre-set heroes to respective character info --> character comp
         vm.hero = {};
         vm.clickedHero = {};
+        //initiate the ng-show on the character stats pop up to false
         vm.showMe = false;
         const popUp = document.querySelector(".clickedHero_stats");
             console.log(popUp);
@@ -110,6 +111,7 @@ const home = {
     
 
         vm.viewHero = (hero) => {
+      //animates the clickedHero_stats pop up
       
       setTimeout(function(){
 
@@ -118,18 +120,25 @@ const home = {
       }, 200);
                   
                    
+            //sends the clicked hero data to service so entire application can utilize
             GameService.sendHero(hero);
 
+            //retrieves that stored data from GameService
             vm.clickedHero = GameService.getHero();
             
+            //api call to view hero at that id
             GameService.getPlayer(vm.clickedHero.id).then((response)=> {
+                //change ng-show me to true to display the pop up
               
+        // vm.showMe= true;
                 vm.clickedHero = response;
             })
         };
 
         vm.chooseDifHero = () => {
+            //hide the character stats popup
             angular.element(popUp).addClass("animated rotateOut");
+            // angular.element(popUp).css("display", "none");
     
             setTimeout(() => {
                 angular.element(popUp).removeClass("animated rotateOut");

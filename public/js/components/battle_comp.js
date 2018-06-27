@@ -1,5 +1,12 @@
 "use strict";
 
+//TODO:add percentage decrement to health bar (here and in CSS)
+
+//TODO:repeat that until one is defeated
+
+//TODO:change to the gamover over view/comp
+
+//TODO:change h3 health level to powerbar
 const battle = {
 template: `
 <section class="main">
@@ -66,11 +73,13 @@ template: `
 controller: ["GameService", function (GameService){
     const vm = this;
 
+    // hero that user has chosen to play with
     let clickedHero = {};
     let winner = {};   
 
-    vm.playerHealth = 7;
-    vm.opponentHealth = 7;
+    // GamePlay declaration code
+    vm.playerHealth = 5;
+    vm.opponentHealth = 5;
     vm.gradeI;
     vm.subjectI;
     vm.questionI = 0;
@@ -84,9 +93,11 @@ controller: ["GameService", function (GameService){
     vm.playerHealthBarWidth = 100;
     vm.oppHealthBarWidth = 100;
 
+    //health bar to decrement with css
     const oppHealthBar = document.getElementById("oppHealthBar");
     const playerHealthBar = document.getElementById("playerHealthBar");
     
+    //retrieves user info from service
     vm.user = GameService.getUserInfo();
     vm.isRematch = GameService.isRematch();
 
@@ -97,6 +108,7 @@ controller: ["GameService", function (GameService){
 
 
 
+    //based on users age range, sets the index for the array of questions
     vm.setGradeIndex = () => {
         
         if(vm.user.grade == 6){
@@ -122,6 +134,7 @@ controller: ["GameService", function (GameService){
         console.log(vm.subjectI);
     }
 
+    //calls the method above
     vm.setGradeIndex();
     vm.setSubjectIndex();
 
@@ -134,6 +147,7 @@ controller: ["GameService", function (GameService){
         
     }
 
+    // const questionP = document.querySelector(".speechBubble_questions");
     vm.startBattle = () => {
     
         vm.questions = angular.copy(GameService.getQuestions());
@@ -146,23 +160,32 @@ controller: ["GameService", function (GameService){
         vm.selectedAnswer = option;
         vm.correctAnswer = vm.questions[vm.questionI].answer;
     
-       
+        //remove question animation
+        // angular.element(questionP).removeClass("anim-typewriter");
+        // angular.element(questionP).css("display", "none");
     
+        //checks the answer itself
         vm.isAnswerRight(vm.selectedAnswer, vm.correctAnswer);
+        //then we check if there's a winner yet
         vm.checkForWinner();
         
     }
 
     vm.isAnswerRight = () => {
         if (vm.selectedAnswer == vm.correctAnswer){
+                //if it does, reduce opp health
                 vm.opponentHealth --;
+                //reduce the width of the bar variable by 20
                 vm.oppHealthBarWidth -=20;
+                //use that variable to adjust the width of the inner health bar
                 angular.element(oppHealthBar).css("width", `${vm.oppHealthBarWidth}%`);
 
+                //if the health reaches 1, change the bar to red
                 if(vm.opponentHealth === 1){
                     angular.element(oppHealthBar).css("background-color", "red");
                 }
 
+                //remove from array
                 console.log(`vm.questions[vm.gradeI][vm.subjectI]`);
                 
                 GameService.removeCorrectQuestion(vm.questionI);
@@ -170,6 +193,7 @@ controller: ["GameService", function (GameService){
                 
         
             } else {
+                //if it is not correct, reduce player health
                 vm.playerHealth --;
                 vm.playerHealthBarWidth -=20;
                 
@@ -185,12 +209,15 @@ controller: ["GameService", function (GameService){
         if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
         
             vm.questionI++;
-
+            // angular.element(questionP).css("display", "block");
+            // angular.element(questionP).addClass("anim-typewriter");
         } else if (vm.playerHealth === 0){
             console.log("playerHealth 0");
             console.log(vm.opponent);
             
+            // Send the opponent to the Gameover Screen
             GameService.sendWinner(vm.opponent);
+            //end round, change to view to gameover view
         } else if (vm.opponentHealth === 0){
             console.log("playerHealth 0");
             vm.totalWins++;
@@ -199,10 +226,12 @@ controller: ["GameService", function (GameService){
             console.log(vm.totalWins);   
         }
     }
+    //retrieving the user's character from Service
     vm.clickedHero = GameService.getHero();
 
     vm.victories = GameService.getTotalWins();
 
+    //takes user back to home view/component
     vm.goToHome = () => {
         GameService.goToHome();
     };  
