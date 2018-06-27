@@ -90,6 +90,9 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
     vm.playerHealthBarWidth = 100;
     vm.oppHealthBarWidth = 100;
 
+    //sound effects
+    const correctSound = document.getElementById("correct");
+    const incorrectSound = document.getElementById("incorrect");
     //health bar to decrement with css
     const oppHealthBar = document.getElementById("oppHealthBar");
     const playerHealthBar = document.getElementById("playerHealthBar");
@@ -189,7 +192,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
 
     vm.isAnswerRight = () => {
         if (vm.selectedAnswer == vm.correctAnswer){
-                //
+                correct.play();
                 //if it does, reduce opp health
                 vm.opponentHealth --;
                 //reduce the width of the bar variable by 20
@@ -206,6 +209,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         
         
             } else {
+                incorrect.play();
                 //if it is not correct, reduce player health
                 vm.playerHealth --;
                 vm.playerHealthBarWidth -=20;
