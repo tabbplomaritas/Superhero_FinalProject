@@ -208,10 +208,11 @@ controller: ["GameService", function (GameService){
     };  
     
     vm.opponent = GameService.getOpponent();
-    console.log(vm.opponent);
-    
     
          
+
+     
+   
 }]
 }
 
