@@ -165,8 +165,10 @@ const home = {
             let asideImage_character = "";
             console.log(asideImage);
             
-            angular.element(asideImage).css("width", "20rem");
-            angular.element(asideImage).css("top", "-10rem");
+            angular.element(asideImage).css("width", "26rem");
+            angular.element(asideImage).css("top", "33rem");
+            angular.element(asideImage).css("right", "5rem");
+            
             console.log(vm.clickedHero.name);
             switch(vm.clickedHero.name) {
 
@@ -211,7 +213,8 @@ const home = {
                     color3 = "DDD4E4",
                     asideImage_character = "../assets/images/storm.png"
                     angular.element(asideImage).css("width", "40rem");
-                   angular.element(asideImage).css("left", "-10rem");
+                    angular.element(asideImage).css("top", "19rem");
+                    angular.element(asideImage).css("left", "-19rem");
                 break;
 
                 case "Black Panther":
