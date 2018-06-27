@@ -42,7 +42,7 @@ const questions=
                 "B.  A device that controls the music a room",
                 "C.  A device that controls the airflow in a room",
                 "D.  A device that controls the heating in a room"],                                        
-      "answer":"D.  A device that controls the heating in a room."
+      "answer":"D.  A device that controls the heating in a room"
     },
     // {
     //   "question":" What is a homonym?", 
