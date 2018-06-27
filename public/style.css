@@ -124,7 +124,7 @@ footer img {
   top: 55%;
   right: 50%;
   transform: translate(50%, -50%);
-  height: 36rem;
+  height: auto;
   width: 36rem;
   background-color: rgba(255, 255, 255, 0.8);
   border: .2rem solid black;
@@ -141,6 +141,7 @@ footer img {
   justify-content: flex-start;
   align-items: center;
   color: white;
+  padding: 1rem;
   height: 100%;
   width: 100%;
   background: linear-gradient(to bottom, #46a8dca8, #0a1c20d2);
