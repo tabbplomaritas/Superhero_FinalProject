@@ -189,6 +189,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
 
     vm.isAnswerRight = () => {
         if (vm.selectedAnswer == vm.correctAnswer){
+                //
                 //if it does, reduce opp health
                 vm.opponentHealth --;
                 //reduce the width of the bar variable by 20
