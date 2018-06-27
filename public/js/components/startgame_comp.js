@@ -53,6 +53,7 @@ const startGame ={
     `,
 
     controller: ["GameService", function(GameService){
+            
             const vm = this;
             const allGrades = document.querySelectorAll(".grade");
             const allSubjects = document.querySelectorAll(".subject");

@@ -71,8 +71,6 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 5;
-    vm.opponentHealth = 5;
     vm.gradeI;
     vm.subjectI;
     vm.questionI = 0;
@@ -130,7 +128,6 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         } else if (vm.user.subject === "History"){
             vm.subjectI = 3;
         };
-        console.log(vm.subjectI);
     }
 
     //calls the method above
@@ -141,7 +138,6 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
     if(vm.isRematch == false){
         GameService.setGradeSubject(vm.gradeI, vm.subjectI);
     } else {
-        console.log("this is a rematch, use old questions.");
         GameService.setPlayerHealth(vm.playerHealth);
         GameService.setOpponentHealth(vm.playerHealth);
     }
@@ -151,18 +147,14 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         vm.questions = angular.copy(GameService.getQuestions());
         vm.showMe= false;
         vm.gamesPlayed = GameService.getGamesPlayed();
-        console.log(vm.gamesPlayed);
         vm.gamesPlayed++;
-        console.log(vm.gamesPlayed)
         GameService.sendGamesPlayed(vm.gamesPlayed);
     };
 
     vm.markCorrectAnswer = (option) => {
         let optionsTest = document.querySelectorAll(".optionsTest");
-
         vm.correctAnswer = vm.questions[vm.questionI].answer;
         let speechBubbleQuestion = document.querySelector(".speechBubble_questions");
-
         for(let i = 0; i < optionsTest.length; i++) {
             if(optionsTest[i].innerText === vm.correctAnswer){
                 let correct = optionsTest[i];
@@ -187,7 +179,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         //after health deducted, checks if there is a winner yet or if a new question is given
         $timeout(() => {
             vm.checkForWinner();
-        }, 9000);
+        }, 500);
     }
 
     vm.isAnswerRight = () => {
@@ -204,7 +196,6 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
                 if(vm.opponentHealth === 1){
                     angular.element(oppHealthBar).css("background-color", "red");
                 }
-
                 GameService.removeCorrectQuestion(vm.questionI);
         
         
@@ -213,9 +204,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
                 //if it is not correct, reduce player health
                 vm.playerHealth --;
                 vm.playerHealthBarWidth -=20;
-                
                 angular.element(playerHealthBar).css("width", `${vm.playerHealthBarWidth}%`);
-        
                 if(vm.playerHealth === 1){
                     angular.element(playerHealthBar).css("background-color", "red");
                 }
@@ -226,25 +215,21 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
 
             if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
                     vm.questionI++;
-             
             } else if (vm.playerHealth === 0){
                 
                 // Send the opponent to the Gameover Screen
                 GameService.sendWinner(vm.opponent);
                 //end round, change to view to gameover view
             } else if (vm.opponentHealth === 0){
-                console.log("playerHealth 0");
                 vm.totalWins++;
                 GameService.sendWinner(vm.clickedHero); 
                 GameService.sendTotalWins(vm.totalWins);
-                console.log(vm.totalWins);   
+                  
             }
-    
-       
+      
     }
     //retrieving the user's character from Service
     vm.clickedHero = GameService.getHero();
-
     vm.victories = GameService.getTotalWins();
 
     //takes user back to home view/component

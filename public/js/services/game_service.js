@@ -14,35 +14,25 @@ function GameService ($http, $location) {
   let playerHealth = 4;
   let opponentHealth = 4;
   let gamesPlayed = 0;
+  let resetSvc;
 
-  const sendGamesPlayed = (gameTotal) => {
-    gamesPlayed = gameTotal;
-    return gamesPlayed;
-  }
-  const getGamesPlayed = () => {
-    return gamesPlayed;
+  const resetService = () => {
+    let player = 1; 
+    let data = {};
+    let clickedHero = {};
+    let questionBank = [];
+    let winner = {};
+    let totalWins = 0;
+    let opponent = false;
+    let userInfo = {};
+    let randomNum;
+    let checkIsRematch = false;
+    let playerHealth = 4;
+    let opponentHealth = 4;
+    let gamesPlayed = 0;
   }
 
-  const getPlayerHealth = () => {
-    return playerHealth
-  }
-  const setPlayerHealth = (total) => {
-    if (playerHealth === 1){
-      return playerHealth;
-    } else { playerHealth = total / 2 }
-    console.log("work" + playerHealth);
-    return playerHealth;
-  }
-  const getOpponentHealth = () => {
-    return opponentHealth
-  }
-  const setOpponentHealth = (total) => {
-    if (opponentHealth === 1){
-      return opponentHealth;
-    } else {opponentHealth = total / 2;}
-    console.log("work" + opponentHealth);
-    return opponentHealth;
-  }
+
 
   const isRematch = () => {
     return checkIsRematch;
@@ -53,11 +43,7 @@ function GameService ($http, $location) {
   }
 
   const removeCorrectQuestion = (questionI) => {
-    console.log(questionBank);
-    
     questionBank.splice(questionI, 1);
-    console.log(questionBank);
-    
   }
 
   const getOpponent = () => {
@@ -65,8 +51,6 @@ function GameService ($http, $location) {
   }
 
   const upDifficulty = () => {
-    console.log(userInfo);
-
       if(userInfo.grade < 8){
       userInfo.grade++;
       }
@@ -112,9 +96,7 @@ function GameService ($http, $location) {
       method: "GET",
       url: "/questions/",
     }).then((response) => {
-      questionBank =response.data[gradeI][subjectI];
-      console.log(questionBank);
-      
+      questionBank =response.data[gradeI][subjectI];      
     }).catch((error) => {
       console.log(error);
     })
@@ -131,10 +113,11 @@ function GameService ($http, $location) {
   return clickedHero;
   }
 
-  const viewBattle = () => {
-    console.log("view battle service working");
-    
+  const viewBattle = () => {    
     $location.path("/battle");
+  }
+  const goToStartGame = () => { 
+    $location.path("/startgame");
   }
 
   const goToHome = () => { 
@@ -157,7 +140,7 @@ function GameService ($http, $location) {
 
   const sendTotalWins = (wins) =>{
     totalWins += wins;
-    console.log(totalWins);
+  
     return totalWins
   }
 
@@ -172,6 +155,33 @@ function GameService ($http, $location) {
 
   const getRandomNum = () => {
     return randomNum
+  }
+  const sendGamesPlayed = (gameTotal) => {
+    gamesPlayed = gameTotal;
+    return gamesPlayed;
+  }
+  const getGamesPlayed = () => {
+    return gamesPlayed;
+  }
+
+  const getPlayerHealth = () => {
+    return playerHealth
+  }
+  const setPlayerHealth = (total) => {
+    if (playerHealth === 1){
+      return playerHealth;
+    } else { playerHealth = total / 2 }
+    return playerHealth;
+  }
+
+  const getOpponentHealth = () => {
+    return opponentHealth
+  }
+  const setOpponentHealth = (total) => {
+    if (opponentHealth === 1){
+      return opponentHealth;
+    } else {opponentHealth = total / 2;}
+    return opponentHealth;
   }
 
   return {
@@ -202,7 +212,9 @@ function GameService ($http, $location) {
     setOpponentHealth,
     getOpponentHealth,
     sendGamesPlayed,
-    getGamesPlayed
+    getGamesPlayed,
+    goToStartGame,
+    resetService
   };
 }
 

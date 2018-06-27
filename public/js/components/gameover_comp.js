@@ -19,9 +19,9 @@ const gameover = {
           <img class="gameoverImg" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.winner.image.url}}">
         </div>
         <div class="gamover_btns"> 
-          <button class="button_new_game" ng-click="$ctrl.goToHome();">New Game <p class="gameoverButton_text">Journey back home and set out for a fresh battle!</p></button>
+          <button class="button_new_game" ng-click="$ctrl.goToStartGame();">New Game <p class="gameoverButton_text">Journey back home and set out for a fresh battle!</p></button>
           
-          <button class="button_rematch customPulse" ng-click="$ctrl.goToBattle();">Rematch 
+          <button class="button_rematch customPulse" ng-show="$ctrl.showMe" ng-click="$ctrl.goToBattle();">Rematch 
           <p class="gameoverButton_text">Face {{$ctrl.opponent.name}} once more, {{$ctrl.rematchPhrase}}</p></button>
         </div>
       </div>
@@ -36,25 +36,22 @@ const gameover = {
     vm.winner = GameService.getWinner();
     vm.clickedHero = GameService.getHero();
     //TODO: change these to be consistant naming conventions -also change in other comps to reflect
-   vm.opponent = GameService.getOpponent();
-   vm.user = GameService.getUserInfo();
+    vm.opponent = GameService.getOpponent();
+    vm.user = GameService.getUserInfo();
+    vm.showMe = true;
     vm.rematchPhrase = "";
-    console.log(vm.user);
   
 
     if(vm.winner.name == vm.clickedHero.name){
       GameService.upDifficulty();
       vm.rematchPhrase = `this time with harder ${vm.user.subject} questions!`;
-      
     } 
     else if (vm.winner.name == vm.opponent.name) {
       vm.rematchPhrase = `this time with the ${vm.user.subject} questions you got wrong!`;
-
     }
-
-
-     vm.goToHome = () => {
-        GameService.goToHome();
+    vm.goToStartGame = () => {
+      GameService.resetService();
+      GameService.goToStartGame(); 
     };
     
     vm.goToBattle = () => {
@@ -62,10 +59,12 @@ const gameover = {
       GameService.goToBattle();
     };  
 
-   vm.user = GameService.getUserInfo();
-   
+    vm.user = GameService.getUserInfo();
 
-
+    vm.gamesPlayed = GameService.getGamesPlayed();
+    if (vm.gamesPlayed === 2){
+      vm.showMe = false;
+    }
   }]
 
 }
