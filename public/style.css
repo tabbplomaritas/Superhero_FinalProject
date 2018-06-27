@@ -151,6 +151,7 @@ footer img {
 }
 
 .gameIntro_inner h2 {
+  text-align: center;
   margin-top: 1rem;
   font-size: 2.5rem;
   color: #d01e00;
