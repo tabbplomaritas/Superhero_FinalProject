@@ -696,7 +696,7 @@ footer img {
 
 .answer_options:hover {
   cursor: pointer;
-  background-color: #feda0e;
+  color: #f75002;
 }
 
 #player_speech {

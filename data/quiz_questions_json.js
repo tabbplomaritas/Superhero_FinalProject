@@ -50,7 +50,7 @@ const questions=
                 "B. Words that are spelled the same but have different definitions",
                 "C. Words that describe, identify or further define a noun or a pronoun",
                 "D. Word that shows possession"],                                        
-      "answer":   "B. Words that are spelled the same but have different definitions."
+      "answer":   "B. Words that are spelled the same but have different definitions"
     },
     {
       "question":"What is a metaphor?",
