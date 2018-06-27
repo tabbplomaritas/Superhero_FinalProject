@@ -31,11 +31,11 @@ const questions=
       "answer":"B. he"
 
     },
-    // {
-    //   "question":"Their business's success was far greater than what even they themselves had dared to imagine",
-    //   "options":["A.  Reflexive","B. Intensive"],
-    //   "answer":"B. Intensive"
-    // },
+    {
+      "question":"'Their business's success was far greater than what even they themselves had dared to imagine.' This sentence is:",
+      "options":["A.  Reflexive","B. Intensive"],
+      "answer":"B. Intensive"
+    },
     {
       "question":"The root 'therm' means heat. What does the word thermostat mean?",
       "options":["A.  A device that controls the lighting a room",
@@ -68,6 +68,16 @@ const questions=
         "C. to cause him indigestion",
         "D. to remain in his stomach"],
         "answer":"B. to last"
+      },
+      {
+        "question": "I have ___ many friends.",
+        "options": ["A. to", "B. too", "C. two"],
+        "answer": "B. too"
+      },
+      {
+        "question": "'Bang' and 'Beep' are examples of an:",
+        "options": ["A. onomatopoeia", "B. alliteration", "C. adverb"],
+        "answer": "A. onomatopoeia"
       }
     ],
 
