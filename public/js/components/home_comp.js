@@ -173,7 +173,8 @@ const home = {
                     color1 = "1DAFE6",
                     color2 = "96d2e7",
                     color3 = "e68f8d",
-                    asideImage_character = "../assets/images/batmanRobin.png"
+                    asideImage_character = "../assets/images/shield.png"
+
                 break;
 
                 case "Wonder Woman":
@@ -187,14 +188,14 @@ const home = {
                     color1 = "12211A",
                     color2 = "89908E",
                     color3 = "FEEB81",
-                    asideImage_character = "../assets/images/batmanRobin.png"
+                    asideImage_character = "../assets/images/batsignal.png"
                 break;
 
                 case "Hulk":
                     color1 = "A8E75A",
                     color2 = "6f9c37",
                     color3 = "6B3A89",
-                    asideImage_character = "../assets/images/batmanRobin.png"
+                    asideImage_character = "../assets/images/hulkfist.png"
                 break;
 
                 case "Spider-Man":
@@ -208,7 +209,7 @@ const home = {
                     color1 = "8565D5",
                     color2 = "ae9ed4";
                     color3 = "DDD4E4",
-                    asideImage_character = "../assets/images/batmanRobin.png"
+                    asideImage_character = "../assets/images/bolt.jpg"
                 break;
 
                 case "Black Panther":
@@ -226,6 +227,8 @@ const home = {
             angular.element(body).css(`background-color`, `#${color3}`);
             angular.element(asideImage).addClass("customSwingIn");
             angular.element(asideImage).attr("src", `${asideImage_character}`);
+            angular.element(asideImage).css("width", "25rem");
+                    angular.element(asideImage).css("top", "18rem");
             
         }
     }]
