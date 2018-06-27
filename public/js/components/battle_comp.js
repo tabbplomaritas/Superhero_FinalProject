@@ -1,12 +1,5 @@
 "use strict";
 
-//TODO:add percentage decrement to health bar (here and in CSS)
-
-//TODO:repeat that until one is defeated
-
-//TODO:change to the gamover over view/comp
-
-//TODO:change h3 health level to powerbar
 const battle = {
 template: `
 <section class="main">
@@ -59,7 +52,7 @@ template: `
                 <div class="speechBubble">
                     <div class="speechBubble_answers">
                     <div class="answer_options" ng-repeat="option in $ctrl.questions[$ctrl.questionI].options">
-                        <p ng-click="$ctrl.checkAnswer(option);">{{option}} </p>
+                        <p class="optionsTest" ng-click="$ctrl.checkAnswer(option);">{{option}} </p>
                     </div>
                     </div>
                     <img id="playerSpeech_flipped" src="/assets/design/speechBubble_wide.png">
@@ -70,7 +63,7 @@ template: `
 </section>
 `,
 
-controller: ["GameService", function (GameService){
+controller: ["GameService", "$timeout", function (GameService, $timeout){
     const vm = this;
 
     // hero that user has chosen to play with
@@ -107,7 +100,6 @@ controller: ["GameService", function (GameService){
     vm.scrollWindow();
 
 
-
     //based on users age range, sets the index for the array of questions
     vm.setGradeIndex = () => {
         
@@ -139,36 +131,48 @@ controller: ["GameService", function (GameService){
     vm.setSubjectIndex();
 
     if(vm.isRematch == false){
-        console.log(vm.isRematch);
-        
         GameService.setGradeSubject(vm.gradeI, vm.subjectI);
     } else {
         console.log("this is a rematch, use old questions.");
-        
     }
 
-    // const questionP = document.querySelector(".speechBubble_questions");
+
     vm.startBattle = () => {
-    
         vm.questions = angular.copy(GameService.getQuestions());
-        console.log(vm.questions);
         vm.showMe= false;
- 
     };
+
+    vm.markCorrectAnswer = (option) => {
+        let optionsTest = document.querySelectorAll(".optionsTest");
+
+        vm.correctAnswer = vm.questions[vm.questionI].answer;
+        let speechBubbleQuestion = document.querySelector(".speechBubble_questions");
+
+        for(let i = 0; i < optionsTest.length; i++) {
+            if(optionsTest[i].innerText === vm.correctAnswer){
+                let correct = optionsTest[i];
+                angular.element(correct).css("color", "green");
+                angular.element(correct).addClass("customPulse");
+            } else {
+                let inCorrect = optionsTest[i];
+                angular.element(inCorrect).css("color", "red");
+            }
+        }
+    }
 
     vm.checkAnswer = (option) => {
         vm.selectedAnswer = option;
         vm.correctAnswer = vm.questions[vm.questionI].answer;
-    
-        //remove question animation
-        // angular.element(questionP).removeClass("anim-typewriter");
-        // angular.element(questionP).css("display", "none");
-    
-        //checks the answer itself
-        vm.isAnswerRight(vm.selectedAnswer, vm.correctAnswer);
-        //then we check if there's a winner yet
-        vm.checkForWinner();
         
+        //indicates the right and wrong answers via color change and animation.
+        vm.markCorrectAnswer();
+        //checks if users selection is the correct answer and deducts health as needed
+        vm.isAnswerRight(vm.selectedAnswer, vm.correctAnswer);
+
+        //after health deducted, checks if there is a winner yet or if a new question is given
+        $timeout(() => {
+            vm.checkForWinner();
+        }, 3000);
     }
 
     vm.isAnswerRight = () => {
@@ -185,12 +189,8 @@ controller: ["GameService", function (GameService){
                     angular.element(oppHealthBar).css("background-color", "red");
                 }
 
-                //remove from array
-                console.log(`vm.questions[vm.gradeI][vm.subjectI]`);
-                
                 GameService.removeCorrectQuestion(vm.questionI);
-                console.log(vm.questions);
-                
+        
         
             } else {
                 //if it is not correct, reduce player health
@@ -206,25 +206,24 @@ controller: ["GameService", function (GameService){
     }
 
     vm.checkForWinner = () => {
-        if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
-        
-            vm.questionI++;
-            // angular.element(questionP).css("display", "block");
-            // angular.element(questionP).addClass("anim-typewriter");
-        } else if (vm.playerHealth === 0){
-            console.log("playerHealth 0");
-            console.log(vm.opponent);
-            
-            // Send the opponent to the Gameover Screen
-            GameService.sendWinner(vm.opponent);
-            //end round, change to view to gameover view
-        } else if (vm.opponentHealth === 0){
-            console.log("playerHealth 0");
-            vm.totalWins++;
-            GameService.sendWinner(vm.clickedHero); 
-            GameService.sendTotalWins(vm.totalWins);
-            console.log(vm.totalWins);   
-        }
+
+            if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
+                    vm.questionI++;
+             
+            } else if (vm.playerHealth === 0){
+                
+                // Send the opponent to the Gameover Screen
+                GameService.sendWinner(vm.opponent);
+                //end round, change to view to gameover view
+            } else if (vm.opponentHealth === 0){
+                console.log("playerHealth 0");
+                vm.totalWins++;
+                GameService.sendWinner(vm.clickedHero); 
+                GameService.sendTotalWins(vm.totalWins);
+                console.log(vm.totalWins);   
+            }
+    
+       
     }
     //retrieving the user's character from Service
     vm.clickedHero = GameService.getHero();
