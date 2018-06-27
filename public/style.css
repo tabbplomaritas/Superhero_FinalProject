@@ -550,9 +550,9 @@ footer img {
 
 .speechBubble_answers {
   width: 90%;
-  text-align: center;
+  text-align: left;
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 38%;
   line-height: 1rem;
   font-size: 1.5rem;
@@ -689,6 +689,7 @@ footer img {
   flex-direction: column;
   justify-content: space-between;
   margin: .5rem;
+  margin-left: -6rem;
   padding: .5rem;
   transition: .3s all;
   text-align: left;
