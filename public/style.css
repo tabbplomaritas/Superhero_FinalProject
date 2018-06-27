@@ -120,6 +120,7 @@ footer img {
 /* start component styles */
 
 .gameIntro {
+  z-index: 4;
   position: fixed;
   top: 55%;
   right: 50%;
