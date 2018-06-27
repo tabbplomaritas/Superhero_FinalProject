@@ -161,6 +161,10 @@ const home = {
             let navInner = document.querySelectorAll(".nav_inner");
             let asideInner = document.querySelectorAll(".aside_inner");
             let body = document.querySelector("body");
+            let asideImage= document.querySelector("#aside_image");
+            let asideImage_character = "";
+            console.log(asideImage);
+            
             
             console.log(vm.clickedHero.name);
             switch(vm.clickedHero.name) {
@@ -168,43 +172,50 @@ const home = {
                 case "Captain America":
                     color1 = "1DAFE6",
                     color2 = "96d2e7",
-                    color3 = "e68f8d"
+                    color3 = "e68f8d",
+                    asideImage_character = "../assets/images/batmanRobin.png"
                 break;
 
                 case "Wonder Woman":
                     color1 = "F3CA5A",
                     color2 = "f1d893",
-                    color3 = "BC3A30"
+                    color3 = "BC3A30",
+                    asideImage_character = "../assets/images/batmanRobin.png"
                 break;
 
                 case "Batman":
                     color1 = "12211A",
                     color2 = "89908E",
-                    color3 = "FEEB81"
+                    color3 = "FEEB81",
+                    asideImage_character = "../assets/images/batmanRobin.png"
                 break;
 
                 case "Hulk":
                     color1 = "A8E75A",
                     color2 = "6f9c37",
-                    color3 = "6B3A89"
+                    color3 = "6B3A89",
+                    asideImage_character = "../assets/images/batmanRobin.png"
                 break;
 
                 case "Spider-Man":
                     color1 = "BC3A30",
                     color2 = "b87671",
-                    color3 = "0E1213"
+                    color3 = "0E1213",
+                    asideImage_character = "../assets/images/batmanRobin.png"
                 break;
 
                 case "Storm":
                     color1 = "8565D5",
                     color2 = "ae9ed4";
-                    color3 = "DDD4E4"
+                    color3 = "DDD4E4",
+                    asideImage_character = "../assets/images/batmanRobin.png"
                 break;
 
                 case "Black Panther":
                     color1 = "050608",
                     color2 = "433D71",
-                    color3 = "E8BF71"
+                    color3 = "E8BF71",
+                    asideImage_character = "../assets/images/batmanRobin.png"
                 break;
 
             }
@@ -213,6 +224,8 @@ const home = {
             angular.element(navInner).css(`background`, `linear-gradient(to bottom, #${color1}, #${color2})`);
             angular.element(asideInner).css(`background`, `linear-gradient(to left, #${color1} 50%, #${color2})`);
             angular.element(body).css(`background-color`, `#${color3}`);
+            angular.element(asideImage).addClass("customSwingIn");
+            angular.element(asideImage).attr("src", `${asideImage_character}`);
             
         }
     }]

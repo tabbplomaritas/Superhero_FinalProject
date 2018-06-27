@@ -108,6 +108,7 @@ const startGame ={
             vm.sendUserInfo = (user) => {
                 smallPop.play();
                 GameService.sendUserInfo(user);
+                angular.element(aside_image).removeClass("customSwingIn");
             }
 
 
