@@ -31,7 +31,7 @@ const startGame ={
 
         </section>
 
-        <img class="beginAdv" ng-click="$ctrl.sendUserInfo($ctrl.user)" src="../../assets/design/readyToBattle-01.png">
+        <img class="beginAdv" ng-click="$ctrl.sendUserInfo($ctrl.user)" src="../../assets/design/beginadventure.png">
       </form>
 
 
