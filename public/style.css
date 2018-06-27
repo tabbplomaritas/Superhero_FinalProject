@@ -120,6 +120,7 @@ footer img {
 /* start component styles */
 
 .gameIntro {
+  z-index: 4;
   position: fixed;
   top: 55%;
   right: 50%;
@@ -150,6 +151,7 @@ footer img {
 }
 
 .gameIntro_inner h2 {
+  text-align: center;
   margin-top: 1rem;
   font-size: 2.5rem;
   color: #d01e00;
@@ -180,6 +182,7 @@ footer img {
 }
 
 .userInfoForm {
+  z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
