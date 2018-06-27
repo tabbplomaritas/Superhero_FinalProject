@@ -189,6 +189,7 @@ const home = {
                     color2 = "89908E",
                     color3 = "FEEB81",
                     asideImage_character = "../assets/images/batsignal.png"
+                    
                 break;
 
                 case "Hulk":
@@ -227,6 +228,7 @@ const home = {
             angular.element(body).css(`background-color`, `#${color3}`);
             angular.element(asideImage).addClass("customSwingIn");
             angular.element(asideImage).attr("src", `${asideImage_character}`);
+            //copy these two lines below into any specific character for width and placement changes
             angular.element(asideImage).css("width", "25rem");
                     angular.element(asideImage).css("top", "18rem");
             
