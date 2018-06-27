@@ -71,8 +71,6 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
     let winner = {};   
 
     // GamePlay declaration code
-    vm.playerHealth = 5;
-    vm.opponentHealth = 5;
     vm.gradeI;
     vm.subjectI;
     vm.questionI = 0;
@@ -127,7 +125,6 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         } else if (vm.user.subject === "History"){
             vm.subjectI = 3;
         };
-        console.log(vm.subjectI);
     }
 
     //calls the method above
@@ -138,7 +135,6 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
     if(vm.isRematch == false){
         GameService.setGradeSubject(vm.gradeI, vm.subjectI);
     } else {
-        console.log("this is a rematch, use old questions.");
         GameService.setPlayerHealth(vm.playerHealth);
         GameService.setOpponentHealth(vm.playerHealth);
     }
@@ -148,9 +144,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         vm.questions = angular.copy(GameService.getQuestions());
         vm.showMe= false;
         vm.gamesPlayed = GameService.getGamesPlayed();
-        console.log(vm.gamesPlayed);
         vm.gamesPlayed++;
-        console.log(vm.gamesPlayed)
         GameService.sendGamesPlayed(vm.gamesPlayed);
     };
 
@@ -184,7 +178,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         //after health deducted, checks if there is a winner yet or if a new question is given
         $timeout(() => {
             vm.checkForWinner();
-        }, 3000);
+        }, 500);
     }
 
     vm.isAnswerRight = () => {
@@ -232,7 +226,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
                 vm.totalWins++;
                 GameService.sendWinner(vm.clickedHero); 
                 GameService.sendTotalWins(vm.totalWins);
-                console.log(vm.totalWins);   
+                  
             }
     
        

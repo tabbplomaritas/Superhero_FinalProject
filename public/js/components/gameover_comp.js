@@ -19,9 +19,9 @@ const gameover = {
           <img class="gameoverImg" ng-model="$ctrl.opponent.image.url" src="{{$ctrl.winner.image.url}}">
         </div>
         <div class="gamover_btns"> 
-          <button class="button_new_game" ng-click="$ctrl.goToHome();">New Game <p class="gameoverButton_text">Journey back home and set out for a fresh battle!</p></button>
+          <button class="button_new_game" ng-click="$ctrl.goToStartGame();">New Game <p class="gameoverButton_text">Journey back home and set out for a fresh battle!</p></button>
           
-          <button class="button_rematch customPulse" ng-click="$ctrl.goToBattle();">Rematch 
+          <button class="button_rematch customPulse" ng-show="$ctrl.showMe" ng-click="$ctrl.goToBattle();">Rematch 
           <p class="gameoverButton_text">Face {{$ctrl.opponent.name}} once more, {{$ctrl.rematchPhrase}}</p></button>
         </div>
       </div>
@@ -38,6 +38,7 @@ const gameover = {
     //TODO: change these to be consistant naming conventions -also change in other comps to reflect
    vm.opponent = GameService.getOpponent();
    vm.user = GameService.getUserInfo();
+   vm.showMe = true;
     vm.rematchPhrase = "";
     console.log(vm.user);
   
@@ -53,8 +54,10 @@ const gameover = {
     }
 
 
-     vm.goToHome = () => {
-        GameService.goToHome();
+     vm.goToStartGame = () => {
+        GameService.goToStartGame();
+        GameService.setOpponentHealth(4);
+        GameService.setPlayerHealth(4);
     };
     
     vm.goToBattle = () => {
@@ -63,7 +66,19 @@ const gameover = {
     };  
 
    vm.user = GameService.getUserInfo();
-   
+
+   vm.gamesPlayed = GameService.getGamesPlayed();
+   console.log(vm.gamesPlayed);
+   if (vm.gamesPlayed === 2){
+     vm.showMe = false;
+     console.log(vm.showMe);
+     GameService.createRandomNum(); 
+     vm.randomNum = GameService.getRandomNum();
+     GameService.setOpponent(vm.randomNum);
+     GameService.sendGamesPlayed(0);
+     GameService.setOpponentHealth(4);
+     GameService.setPlayerHealth(4);
+   }
 
 
   }]

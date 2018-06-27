@@ -30,9 +30,9 @@ function GameService ($http, $location) {
     if (playerHealth === 1){
       return playerHealth;
     } else { playerHealth = total / 2 }
-    console.log("work" + playerHealth);
     return playerHealth;
   }
+
   const getOpponentHealth = () => {
     return opponentHealth
   }
@@ -40,7 +40,6 @@ function GameService ($http, $location) {
     if (opponentHealth === 1){
       return opponentHealth;
     } else {opponentHealth = total / 2;}
-    console.log("work" + opponentHealth);
     return opponentHealth;
   }
 
@@ -53,11 +52,7 @@ function GameService ($http, $location) {
   }
 
   const removeCorrectQuestion = (questionI) => {
-    console.log(questionBank);
-    
     questionBank.splice(questionI, 1);
-    console.log(questionBank);
-    
   }
 
   const getOpponent = () => {
@@ -65,8 +60,6 @@ function GameService ($http, $location) {
   }
 
   const upDifficulty = () => {
-    console.log(userInfo);
-
       if(userInfo.grade < 8){
       userInfo.grade++;
       }
@@ -112,9 +105,7 @@ function GameService ($http, $location) {
       method: "GET",
       url: "/questions/",
     }).then((response) => {
-      questionBank =response.data[gradeI][subjectI];
-      console.log(questionBank);
-      
+      questionBank =response.data[gradeI][subjectI];      
     }).catch((error) => {
       console.log(error);
     })
@@ -135,6 +126,9 @@ function GameService ($http, $location) {
     console.log("view battle service working");
     
     $location.path("/battle");
+  }
+  const goToStartGame = () => { 
+    $location.path("/startgame");
   }
 
   const goToHome = () => { 
@@ -202,7 +196,8 @@ function GameService ($http, $location) {
     setOpponentHealth,
     getOpponentHealth,
     sendGamesPlayed,
-    getGamesPlayed
+    getGamesPlayed,
+    goToStartGame
   };
 }
 
