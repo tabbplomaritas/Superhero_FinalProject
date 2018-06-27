@@ -44,14 +44,14 @@ const questions=
                 "D.  A device that controls the heating in a room"],                                        
       "answer":"D.  A device that controls the heating in a room."
     },
-    {
-      "question":" What is a homonym?", 
-      "options":["A. A word that imitate sounds or ideas",
-                "B. Words that are spelled the same but have different definitions",
-                "C. Words that describe, identify or further define a noun or a pronoun",
-                "D. Word that shows possession"],                                        
-      "answer":   "B. Words that are spelled the same but have different definitions"
-    },
+    // {
+    //   "question":" What is a homonym?", 
+    //   "options":["A. A word that imitate sounds or ideas",
+    //             "B. Words that are spelled the same but have different definitions",
+    //             "C. Words that describe, identify or further define a noun or a pronoun",
+    //             "D. Word that shows possession"],                                        
+    //   "answer":   "B. Words that are spelled the same but have different definitions"
+    // },
     {
       "question":"What is a metaphor?",
       "options":["A. words that replaces one or more nouns",
@@ -388,14 +388,14 @@ const questions=
 
   // 7th Grade Science
   [
-    {
-      "question":"Estimate the approximate temperature of a warm grilled cheese sandwich:",
-      "options":["A. 20 degrees F",
-                 "B. 55 degress C",
-                 "C. 55 degress F",
-                 "D. 90 degrees C"],
-      "answer": "B. 55 degress C"
-    },
+    // {
+    //   "question":"Estimate the approximate temperature of a warm grilled cheese sandwich:",
+    //   "options":["A. 20 degrees F",
+    //              "B. 55 degress C",
+    //              "C. 55 degress F",
+    //              "D. 90 degrees C"],
+    //   "answer": "B. 55 degress C"
+    // },
     {
     "question":"Estimate the approximate temperature of a cool glass of milk:",
     "options":["A. 3 degrees C",
