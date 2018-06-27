@@ -11,6 +11,38 @@ function GameService ($http, $location) {
   let userInfo = {};
   let randomNum;
   let checkIsRematch = false;
+  let playerHealth = 4;
+  let opponentHealth = 4;
+  let gamesPlayed = 0;
+
+  const sendGamesPlayed = (gameTotal) => {
+    gamesPlayed = gameTotal;
+    return gamesPlayed;
+  }
+  const getGamesPlayed = () => {
+    return gamesPlayed;
+  }
+
+  const getPlayerHealth = () => {
+    return playerHealth
+  }
+  const setPlayerHealth = (total) => {
+    if (playerHealth === 1){
+      return playerHealth;
+    } else { playerHealth = total / 2 }
+    console.log("work" + playerHealth);
+    return playerHealth;
+  }
+  const getOpponentHealth = () => {
+    return opponentHealth
+  }
+  const setOpponentHealth = (total) => {
+    if (opponentHealth === 1){
+      return opponentHealth;
+    } else {opponentHealth = total / 2;}
+    console.log("work" + opponentHealth);
+    return opponentHealth;
+  }
 
   const isRematch = () => {
     return checkIsRematch;
@@ -164,7 +196,13 @@ function GameService ($http, $location) {
     upDifficulty,
     removeCorrectQuestion,
     isRematch, 
-    rematchTrue
+    rematchTrue,
+    setPlayerHealth,
+    getPlayerHealth,
+    setOpponentHealth,
+    getOpponentHealth,
+    sendGamesPlayed,
+    getGamesPlayed
   };
 }
 

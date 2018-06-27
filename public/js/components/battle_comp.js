@@ -81,6 +81,10 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
     vm.totalWins = 0;
     vm.showMe = true;
     vm.opponent;
+    vm.playerHealth = GameService.getPlayerHealth();
+    vm.opponentHealth = GameService.getOpponentHealth();
+    vm.rematchCount;
+    vm.gamesPlayed;
   
 
     vm.playerHealthBarWidth = 100;
@@ -129,17 +133,25 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
     //calls the method above
     vm.setGradeIndex();
     vm.setSubjectIndex();
+    
 
     if(vm.isRematch == false){
         GameService.setGradeSubject(vm.gradeI, vm.subjectI);
     } else {
         console.log("this is a rematch, use old questions.");
+        GameService.setPlayerHealth(vm.playerHealth);
+        GameService.setOpponentHealth(vm.playerHealth);
     }
 
 
     vm.startBattle = () => {
         vm.questions = angular.copy(GameService.getQuestions());
         vm.showMe= false;
+        vm.gamesPlayed = GameService.getGamesPlayed();
+        console.log(vm.gamesPlayed);
+        vm.gamesPlayed++;
+        console.log(vm.gamesPlayed)
+        GameService.sendGamesPlayed(vm.gamesPlayed);
     };
 
     vm.markCorrectAnswer = (option) => {
