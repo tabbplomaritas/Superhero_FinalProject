@@ -14,34 +14,25 @@ function GameService ($http, $location) {
   let playerHealth = 4;
   let opponentHealth = 4;
   let gamesPlayed = 0;
+  let resetSvc;
 
-  const sendGamesPlayed = (gameTotal) => {
-    gamesPlayed = gameTotal;
-    return gamesPlayed;
-  }
-  const getGamesPlayed = () => {
-    return gamesPlayed;
-  }
-
-  const getPlayerHealth = () => {
-    return playerHealth
-  }
-  const setPlayerHealth = (total) => {
-    if (playerHealth === 1){
-      return playerHealth;
-    } else { playerHealth = total / 2 }
-    return playerHealth;
+  const resetService = () => {
+    let player = 1; 
+    let data = {};
+    let clickedHero = {};
+    let questionBank = [];
+    let winner = {};
+    let totalWins = 0;
+    let opponent = false;
+    let userInfo = {};
+    let randomNum;
+    let checkIsRematch = false;
+    let playerHealth = 4;
+    let opponentHealth = 4;
+    let gamesPlayed = 0;
   }
 
-  const getOpponentHealth = () => {
-    return opponentHealth
-  }
-  const setOpponentHealth = (total) => {
-    if (opponentHealth === 1){
-      return opponentHealth;
-    } else {opponentHealth = total / 2;}
-    return opponentHealth;
-  }
+
 
   const isRematch = () => {
     return checkIsRematch;
@@ -167,6 +158,33 @@ function GameService ($http, $location) {
   const getRandomNum = () => {
     return randomNum
   }
+  const sendGamesPlayed = (gameTotal) => {
+    gamesPlayed = gameTotal;
+    return gamesPlayed;
+  }
+  const getGamesPlayed = () => {
+    return gamesPlayed;
+  }
+
+  const getPlayerHealth = () => {
+    return playerHealth
+  }
+  const setPlayerHealth = (total) => {
+    if (playerHealth === 1){
+      return playerHealth;
+    } else { playerHealth = total / 2 }
+    return playerHealth;
+  }
+
+  const getOpponentHealth = () => {
+    return opponentHealth
+  }
+  const setOpponentHealth = (total) => {
+    if (opponentHealth === 1){
+      return opponentHealth;
+    } else {opponentHealth = total / 2;}
+    return opponentHealth;
+  }
 
   return {
     getPlayer,
@@ -197,7 +215,8 @@ function GameService ($http, $location) {
     getOpponentHealth,
     sendGamesPlayed,
     getGamesPlayed,
-    goToStartGame
+    goToStartGame,
+    resetService
   };
 }
 

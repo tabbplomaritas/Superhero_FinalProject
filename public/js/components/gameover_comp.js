@@ -55,9 +55,8 @@ const gameover = {
 
 
      vm.goToStartGame = () => {
-        GameService.goToStartGame();
-        GameService.setOpponentHealth(4);
-        GameService.setPlayerHealth(4);
+       GameService.resetService();
+       GameService.goToStartGame(); 
     };
     
     vm.goToBattle = () => {
