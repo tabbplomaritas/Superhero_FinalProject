@@ -36,27 +36,22 @@ const gameover = {
     vm.winner = GameService.getWinner();
     vm.clickedHero = GameService.getHero();
     //TODO: change these to be consistant naming conventions -also change in other comps to reflect
-   vm.opponent = GameService.getOpponent();
-   vm.user = GameService.getUserInfo();
-   vm.showMe = true;
+    vm.opponent = GameService.getOpponent();
+    vm.user = GameService.getUserInfo();
+    vm.showMe = true;
     vm.rematchPhrase = "";
-    console.log(vm.user);
   
 
     if(vm.winner.name == vm.clickedHero.name){
       GameService.upDifficulty();
       vm.rematchPhrase = `this time with harder ${vm.user.subject} questions!`;
-      
     } 
     else if (vm.winner.name == vm.opponent.name) {
       vm.rematchPhrase = `this time with the ${vm.user.subject} questions you got wrong!`;
-
     }
-
-
-     vm.goToStartGame = () => {
-       GameService.resetService();
-       GameService.goToStartGame(); 
+    vm.goToStartGame = () => {
+      GameService.resetService();
+      GameService.goToStartGame(); 
     };
     
     vm.goToBattle = () => {
@@ -64,22 +59,12 @@ const gameover = {
       GameService.goToBattle();
     };  
 
-   vm.user = GameService.getUserInfo();
+    vm.user = GameService.getUserInfo();
 
-   vm.gamesPlayed = GameService.getGamesPlayed();
-   console.log(vm.gamesPlayed);
-   if (vm.gamesPlayed === 2){
-     vm.showMe = false;
-     console.log(vm.showMe);
-     GameService.createRandomNum(); 
-     vm.randomNum = GameService.getRandomNum();
-     GameService.setOpponent(vm.randomNum);
-     GameService.sendGamesPlayed(0);
-     GameService.setOpponentHealth(4);
-     GameService.setPlayerHealth(4);
-   }
-
-
+    vm.gamesPlayed = GameService.getGamesPlayed();
+    if (vm.gamesPlayed === 2){
+      vm.showMe = false;
+    }
   }]
 
 }

@@ -150,10 +150,8 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
 
     vm.markCorrectAnswer = (option) => {
         let optionsTest = document.querySelectorAll(".optionsTest");
-
         vm.correctAnswer = vm.questions[vm.questionI].answer;
         let speechBubbleQuestion = document.querySelector(".speechBubble_questions");
-
         for(let i = 0; i < optionsTest.length; i++) {
             if(optionsTest[i].innerText === vm.correctAnswer){
                 let correct = optionsTest[i];
@@ -195,7 +193,6 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
                 if(vm.opponentHealth === 1){
                     angular.element(oppHealthBar).css("background-color", "red");
                 }
-
                 GameService.removeCorrectQuestion(vm.questionI);
         
         
@@ -203,9 +200,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
                 //if it is not correct, reduce player health
                 vm.playerHealth --;
                 vm.playerHealthBarWidth -=20;
-                
                 angular.element(playerHealthBar).css("width", `${vm.playerHealthBarWidth}%`);
-        
                 if(vm.playerHealth === 1){
                     angular.element(playerHealthBar).css("background-color", "red");
                 }
@@ -216,25 +211,21 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
 
             if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
                     vm.questionI++;
-             
             } else if (vm.playerHealth === 0){
                 
                 // Send the opponent to the Gameover Screen
                 GameService.sendWinner(vm.opponent);
                 //end round, change to view to gameover view
             } else if (vm.opponentHealth === 0){
-                console.log("playerHealth 0");
                 vm.totalWins++;
                 GameService.sendWinner(vm.clickedHero); 
                 GameService.sendTotalWins(vm.totalWins);
                   
             }
-    
-       
+      
     }
     //retrieving the user's character from Service
     vm.clickedHero = GameService.getHero();
-
     vm.victories = GameService.getTotalWins();
 
     //takes user back to home view/component

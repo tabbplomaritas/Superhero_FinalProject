@@ -113,9 +113,7 @@ function GameService ($http, $location) {
   return clickedHero;
   }
 
-  const viewBattle = () => {
-    console.log("view battle service working");
-    
+  const viewBattle = () => {    
     $location.path("/battle");
   }
   const goToStartGame = () => { 
@@ -142,7 +140,7 @@ function GameService ($http, $location) {
 
   const sendTotalWins = (wins) =>{
     totalWins += wins;
-    console.log(totalWins);
+  
     return totalWins
   }
 
