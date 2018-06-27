@@ -120,6 +120,15 @@
     order: 2;
   }
 
+  .speechBubble_answers {
+    top: 45%;
+  }
+
+  .answer_options {
+    margin-left: -7.5rem;
+  }
+
+
   .fighter_info_img {
     margin-top: -2rem;
     max-height: 22.5rem;
