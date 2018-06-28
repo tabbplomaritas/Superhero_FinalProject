@@ -227,8 +227,10 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
                 GameService.sendWinner(vm.opponent);
                 //end round, change to view to gameover view
             } else if (vm.opponentHealth === 0){
-                quizmusic.stop();
-                gameoversound.pause();
+                console.log("user wins");
+                
+                quizmusic.pause();
+                gameoversound.play();
                 vm.totalWins++;
                 GameService.sendWinner(vm.clickedHero); 
                 GameService.sendTotalWins(vm.totalWins);
