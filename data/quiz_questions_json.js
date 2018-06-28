@@ -475,8 +475,8 @@ const questions=
     },
     {
       "question":"The 3/5th's Compromise dealt predominantly with whom?",
-      "options":["A. Slaves","B. Southerners","C. Impoverished people","D. Northerners"],
-      "answer":"A. Slaves"
+      "options":["A. Enslaved Americans","B. Southerners","C. Impoverished people","D. Northerners"],
+      "answer":"A. Enslaved Americans"
     },
     {
       "question":"The First Amendment protects citizens' ____ and ____.",
