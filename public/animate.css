@@ -3318,12 +3318,13 @@
   from {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
-    visibility: visible;
+    opacity: 0;
   }
 
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -3331,12 +3332,13 @@
   from {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
-    visibility: visible;
+    opacity: 0;
   }
 
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -3344,6 +3346,7 @@
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
   animation-duration: .7s;
+  animation-fill-mode: both;
 }
 
 /* my own version of slideinright for when element has been transformed vertically on the window */

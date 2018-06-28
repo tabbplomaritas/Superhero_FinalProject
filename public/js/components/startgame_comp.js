@@ -10,7 +10,7 @@ const startGame ={
         
         <section class="userInfoForm_selections">
             
-            <div class="userInfoForm_Subject animated slideInRight">
+            <div class="userInfoForm_Subject animated">
                 <h3>Select Your Subject:</h3>
                 <div class="userInforForm_Subject_opts">
                     <p class="subject animated" ng-click="$ctrl.setSubject('English', $event);">ENGLISH</p>
@@ -52,11 +52,12 @@ const startGame ={
       </section>
     `,
 
-    controller: ["GameService", function(GameService){
+    controller: ["GameService", "$timeout", function(GameService, $timeout){
             
             const vm = this;
             const allGrades = document.querySelectorAll(".grade");
             const allSubjects = document.querySelectorAll(".subject");
+
             const swing = document.getElementById("swing");
             const squeeze = document.getElementById("squeeze");
             const smallPop = document.getElementById("smallPop");
@@ -67,7 +68,8 @@ const startGame ={
             vm.gameIntro = document.querySelector(".gameIntro");
           
             GameService.setOpponent(vm.randomNum);
-
+            angular.element(allSubjects).css("opacity", "0");
+            
             vm.showAsideImage = () => {
                 let windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
                 
@@ -80,6 +82,11 @@ const startGame ={
             vm.hideGameIntro = () => { 
                 smallPop.play();
                 angular.element(vm.gameIntro).addClass("animated zoomOut");
+               
+               
+                angular.element(allSubjects).addClass("slideInRight");
+              
+
 
                 setTimeout(() => {
                     angular.element(vm.gameIntro).css("display", "none");
