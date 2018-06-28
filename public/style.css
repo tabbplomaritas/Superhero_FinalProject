@@ -102,13 +102,13 @@ footer {
   height: 15rem;
   width: 105%;
   position: fixed;
-  bottom: -1%;
+  bottom: -2%;
   z-index: 3;
 }
 
 footer img {
   width: auto;
-  height: 14rem;
+  height: 12rem;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -288,14 +288,14 @@ footer img {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform-origin: center;
     transform: rotate(0deg) translate(-50%, -50%);
     z-index: 6;
     background-color: white;
     width: 25rem;
-    padding: 2rem 2rem 5rem 2rem;
+    padding: 1rem 2rem 5rem 2rem;
     -webkit-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
     -moz-box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
     box-shadow: 2px 3px 79px 6px rgba(0,0,0,0.37);
