@@ -115,7 +115,7 @@ const home = {
 
         vm.viewHero = (hero) => {
       //animates the clickedHero_stats pop up
-            angular.element(heroContainer).css("display", "none");
+            angular.element(heroContainer).css("visibility", "hidden");
       
       setTimeout(function(){
 
