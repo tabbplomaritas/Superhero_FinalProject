@@ -288,7 +288,7 @@ footer img {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 45%;
+    top: 35%;
     left: 50%;
     transform-origin: center;
     transform: rotate(0deg) translate(-50%, -50%);
