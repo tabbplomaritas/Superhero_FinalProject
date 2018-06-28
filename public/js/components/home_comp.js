@@ -116,11 +116,11 @@ const home = {
         vm.viewHero = (hero) => {
       //animates the clickedHero_stats pop up
       
-      setTimeout(function(){
+    //   setTimeout(function(){
 
         angular.element(popUp).css("display", "flex");
         angular.element(popUp).addClass("animated rotateIn");
-      }, 200);
+    //   }, 200);
                   
                    
             //sends the clicked hero data to service so entire application can utilize
