@@ -10,7 +10,7 @@ const startGame ={
         
         <section class="userInfoForm_selections">
             
-            <div class="userInfoForm_Subject animated">
+            <div class="userInfoForm_Subject animated slideInRight">
                 <h3>Select Your Subject:</h3>
                 <div class="userInforForm_Subject_opts">
                     <p class="subject animated" ng-click="$ctrl.setSubject('English', $event);">ENGLISH</p>
@@ -61,6 +61,7 @@ const startGame ={
             const swing = document.getElementById("swing");
             const squeeze = document.getElementById("squeeze");
             const smallPop = document.getElementById("smallPop");
+            const incorrectSound = document.getElementById("incorrect");
         
             vm.user = {};
             GameService.createRandomNum(); 
@@ -68,7 +69,7 @@ const startGame ={
             vm.gameIntro = document.querySelector(".gameIntro");
           
             GameService.setOpponent(vm.randomNum);
-            angular.element(allSubjects).css("opacity", "0");
+       
             
             vm.showAsideImage = () => {
                 let windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -81,11 +82,7 @@ const startGame ={
 
             vm.hideGameIntro = () => { 
                 smallPop.play();
-                angular.element(vm.gameIntro).addClass("animated zoomOut");
-               
-               
-                angular.element(allSubjects).addClass("slideInRight");
-              
+                angular.element(vm.gameIntro).addClass("animated zoomOut");          
 
 
                 setTimeout(() => {
@@ -114,9 +111,13 @@ const startGame ={
             }
 
             vm.sendUserInfo = (user) => {
-                smallPop.play();
-                GameService.sendUserInfo(user);
-                angular.element(aside_image).removeClass("customSwingIn");
+                if(vm.user.subject !== "undefined" && vm.user.grade !== "undefined"){
+                    smallPop.play();
+                    GameService.sendUserInfo(user);
+                    angular.element(aside_image).removeClass("customSwingIn");
+                } else {
+                    incorrectSound.play();
+                }
             }
 
 
