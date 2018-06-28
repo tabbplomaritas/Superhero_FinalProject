@@ -47,10 +47,9 @@ const home = {
                 </div>
             </section>
 
-            <div class="clickedHero_buttons">
-                <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/beginadventure.png">
-                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/beginadventure.png">  
-            </div>
+                <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
+                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
+         
         </section> 
     </section>
     `,
