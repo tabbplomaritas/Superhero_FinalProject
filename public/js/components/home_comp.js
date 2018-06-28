@@ -183,7 +183,8 @@ const home = {
                     color1 = "F3CA5A",
                     color2 = "f1d893",
                     color3 = "BC3A30",
-                    asideImage_character = "../assets/images/ww.png"
+                    asideImage_character = "../assets/images/wwlogo.png"
+                    angular.element(asideImage).css("width", "32rem");
                 break;
 
                 case "Batman":
