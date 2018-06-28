@@ -359,12 +359,12 @@ footer img {
   transition: .5s all;
 }
 
-#backToHeroes:hover,
+/* #backToHeroes:hover,
 #readyToBattle:hover,
   .beginAdv:hover {
   transform: rotate3d(1, 1, 1, 40deg);
   cursor: pointer;
-}
+} */
 
 #readyToBattle {
   z-index: 7;
