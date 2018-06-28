@@ -183,7 +183,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         //after health deducted, checks if there is a winner yet or if a new question is given
         $timeout(() => {
             vm.checkForWinner();
-        }, 500);
+        }, 2300);
     }
 
     vm.isAnswerRight = () => {
