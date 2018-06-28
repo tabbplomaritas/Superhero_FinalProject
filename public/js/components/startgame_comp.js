@@ -8,6 +8,7 @@ const startGame ={
          <h3>Enter Your Name, Subject & Grade to defeat Villains of the Galaxy </h3>
         <input type="text" placeholder="Name" ng-model="$ctrl.user.name">
         
+        
         <section class="userInfoForm_selections">
             
             <div class="userInfoForm_Subject animated slideInRight">
