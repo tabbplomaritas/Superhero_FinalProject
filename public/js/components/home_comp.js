@@ -45,19 +45,13 @@ const home = {
                     <p>Combat: </p>
                     <p>{{ $ctrl.clickedHero.powerstats.combat }} </p>
                 </div>
-                <div class="homeButton" ng-click="$ctrl.chooseDifHero()">
-                    <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
-                </div>
-                <div class="homeButton" ng-click="$ctrl.viewBattle()">
-                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
-                </div>
             </section>
 
-               
+                <img id="backToHeroes"  ontouchstart="$ctrl.chooseDifHero()" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
+                <img id="readyToBattle" ontouchstart="$ctrl.viewBattle()" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
          
         </section> 
     </section>
-    
     `,
     controller: ["GameService", function(GameService){
         const vm = this;
@@ -244,6 +238,3 @@ const home = {
 angular
     .module("app")
     .component("home", home);
-
-    // <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
-    //             <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">
