@@ -50,6 +50,11 @@
     font-size: 1.7rem;
     width: 75%;
   }
+
+  .answer_options:hover {
+    cursor: pointer;
+    color: #f75002;
+  }
  
   .button_battle {
     height: 12rem;
