@@ -357,6 +357,7 @@ footer img {
   bottom: -2rem;
   transform: rotate(-15deg);
   transition: .5s all;
+  cursor: pointer;
 }
 
 /* #backToHeroes:hover,
@@ -375,6 +376,7 @@ footer img {
   bottom: -2rem;
   transform: rotate(-15deg);
   transition: .5s all;
+  cursor: pointer;
 }
 
 
