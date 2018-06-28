@@ -363,19 +363,19 @@ const questions=
     {
       "question":"Is -9 minus 6 positive or negative?",
       "options":["A. Positive",
-      "B. Negative"],
+      "B. Negative", "C. Zero", "D. Neutral"],
       "answer":"B. Negative"
     },
     {
       "question":"Is 9 plus -8 positive or negative?",
       "options":["A. Positive",
-      "B. Negative"],
+      "B. Negative", "C. Zero", "D. Neutral"],
       "answer":"A. Positive"
     },
     {
       "question":"Is -82 plus -83 positive or negative?",
       "options":["A. Positive",
-      "B. Negative"],
+      "B. Negative", "C. Zero", "D. Neutral"],
       "answer":"B. Negative"
     },
     {
