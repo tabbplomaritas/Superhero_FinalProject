@@ -9,7 +9,7 @@
 const gameover = {
 
   template:`
-  <section class="main">
+  <section class="main" onmousemove="$ctrl.playSound();">
       <div id="main_gameover">
       
         <div class="gameoverImgContainer">
@@ -40,7 +40,7 @@ const gameover = {
     vm.user = GameService.getUserInfo();
     vm.showMe = true;
     vm.rematchPhrase = "";
-  
+ 
 
     if(vm.winner.name == vm.clickedHero.name){
       GameService.upDifficulty();

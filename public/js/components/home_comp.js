@@ -100,11 +100,10 @@ const home = {
         //initiate the ng-show on the character stats pop up to false
         vm.showMe = false;
         const popUp = document.querySelector(".clickedHero_stats");
-          
         const main = document.querySelector(".main");
-
         const heroContainer = document.querySelector(".heroOption_container");
         console.log(heroContainer);
+        const swing = document.getElementById("swing");
         
 
         vm.scrollWindow = () => {
@@ -114,13 +113,12 @@ const home = {
     
 
         vm.viewHero = (hero) => {
-      //animates the clickedHero_stats pop up
-      
-    //   setTimeout(function(){
+            //animates the clickedHero_stats pop up
+            setTimeout(function(){
 
-        angular.element(popUp).css("display", "flex");
-        angular.element(popUp).addClass("animated rotateIn");
-    //   }, 200);
+                angular.element(popUp).css("display", "flex");
+                angular.element(popUp).addClass("animated rotateIn");
+            }, 200);
                   
                    
             //sends the clicked hero data to service so entire application can utilize
@@ -129,13 +127,10 @@ const home = {
             //retrieves that stored data from GameService
             vm.clickedHero = GameService.getHero();
             
-            //api call to view hero at that id
+            // api call to view hero at that id
             GameService.getPlayer(vm.clickedHero.id).then((response)=> {
-                //change ng-show me to true to display the pop up
-              
-        // vm.showMe= true;
-                vm.clickedHero = response;
-            })
+                    vm.clickedHero = response;
+                })
         };
 
         vm.chooseDifHero = () => {
@@ -151,6 +146,7 @@ const home = {
         }
         
         vm.viewBattle = () => {
+            swing.play();
             vm.changeNavColor();
             GameService.viewBattle();
         };

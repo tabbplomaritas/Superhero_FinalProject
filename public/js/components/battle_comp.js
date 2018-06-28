@@ -91,9 +91,13 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
     //sound effects
     const correctSound = document.getElementById("correct");
     const incorrectSound = document.getElementById("incorrect");
+    const quizmusic= document.getElementById("quizmusic");
     //health bar to decrement with css
     const oppHealthBar = document.getElementById("oppHealthBar");
     const playerHealthBar = document.getElementById("playerHealthBar");
+    const gameoversound = document.getElementById("gameover");
+
+  
     
     //retrieves user info from service
     vm.user = GameService.getUserInfo();
@@ -144,10 +148,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
 
 
     vm.startBattle = () => {
-        // logic testing if questions array is broke.
-        // if(vm.gamesPlayed === 0){
-        //     vm.questions=[];
-        // }
+        quizmusic.play();
         vm.questions = angular.copy(GameService.getQuestions());
         vm.showMe= false;
         vm.gamesPlayed = GameService.getGamesPlayed();
@@ -183,7 +184,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         //after health deducted, checks if there is a winner yet or if a new question is given
         $timeout(() => {
             vm.checkForWinner();
-        }, 2300);
+        }, 1800);
     }
 
     vm.isAnswerRight = () => {
@@ -192,7 +193,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
                 //if it does, reduce opp health
                 vm.opponentHealth --;
                 //reduce the width of the bar variable by 20
-                vm.oppHealthBarWidth -=20;
+                vm.oppHealthBarWidth -=25;
                 //use that variable to adjust the width of the inner health bar
                 angular.element(oppHealthBar).css("width", `${vm.oppHealthBarWidth}%`);
 
@@ -207,7 +208,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
                 incorrect.play();
                 //if it is not correct, reduce player health
                 vm.playerHealth --;
-                vm.playerHealthBarWidth -=20;
+                vm.playerHealthBarWidth -=25;
                 angular.element(playerHealthBar).css("width", `${vm.playerHealthBarWidth}%`);
                 if(vm.playerHealth === 1){
                     angular.element(playerHealthBar).css("background-color", "red");
@@ -220,11 +221,14 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
             if (vm.playerHealth > 0 && vm.opponentHealth > 0) {
                     vm.questionI++;
             } else if (vm.playerHealth === 0){
-                
+                    quizmusic.pause();
+                    gameoversound.play();
                 // Send the opponent to the Gameover Screen
                 GameService.sendWinner(vm.opponent);
                 //end round, change to view to gameover view
             } else if (vm.opponentHealth === 0){
+                quizmusic.stop();
+                gameoversound.pause();
                 vm.totalWins++;
                 GameService.sendWinner(vm.clickedHero); 
                 GameService.sendTotalWins(vm.totalWins);
