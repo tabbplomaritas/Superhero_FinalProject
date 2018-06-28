@@ -368,7 +368,7 @@ footer img {
 } */
 
 #readyToBattle {
-  padding: 1rem;
+  padding: .5rem;
   z-index: 100000000000;
   width: 11rem;
   height: 10rem;

@@ -48,7 +48,7 @@ const home = {
             </section>
 
                 <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
-                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
+                <button id="readyToBattle" ng-click="$ctrl.viewBattle()">Ready to Battle!</button>  
          
         </section> 
     </section>
