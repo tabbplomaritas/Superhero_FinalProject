@@ -139,11 +139,15 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         GameService.setGradeSubject(vm.gradeI, vm.subjectI);
     } else {
         GameService.setPlayerHealth(vm.playerHealth);
-        GameService.setOpponentHealth(vm.playerHealth);
+        GameService.setOpponentHealth(vm.OpponentHealth);
     }
 
 
     vm.startBattle = () => {
+        // logic testing if questions array is broke.
+        // if(vm.gamesPlayed === 0){
+        //     vm.questions=[];
+        // }
         vm.questions = angular.copy(GameService.getQuestions());
         vm.showMe= false;
         vm.gamesPlayed = GameService.getGamesPlayed();
@@ -179,7 +183,7 @@ controller: ["GameService", "$timeout", function (GameService, $timeout){
         //after health deducted, checks if there is a winner yet or if a new question is given
         $timeout(() => {
             vm.checkForWinner();
-        }, 500);
+        }, 2300);
     }
 
     vm.isAnswerRight = () => {

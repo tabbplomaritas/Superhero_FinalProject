@@ -52,14 +52,16 @@ const startGame ={
       </section>
     `,
 
-    controller: ["GameService", function(GameService){
+    controller: ["GameService", "$timeout", function(GameService, $timeout){
             
             const vm = this;
             const allGrades = document.querySelectorAll(".grade");
             const allSubjects = document.querySelectorAll(".subject");
+
             const swing = document.getElementById("swing");
             const squeeze = document.getElementById("squeeze");
             const smallPop = document.getElementById("smallPop");
+            const incorrectSound = document.getElementById("incorrect");
         
             vm.user = {};
             GameService.createRandomNum(); 
@@ -67,7 +69,8 @@ const startGame ={
             vm.gameIntro = document.querySelector(".gameIntro");
           
             GameService.setOpponent(vm.randomNum);
-
+       
+            
             vm.showAsideImage = () => {
                 let windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
                 
@@ -79,7 +82,8 @@ const startGame ={
 
             vm.hideGameIntro = () => { 
                 smallPop.play();
-                angular.element(vm.gameIntro).addClass("animated zoomOut");
+                angular.element(vm.gameIntro).addClass("animated zoomOut");          
+
 
                 setTimeout(() => {
                     angular.element(vm.gameIntro).css("display", "none");
@@ -107,9 +111,17 @@ const startGame ={
             }
 
             vm.sendUserInfo = (user) => {
-                smallPop.play();
-                GameService.sendUserInfo(user);
-                angular.element(aside_image).removeClass("customSwingIn");
+                console.log(vm.user.subject);
+                console.log(vm.user.grade);
+
+                
+                if(vm.user.subject !== undefined && vm.user.grade !== undefined){
+                    smallPop.play();
+                    GameService.sendUserInfo(user);
+                    angular.element(aside_image).removeClass("customSwingIn");
+                } else {
+                    incorrectSound.play();
+                }
             }
 
 

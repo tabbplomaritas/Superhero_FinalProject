@@ -17,19 +17,19 @@ function GameService ($http, $location) {
   let resetSvc;
 
   const resetService = () => {
-    let player = 1; 
-    let data = {};
-    let clickedHero = {};
-    let questionBank = [];
-    let winner = {};
-    let totalWins = 0;
-    let opponent = false;
-    let userInfo = {};
-    let randomNum;
-    let checkIsRematch = false;
-    let playerHealth = 4;
-    let opponentHealth = 4;
-    let gamesPlayed = 0;
+    player = 1; 
+    data = {};
+    clickedHero = {};
+    questionBank = [];
+    winner = {};
+    totalWins = 0;
+    opponent = false;
+    userInfo = {};
+    randomNum;
+    checkIsRematch = false;
+    playerHealth = 4;
+    opponentHealth = 4;
+    gamesPlayed = 0;
   }
 
 

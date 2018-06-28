@@ -47,10 +47,9 @@ const home = {
                 </div>
             </section>
 
-            <div class="clickedHero_buttons">
-                <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
-                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
-            </div>
+                <img id="backToHeroes"  ontouchstart="$ctrl.chooseDifHero()" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
+                <img id="readyToBattle" ontouchstart="$ctrl.viewBattle()" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
+         
         </section> 
     </section>
     `,
@@ -101,8 +100,12 @@ const home = {
         //initiate the ng-show on the character stats pop up to false
         vm.showMe = false;
         const popUp = document.querySelector(".clickedHero_stats");
-            console.log(popUp);
+          
         const main = document.querySelector(".main");
+
+        const heroContainer = document.querySelector(".heroOption_container");
+        console.log(heroContainer);
+        
 
         vm.scrollWindow = () => {
             window.scrollTo(0, 212);
@@ -113,11 +116,11 @@ const home = {
         vm.viewHero = (hero) => {
       //animates the clickedHero_stats pop up
       
-      setTimeout(function(){
+    //   setTimeout(function(){
 
         angular.element(popUp).css("display", "flex");
         angular.element(popUp).addClass("animated rotateIn");
-      }, 200);
+    //   }, 200);
                   
                    
             //sends the clicked hero data to service so entire application can utilize
@@ -163,13 +166,11 @@ const home = {
             let body = document.querySelector("body");
             let asideImage= document.querySelector("#aside_image");
             let asideImage_character = "";
-            console.log(asideImage);
             
             angular.element(asideImage).css("width", "26rem");
             angular.element(asideImage).css("top", "33rem");
             angular.element(asideImage).css("right", "5rem");
             
-            console.log(vm.clickedHero.name);
             switch(vm.clickedHero.name) {
 
                 case "Captain America":
@@ -224,10 +225,7 @@ const home = {
                     color3 = "E8BF71",
                     asideImage_character = "../assets/images/panther.png"
                 break;
-
             }
-            console.log(navInner);
-        
             angular.element(navInner).css(`background`, `linear-gradient(to bottom, #${color1}, #${color2})`);
             angular.element(asideInner).css(`background`, `linear-gradient(to left, #${color1} 50%, #${color2})`);
             angular.element(body).css(`background-color`, `#${color3}`);

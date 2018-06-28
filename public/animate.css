@@ -3344,6 +3344,7 @@
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
   animation-duration: .7s;
+  animation-fill-mode: both;
 }
 
 /* my own version of slideinright for when element has been transformed vertically on the window */

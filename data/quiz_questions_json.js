@@ -113,12 +113,12 @@ const questions=
       },
       {
         "question":"The answer to -10 × 1 is: ",
-        "options":["A. positive","B. negative"],
+        "options":["A. positive","B. negative", "C. neutral", "D. zero"],
         "answer":"B. negative"
       },
       {
         "question":"Are the ratios '10:14' and '5:7' equivalent?",
-        "options":["A. Yes","B. No"],
+        "options":["A. Yes","B. No", "C. The same", "D. Neither"],
         "answer":"A. Yes"
       },
       {
@@ -363,19 +363,19 @@ const questions=
     {
       "question":"Is -9 minus 6 positive or negative?",
       "options":["A. Positive",
-      "B. Negative"],
+      "B. Negative", "C. Zero", "D. Neutral"],
       "answer":"B. Negative"
     },
     {
       "question":"Is 9 plus -8 positive or negative?",
       "options":["A. Positive",
-      "B. Negative"],
+      "B. Negative", "C. Zero", "D. Neutral"],
       "answer":"A. Positive"
     },
     {
       "question":"Is -82 plus -83 positive or negative?",
       "options":["A. Positive",
-      "B. Negative"],
+      "B. Negative", "C. Zero", "D. Neutral"],
       "answer":"B. Negative"
     },
     {
@@ -475,8 +475,8 @@ const questions=
     },
     {
       "question":"The 3/5th's Compromise dealt predominantly with whom?",
-      "options":["A. Slaves","B. Southerners","C. Impoverished people","D. Northerners"],
-      "answer":"A. Slaves"
+      "options":["A. Enslaved Americans","B. Southerners","C. Impoverished people","D. Northerners"],
+      "answer":"A. Enslaved Americans"
     },
     {
       "question":"The First Amendment protects citizens' ____ and ____.",
