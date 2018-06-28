@@ -111,7 +111,11 @@ const startGame ={
             }
 
             vm.sendUserInfo = (user) => {
-                if(vm.user.subject !== "undefined" && vm.user.grade !== "undefined"){
+                console.log(vm.user.subject);
+                console.log(vm.user.grade);
+
+                
+                if(vm.user.subject !== undefined && vm.user.grade !== undefined){
                     smallPop.play();
                     GameService.sendUserInfo(user);
                     angular.element(aside_image).removeClass("customSwingIn");
