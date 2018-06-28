@@ -48,7 +48,7 @@ const home = {
             </section>
 
                 <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
-                <button id="readyToBattle" ng-click="$ctrl.viewBattle()">Ready to Battle!</button>  
+                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
          
         </section> 
     </section>
@@ -115,7 +115,6 @@ const home = {
 
         vm.viewHero = (hero) => {
       //animates the clickedHero_stats pop up
-            angular.element(heroContainer).css("visibility", "hidden");
       
       setTimeout(function(){
 
