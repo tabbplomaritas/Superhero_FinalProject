@@ -101,7 +101,7 @@ const home = {
         //initiate the ng-show on the character stats pop up to false
         vm.showMe = false;
         const popUp = document.querySelector(".clickedHero_stats");
-            console.log(popUp);
+          
         const main = document.querySelector(".main");
 
         vm.scrollWindow = () => {
@@ -163,13 +163,11 @@ const home = {
             let body = document.querySelector("body");
             let asideImage= document.querySelector("#aside_image");
             let asideImage_character = "";
-            console.log(asideImage);
             
             angular.element(asideImage).css("width", "26rem");
             angular.element(asideImage).css("top", "33rem");
             angular.element(asideImage).css("right", "5rem");
             
-            console.log(vm.clickedHero.name);
             switch(vm.clickedHero.name) {
 
                 case "Captain America":
@@ -223,10 +221,7 @@ const home = {
                     color3 = "E8BF71",
                     asideImage_character = "../assets/images/panther.png"
                 break;
-
             }
-            console.log(navInner);
-        
             angular.element(navInner).css(`background`, `linear-gradient(to bottom, #${color1}, #${color2})`);
             angular.element(asideInner).css(`background`, `linear-gradient(to left, #${color1} 50%, #${color2})`);
             angular.element(body).css(`background-color`, `#${color3}`);
