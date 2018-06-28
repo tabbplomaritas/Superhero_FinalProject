@@ -45,9 +45,12 @@ const home = {
                     <p>Combat: </p>
                     <p>{{ $ctrl.clickedHero.powerstats.combat }} </p>
                 </div>
-                
-                <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
+                <div class="homeButton" ng-click="$ctrl.chooseDifHero()">
+                    <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
+                </div>
+                <div class="homeButton" ng-click="$ctrl.viewBattle()">
                 <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
+                </div>
             </section>
 
                
