@@ -45,10 +45,12 @@ const home = {
                     <p>Combat: </p>
                     <p>{{ $ctrl.clickedHero.powerstats.combat }} </p>
                 </div>
+                
+                <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
+                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
             </section>
 
-            <button ng-click="$ctrl.viewBattle();" id="readyToBattle">OK?</button>
-
+               
          
         </section> 
     </section>
@@ -103,6 +105,10 @@ const home = {
         const popUp = document.querySelector(".clickedHero_stats");
           
         const main = document.querySelector(".main");
+
+        const heroContainer = document.querySelector(".heroOption_container");
+        console.log(heroContainer);
+        
 
         vm.scrollWindow = () => {
             window.scrollTo(0, 212);

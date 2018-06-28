@@ -359,30 +359,23 @@ footer img {
   transition: .5s all;
 }
 
-/* #backToHeroes:hover,
+#backToHeroes:hover,
 #readyToBattle:hover,
   .beginAdv:hover {
   transform: rotate3d(1, 1, 1, 40deg);
   cursor: pointer;
-} */
+}
 
 
 #readyToBattle {
-  z-index: 100000000000;
-  width: 14rem;
-  height: 6rem;
+  z-index: 7;
+  width: 11rem;
   border: none;
   position: absolute;
   right: -3rem;
   bottom: -2rem;
-  border: 1px solid black;
-  background: yellow;
-  font-family: 'Bangers';
-  font-size: 2.4rem;
-  cursor: pointer;
-  padding: .5rem;
-  /* transform: rotate(-15deg);
-  transition: .5s all; */
+  transform: rotate(-15deg);
+  transition: .5s all;
 }
 
 
