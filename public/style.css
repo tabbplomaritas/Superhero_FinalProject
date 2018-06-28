@@ -367,7 +367,7 @@ footer img {
 } */
 
 #readyToBattle {
-  z-index: 7;
+  z-index: 100000000000;
   width: 11rem;
   height: 10rem;
   border: none;

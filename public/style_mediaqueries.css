@@ -28,6 +28,7 @@
   }
 
   .clickedHero_stats {
+    top: 50%;
     width: 35rem;
   }
 
