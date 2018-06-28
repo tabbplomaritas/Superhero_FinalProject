@@ -47,11 +47,12 @@ const home = {
                 </div>
             </section>
 
-                <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
-                <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">  
+            <button ng-click="$ctrl.viewBattle();" id="readyToBattle">OK?</button>
+
          
         </section> 
     </section>
+    
     `,
     controller: ["GameService", function(GameService){
         const vm = this;
@@ -234,3 +235,6 @@ const home = {
 angular
     .module("app")
     .component("home", home);
+
+    // <img id="backToHeroes" ng-click="$ctrl.chooseDifHero()" src="../../assets/design/backtoheroes-01.png">
+    //             <img id="readyToBattle" ng-click="$ctrl.viewBattle()" src="../../assets/design/readytobattle-01.png">
