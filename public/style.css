@@ -349,7 +349,8 @@ footer img {
 /* TODO: consolidate repetitive code on buttons */
 #backToHeroes {
   width: 11rem;
-  z-index: 7;
+  z-index: 20;
+  padding: 5rem;
   height: 10rem;
   border: none;
   position: absolute;
@@ -367,13 +368,16 @@ footer img {
 } */
 
 #readyToBattle {
+  padding: 2rem;
   z-index: 100000000000;
   width: 11rem;
   height: 10rem;
   border: none;
   position: absolute;
   right: -3rem;
-  bottom: -2rem;
+  bottom: -5rem;
+  box-sizing: content-box;
+  border: 3px solid red;
   /* transform: rotate(-15deg);
   transition: .5s all; */
 }
