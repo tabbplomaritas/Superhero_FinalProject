@@ -103,6 +103,10 @@ const home = {
           
         const main = document.querySelector(".main");
 
+        const heroContainer = document.querySelector(".heroOption_container");
+        console.log(heroContainer);
+        
+
         vm.scrollWindow = () => {
             window.scrollTo(0, 212);
         };
@@ -111,6 +115,7 @@ const home = {
 
         vm.viewHero = (hero) => {
       //animates the clickedHero_stats pop up
+            angular.element(heroContainer).css("display", "none");
       
       setTimeout(function(){
 
