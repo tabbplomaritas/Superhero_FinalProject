@@ -113,12 +113,12 @@ const questions=
       },
       {
         "question":"The answer to -10 × 1 is: ",
-        "options":["A. positive","B. negative"],
+        "options":["A. positive","B. negative", "C. neutral", "D. zero"],
         "answer":"B. negative"
       },
       {
         "question":"Are the ratios '10:14' and '5:7' equivalent?",
-        "options":["A. Yes","B. No"],
+        "options":["A. Yes","B. No", "C. The same", "D. Neither"],
         "answer":"A. Yes"
       },
       {
