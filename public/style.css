@@ -350,7 +350,7 @@ footer img {
 #backToHeroes {
   width: 11rem;
   z-index: 20;
-  padding: .5rem;
+  padding: 1rem;
   height: 10rem;
   border: none;
   position: absolute;
@@ -368,7 +368,7 @@ footer img {
 } */
 
 #readyToBattle {
-  padding: .5rem;
+  padding: 1rem;
   z-index: 100000000000;
   width: 11rem;
   height: 10rem;
